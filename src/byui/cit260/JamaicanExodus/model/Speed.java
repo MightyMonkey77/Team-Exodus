@@ -5,27 +5,21 @@
  */
 package byui.cit260.JamaicanExodus.model;
 
-
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.Objects;
+
 /**
  *
  * @author Office Payne
  */
-public class Player implements Serializable {
+public class Speed implements Serializable {
+    
+    private String name;
+    private int rate;
 
-private String name;  
-private final ArrayList<Game> games = new ArrayList<>();
-
-    public Player() {
+    public Speed() {
     }
 
-    public ArrayList<Game> getGames() {
-        return games;
-    }
-   
- 
     public String getName() {
         return name;
     }
@@ -34,10 +28,19 @@ private final ArrayList<Game> games = new ArrayList<>();
         this.name = name;
     }
 
+    public int getRate() {
+        return rate;
+    }
+
+    public void setRate(int rate) {
+        this.rate = rate;
+    }
+
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 79 * hash + Objects.hashCode(this.name);
+        int hash = 5;
+        hash = 47 * hash + Objects.hashCode(this.name);
+        hash = 47 * hash + this.rate;
         return hash;
     }
 
@@ -52,7 +55,10 @@ private final ArrayList<Game> games = new ArrayList<>();
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Player other = (Player) obj;
+        final Speed other = (Speed) obj;
+        if (this.rate != other.rate) {
+            return false;
+        }
         if (!Objects.equals(this.name, other.name)) {
             return false;
         }
@@ -61,12 +67,8 @@ private final ArrayList<Game> games = new ArrayList<>();
 
     @Override
     public String toString() {
-        return "Player{" + "name=" + name + ", games=" + games + '}';
+        return "Speed{" + "name=" + name + ", rate=" + rate + '}';
     }
-
     
-    
-
-   
     
 }
