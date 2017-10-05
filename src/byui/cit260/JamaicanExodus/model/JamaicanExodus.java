@@ -17,10 +17,12 @@ public class JamaicanExodus {
     public static void main(String[] args) {
         
         Player playerOne = new Player();
-        Player playerTwo = new Player();
-        Player playerThree = new Player();
         
+        playerOne.setName("Fred Flinstone");
        
+       String playerOneName = playerOne.getName();
+       
+       System.out.println("Name = " + playerOneName + " is a stud.");
         
     }
     
