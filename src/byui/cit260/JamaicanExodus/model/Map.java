@@ -17,7 +17,7 @@ public class Map implements Serializable {
     private String description;
     private int xCount;
     private int yCount;
-    private double location;
+    private int location;
     private double traveled;
 
     public Map() {
@@ -47,11 +47,11 @@ public class Map implements Serializable {
         this.yCount = yCount;
     }
 
-    public double getLocation() {
+    public int getLocation() {
         return location;
     }
 
-    public void setLocation(double location) {
+    public void setLocation(int location) {
         this.location = location;
     }
 

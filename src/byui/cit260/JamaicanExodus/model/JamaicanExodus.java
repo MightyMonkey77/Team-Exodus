@@ -5,6 +5,9 @@
  */
 package byui.cit260.JamaicanExodus.model;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  *
  * @author Office Payne
@@ -16,13 +19,60 @@ public class JamaicanExodus {
      */
     public static void main(String[] args) {
         
+    // Daryl's work   
         Player playerOne = new Player();
-        
         playerOne.setName("Fred Flinstone");
-       
-       String playerOneName = playerOne.getName();
+        String playerOneName = playerOne.getName();
        
        System.out.println("Name = " + playerOneName + " is a stud.");
+     
+        Actor.Father.getName();
+        Actor.Father.getDescription();
+        
+       System.out.println("Name =" + Actor.Father);
+               
+       Farmer farmerJob = new Farmer();
+       farmerJob.setStartMoney(100.00);
+       double farmerJobStartMoney = farmerJob.getStartMoney();
+       System.out.println("Starting Money = "+ farmerJobStartMoney + " This is all the monies you get.");
+               
+       Farmer farmerDescription = new Farmer();
+       farmerDescription.setDescription("You were a local farmer whom left the occupation of the lands" 
+              + " of your home city. Now you are escaping for freedom.");
+       String farmerDescriptionGet = farmerDescription.getDescription();
+       System.out.println("Farmer job description = "+farmerDescriptionGet);
+       
+       Game descriptionOf = new Game();
+       descriptionOf.setDescription("The Jamaican Exodus is a text based game. It begins in the town of Frome."
+               +"\nWhere those in power subjugated the people with heavy burdens. They hear of an opportunity to work and live in Oregon where"
+               +"\nthey have established a refugee camp. \n" 
+               + "Gerain and his family pack up and purchase provisions for their trip to the port town of Kingston. Once they arrive in Kingston,"
+               +"\nGerain is conscripted to work on a ship heading to Florida where his fee is to work the lower decks with his family. They must"
+               +"\npass many obstacles in their journey. Once they arrive in Tampa, Florida they must pay to begin the journey westward via train."
+               +"\nFrom Tampa they go to Birmingham, Alabama where the family must take time to collect funding and food stores. Then they go to "
+               +"\nHouston Texas where they have another trial of faith. Then on to Denver, Colorado to Salt Lake City, Utah. To the final "
+               +"\ndestination of Bend Oregon where the base camp is at." 
+               +"\nThe family will have to work by overcoming obstacles and solving equations to gain funds in order to maintain currency flow."
+               +"\nSome obstacles can be skipped and will not add to the money flow. These will lead the family to the destination.\n" 
+               +"\nThe game begins in the home town of Frome. During the game, you will need to plan for the trip, locate the needed resources,"
+               +"\nand set out on your journey to the first stop of Kingston.");
+       String descriptionOfGet = descriptionOf.getDescription();
+       System.out.println("Game description =" + descriptionOfGet);
+       
+       Map mapLocation = new Map();
+       mapLocation.setLocation(11);
+       int mapLocationSet = mapLocation.getLocation();
+       System.out.println("Map location is "+ mapLocationSet);
+       
+       Inventory inventoryItemDescription = new Inventory();
+       inventoryItemDescription.setInventoryItemDescription("Tools of the trade.");
+       String inventoryItemDescriptionSet = inventoryItemDescription.getInventoryItemDescription();
+       System.out.println("Item is = "+ inventoryItemDescriptionSet);
+       
+       Speed rateOne = new Speed();
+       rateOne.setRate(3);
+       int rateOneSet = rateOne.getRate();
+       System.out.println("Rate of comsumption or loss = " + rateOneSet);
         
     }
     

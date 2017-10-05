@@ -22,9 +22,9 @@ public enum Actor {
     Friend2("Kenise","Female, mothers best friend, single, age 25.",new Point (2,3), 5),
     Female("Ini","Female, work associate, was the head of reliefe projects.", new Point (1,3), 5);
     
-    private String name;
-    private String description;
-    private Point coordinates;
+    private final String name;
+    private final String description;
+    private final Point coordinates;
     private int startingHealth = 5;
 
     Actor(String name, String description, Point coordinates, int startingHealth) {
@@ -37,7 +37,7 @@ public enum Actor {
     public String getName() {
        return name;
 }
-    public String description() {
+    public String getDescription() {
        return description;
 }
     public Point getCoordinates(){
