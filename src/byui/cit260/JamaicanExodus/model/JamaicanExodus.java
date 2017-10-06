@@ -5,9 +5,6 @@
  */
 package byui.cit260.JamaicanExodus.model;
 
-import java.util.HashSet;
-import java.util.Set;
-
 /**
  *
  * @author Office Payne
