@@ -13,23 +13,23 @@ import java.io.Serializable;
  */
 public class Occupations implements Serializable{
    
-    private int occupation;
+    private int occupationF;
 
     public Occupations() {
     }
 
-    public int getOccupation() {
-        return occupation;
+    public int getOccupationF() {
+        return occupationF;
     }
 
-    public void setOccupation(int occupation) {
-        this.occupation = occupation;
+    public void setOccupationF(int occupationF) {
+        this.occupationF = occupationF;
     }
 
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 73 * hash + this.occupation;
+        hash = 73 * hash + this.occupationF;
         return hash;
     }
 
@@ -45,7 +45,7 @@ public class Occupations implements Serializable{
             return false;
         }
         final Occupations other = (Occupations) obj;
-        if (this.occupation != other.occupation) {
+        if (this.occupationF != other.occupationF) {
             return false;
         }
         return true;
@@ -53,7 +53,7 @@ public class Occupations implements Serializable{
 
     @Override
     public String toString() {
-        return "Occupations{" + "occupation=" + occupation + '}';
+        return "Occupations{" + "occupationF=" + occupationF + '}';
     }
     
     

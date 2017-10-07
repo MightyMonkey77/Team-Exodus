@@ -14,7 +14,7 @@ import java.util.Objects;
  */
 public class Shipwright implements Serializable {
 private double startingMoney;
-private String descriptions;
+private String descriptionsW;
 
     public Shipwright() {
     }
@@ -27,19 +27,19 @@ private String descriptions;
         this.startingMoney = startingMoney;
     }
 
-    public String getDescriptions() {
-        return descriptions;
+    public String getDescriptionsW() {
+        return descriptionsW;
     }
 
-    public void setDescriptions(String descriptions) {
-        this.descriptions = descriptions;
+    public void setDescriptionsW(String descriptionsW) {
+        this.descriptionsW = descriptionsW;
     }
 
     @Override
     public int hashCode() {
         int hash = 3;
         hash = 83 * hash + (int) (Double.doubleToLongBits(this.startingMoney) ^ (Double.doubleToLongBits(this.startingMoney) >>> 32));
-        hash = 83 * hash + Objects.hashCode(this.descriptions);
+        hash = 83 * hash + Objects.hashCode(this.descriptionsW);
         return hash;
     }
 
@@ -58,7 +58,7 @@ private String descriptions;
         if (Double.doubleToLongBits(this.startingMoney) != Double.doubleToLongBits(other.startingMoney)) {
             return false;
         }
-        if (!Objects.equals(this.descriptions, other.descriptions)) {
+        if (!Objects.equals(this.descriptionsW, other.descriptionsW)) {
             return false;
         }
         return true;
@@ -66,7 +66,7 @@ private String descriptions;
 
     @Override
     public String toString() {
-        return "Shipwright{" + "startingMoney=" + startingMoney + ", descriptions=" + descriptions + '}';
+        return "Shipwright{" + "startingMoney=" + startingMoney + ", descriptionsW=" + descriptionsW + '}';
     }
 
 

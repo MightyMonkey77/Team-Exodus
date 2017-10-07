@@ -125,6 +125,36 @@ public class JamaicanExodus {
        
     //Mike's Work
     
+        Carpenter startingMoney = new Carpenter ();
+        startingMoney.setStartingMoney(1);
+        double startingMoneySet = startingMoney.getStartingMoney();
+        System.out.println("Paid Day " + startingMoneySet);
+        
+        
+        Banker descriptions  = new Banker ();
+        descriptions.setDescriptions("Thug");
+        String descriptionsSet = descriptions.getDescriptions();
+        System.out.println("Paid Day " + descriptionsSet);
+        
+       
+        SoftwareEngineer descriptionS = new SoftwareEngineer ();
+        descriptionS.setDescriptionS("Cry Baby");
+        String descriptionSSet = descriptionS.getDescriptionS();
+        System.out.println("Paid Day " + descriptionSSet);
+        
+        
+        Shipwright descriptionsW = new Shipwright ();
+        descriptionsW.setDescriptionsW("Cheer Leader");
+        String descriptionsWSet = descriptionsW.getDescriptionsW();
+        System.out.println("Paid Day " + descriptionsWSet);
+        
+        Occupations occupationF = new Occupations ();
+        occupationF.setOccupationF(1);
+        int occupationFSet = occupationF.getOccupationF();
+        System.out.println("Paid Day " + occupationFSet);
+        
+        
+        
         
     }
     

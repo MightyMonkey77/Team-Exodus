@@ -14,7 +14,7 @@ import java.util.Objects;
  */
 public class SoftwareEngineer implements Serializable {
 private double startingMoney;
-private String descriptions;
+private String descriptionS;
 
     public SoftwareEngineer() {
     }
@@ -27,19 +27,19 @@ private String descriptions;
         this.startingMoney = startingMoney;
     }
 
-    public String getDescriptions() {
-        return descriptions;
+    public String getDescriptionS() {
+        return descriptionS;
     }
 
-    public void setDescriptions(String descriptions) {
-        this.descriptions = descriptions;
+    public void setDescriptionS(String descriptionS) {
+        this.descriptionS = descriptionS;
     }
 
     @Override
     public int hashCode() {
         int hash = 3;
         hash = 97 * hash + (int) (Double.doubleToLongBits(this.startingMoney) ^ (Double.doubleToLongBits(this.startingMoney) >>> 32));
-        hash = 97 * hash + Objects.hashCode(this.descriptions);
+        hash = 97 * hash + Objects.hashCode(this.descriptionS);
         return hash;
     }
 
@@ -58,7 +58,7 @@ private String descriptions;
         if (Double.doubleToLongBits(this.startingMoney) != Double.doubleToLongBits(other.startingMoney)) {
             return false;
         }
-        if (!Objects.equals(this.descriptions, other.descriptions)) {
+        if (!Objects.equals(this.descriptionS, other.descriptionS)) {
             return false;
         }
         return true;
@@ -66,7 +66,7 @@ private String descriptions;
 
     @Override
     public String toString() {
-        return "SoftwareEngineer{" + "startingMoney=" + startingMoney + ", descriptions=" + descriptions + '}';
+        return "SoftwareEngineer{" + "startingMoney=" + startingMoney + ", descriptionS=" + descriptionS + '}';
     }
 
 
