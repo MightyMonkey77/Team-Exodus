@@ -71,7 +71,7 @@ public class JamaicanExodus {
        int rateOneSet = rateOne.getRate();
        System.out.println("Rate of comsumption or loss = " + rateOneSet);
        
-       
+             
     }
     
 }

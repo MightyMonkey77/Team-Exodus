@@ -15,7 +15,7 @@ public class Location implements Serializable  {
     
     private int xCord;
     private int yCord;
-    private int visited;
+    private boolean visited;
     private int next;
 
     public Location() {
@@ -37,11 +37,11 @@ public class Location implements Serializable  {
         this.yCord = yCord;
     }
 
-    public int getVisited() {
+    public boolean getVisited() {
         return visited;
     }
 
-    public void setVisited(int visited) {
+    public void setVisited(boolean visited) {
         this.visited = visited;
     }
 
@@ -55,13 +55,15 @@ public class Location implements Serializable  {
 
     @Override
     public int hashCode() {
-        int hash = 5;
-        hash = 71 * hash + this.xCord;
-        hash = 71 * hash + this.yCord;
-        hash = 71 * hash + this.visited;
-        hash = 71 * hash + this.next;
+        int hash = 7;
+        hash = 59 * hash + this.xCord;
+        hash = 59 * hash + this.yCord;
+        hash = 59 * hash + (this.visited ? 1 : 0);
+        hash = 59 * hash + this.next;
         return hash;
     }
+
+    
 
     @Override
     public boolean equals(Object obj) {
