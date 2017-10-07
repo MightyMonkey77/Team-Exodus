@@ -120,7 +120,12 @@ public class JamaicanExodus {
        Rations foodRations = new Rations();
        foodRations.setFoodRations(2);
        int foodRationsSet = foodRations.getFoodRations();
-       System.out.println("2 Rations a day." + foodRationsSet);    
+       System.out.println("2 Rations a day." + foodRationsSet);  
+       
+       
+    //Mike's Work
+    
+        
     }
     
 }
