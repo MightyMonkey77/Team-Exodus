@@ -20,7 +20,7 @@ public class Rations implements Serializable {
     public Rations() {
     }
 
-    public int isFoodRations() {
+    public int getFoodRations() {
         return foodRations;
     }
 
@@ -28,13 +28,14 @@ public class Rations implements Serializable {
         this.foodRations = foodRations;
     }
 
-    public String isFoodName() {
+    public String getFoodName() {
         return foodName;
     }
 
     public void setFoodName(String foodName) {
         this.foodName = foodName;
     }
+    
 
     @Override
     public int hashCode() {

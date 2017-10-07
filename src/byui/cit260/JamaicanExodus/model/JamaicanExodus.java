@@ -98,7 +98,29 @@ public class JamaicanExodus {
         ResourceType description = new ResourceType();
         description.setDescription ("Jewel-encrusted egg");
         String descriptionCurrent = description.getDescription();
-        System.out.println(descriptionCurrent);       
+        System.out.println(descriptionCurrent); 
+        
+    //Chris's Work
+        
+       Location xCord = new Location();
+       xCord.setxCord (1);
+       int xCordSet = xCord.getxCord();
+       System.out.println("Your Great" + xCordSet);
+       
+       Shop name = new Shop();
+       name.setName("The Nayborhood");
+       String nameSet = name.getName();
+       System.out.println("The Nayborhood" + nameSet);
+               
+       ResourceScene food = new ResourceScene();
+       food.setFood(2);
+       Double foodSet = food.getFood();
+       System.out.println("Burger and Fries" + foodSet);
+       
+       Rations foodRations = new Rations();
+       foodRations.setFoodRations(2);
+       int foodRationsSet = foodRations.getFoodRations();
+       System.out.println("2 Rations a day." + foodRationsSet);    
     }
     
 }
