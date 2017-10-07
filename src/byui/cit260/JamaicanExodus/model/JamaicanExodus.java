@@ -22,23 +22,23 @@ public class JamaicanExodus {
         String playerOneName = playerOne.getName();
        
        System.out.println("Name = " + playerOneName + " is a stud.");
-     
+     //Daryl's
         Actor.Father.getName();
         Actor.Father.getDescription();
         
        System.out.println("Name =" + Actor.Father);
-               
+        //Daryl's       
        Farmer farmerJob = new Farmer();
        farmerJob.setStartMoney(100.00);
        double farmerJobStartMoney = farmerJob.getStartMoney();
        System.out.println("Starting Money = "+ farmerJobStartMoney + " This is all the monies you get.");
-               
+        //Daryl's       
        Farmer farmerDescription = new Farmer();
        farmerDescription.setDescription("You were a local farmer whom left the occupation of the lands" 
               + " of your home city. Now you are escaping for freedom.");
        String farmerDescriptionGet = farmerDescription.getDescription();
        System.out.println("Farmer job description = "+farmerDescriptionGet);
-       
+       //Daryl's
        Game descriptionOf = new Game();
        descriptionOf.setDescription("The Jamaican Exodus is a text based game. It begins in the town of Frome."
                +"\nWhere those in power subjugated the people with heavy burdens. They hear of an opportunity to work and live in Oregon where"
@@ -55,22 +55,23 @@ public class JamaicanExodus {
                +"\nand set out on your journey to the first stop of Kingston.");
        String descriptionOfGet = descriptionOf.getDescription();
        System.out.println("Game description =" + descriptionOfGet);
-       
+       //Daryl's
        Map mapLocation = new Map();
        mapLocation.setLocation(11);
        int mapLocationSet = mapLocation.getLocation();
        System.out.println("Map location is "+ mapLocationSet);
-       
+       //Daryl's
        Inventory inventoryItemDescription = new Inventory();
        inventoryItemDescription.setInventoryItemDescription("Tools of the trade.");
        String inventoryItemDescriptionSet = inventoryItemDescription.getInventoryItemDescription();
        System.out.println("Item is = "+ inventoryItemDescriptionSet);
-       
+       //Daryl's
        Speed rateOne = new Speed();
        rateOne.setRate(3);
        int rateOneSet = rateOne.getRate();
        System.out.println("Rate of comsumption or loss = " + rateOneSet);
-        
+       
+       
     }
     
 }
