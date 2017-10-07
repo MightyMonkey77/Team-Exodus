@@ -18,6 +18,18 @@ public class ResourceScene implements Serializable {
     private double money;
     private double amount;
 
+    public double getFood() {
+        return food;
+    }
+
+    public double getMoney() {
+        return money;
+    }
+
+    public double getAmount() {
+        return amount;
+    }
+
     public ResourceScene() {
     }
 

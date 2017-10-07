@@ -71,7 +71,34 @@ public class JamaicanExodus {
        int rateOneSet = rateOne.getRate();
        System.out.println("Rate of comsumption or loss = " + rateOneSet);
        
-             
+         // Kims Work
+        
+        Obstacles obstacleDescription = new Obstacles();
+        obstacleDescription.setObstacleDescription("Blah Blah Blah");
+        String obstacleDescriptionCurrent = obstacleDescription.getObstacleDescription();
+        System.out.println(obstacleDescriptionCurrent);
+        
+        //Boolean howto?
+        //EquationScene isAnswered = new EquationScene();
+        //isAnswered.isIsAnswered(1);
+        //String isAnsweredNow = isAnswered.getIsAnswered();
+        //System.out.println();
+        
+        Equation equation = new Equation();
+        equation.setEquation("Who is buried in Grant's tomb?");
+        String equationCurrent = equation.getEquation();
+        System.out.println(equationCurrent);
+        
+        //Boolean howto?
+        //ObstacleScene isAnswered = new ObstacleScene();
+        //isAnswered.isIsAnswered(1);
+        //String isAnsweredNow = isAnswered.getIsAnswered();
+        //System.out.println();
+        
+        ResourceType description = new ResourceType();
+        description.setDescription ("Jewel-encrusted egg");
+        String descriptionCurrent = description.getDescription();
+        System.out.println(descriptionCurrent);       
     }
     
 }
