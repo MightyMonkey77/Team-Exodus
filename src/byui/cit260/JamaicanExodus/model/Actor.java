@@ -46,6 +46,7 @@ public enum Actor {
     public int getStartingHealth() {
        return startingHealth;
 } 
+    
 
     @Override
     public String toString() {
