@@ -6,7 +6,6 @@
 package byui.cit260.JamaicanExodus.model;
 
 import java.io.Serializable;
-import java.util.Objects;
 /**
  *
  * @author Kim
@@ -14,9 +13,19 @@ import java.util.Objects;
 public class ObstacleScene implements Serializable {
     
     private boolean isAnswered;
+    private int obstacleLocation;
 
     public ObstacleScene() {
     }
+
+    public int getObstacleLocation() {
+        return obstacleLocation;
+    }
+
+    public void setObstacleLocation(int obstacleLocation) {
+        this.obstacleLocation = obstacleLocation;
+    }
+    
 
     public boolean isIsAnswered() {
         return isAnswered;
@@ -28,8 +37,9 @@ public class ObstacleScene implements Serializable {
 
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 17 * hash + (this.isAnswered ? 1 : 0);
+        int hash = 3;
+        hash = 37 * hash + (this.isAnswered ? 1 : 0);
+        hash = 37 * hash + this.obstacleLocation;
         return hash;
     }
 
@@ -48,11 +58,16 @@ public class ObstacleScene implements Serializable {
         if (this.isAnswered != other.isAnswered) {
             return false;
         }
+        if (this.obstacleLocation != other.obstacleLocation) {
+            return false;
+        }
         return true;
     }
 
     @Override
     public String toString() {
-        return "ObstacleScene{" + "isAnswered=" + isAnswered + '}';
+        return "ObstacleScene{" + "isAnswered=" + isAnswered + ", obstacleLocation=" + obstacleLocation + '}';
     }
+
+    
 }

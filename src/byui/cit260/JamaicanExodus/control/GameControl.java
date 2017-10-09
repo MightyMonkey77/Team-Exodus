@@ -11,4 +11,5 @@ package byui.cit260.JamaicanExodus.control;
  */
 public class GameControl {
     
+    
 }

@@ -14,10 +14,19 @@ import java.io.Serializable;
 public class EquationScene implements Serializable {
     
     private boolean isAnswered;
+    private int equationLocation;
 
     public EquationScene() {
     }
 
+    public int getEquationLocation() {
+        return equationLocation;
+    }
+
+    public void setEquationLocation(int equationLocation) {
+        this.equationLocation = equationLocation;
+    }
+    
     public boolean isIsAnswered() {
         return isAnswered;
     }
@@ -28,8 +37,9 @@ public class EquationScene implements Serializable {
 
     @Override
     public int hashCode() {
-        int hash = 5;
-        hash = 83 * hash + (this.isAnswered ? 1 : 0);
+        int hash = 7;
+        hash = 97 * hash + (this.isAnswered ? 1 : 0);
+        hash = 97 * hash + this.equationLocation;
         return hash;
     }
 
@@ -48,13 +58,19 @@ public class EquationScene implements Serializable {
         if (this.isAnswered != other.isAnswered) {
             return false;
         }
+        if (this.equationLocation != other.equationLocation) {
+            return false;
+        }
         return true;
     }
 
     @Override
     public String toString() {
-        return "EquationScene{" + "isAnswered=" + isAnswered + '}';
+        return "EquationScene{" + "isAnswered=" + isAnswered + ", equationLocation=" + equationLocation + '}';
+    }
+
+   
     }
     
     
-}
+

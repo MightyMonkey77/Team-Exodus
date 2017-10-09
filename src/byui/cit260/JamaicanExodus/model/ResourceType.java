@@ -17,10 +17,20 @@ public class ResourceType implements Serializable {
     private String description;
     private String symbol;
     private int percentUsed;
+    private double price;
 
     public ResourceType() {
     }
 
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+    
+    
     public String getDescription() {
         return description;
     }
@@ -47,10 +57,11 @@ public class ResourceType implements Serializable {
 
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 11 * hash + Objects.hashCode(this.description);
-        hash = 11 * hash + Objects.hashCode(this.symbol);
-        hash = 11 * hash + this.percentUsed;
+        int hash = 5;
+        hash = 37 * hash + Objects.hashCode(this.description);
+        hash = 37 * hash + Objects.hashCode(this.symbol);
+        hash = 37 * hash + this.percentUsed;
+        hash = 37 * hash + (int) (Double.doubleToLongBits(this.price) ^ (Double.doubleToLongBits(this.price) >>> 32));
         return hash;
     }
 
@@ -69,6 +80,9 @@ public class ResourceType implements Serializable {
         if (this.percentUsed != other.percentUsed) {
             return false;
         }
+        if (Double.doubleToLongBits(this.price) != Double.doubleToLongBits(other.price)) {
+            return false;
+        }
         if (!Objects.equals(this.description, other.description)) {
             return false;
         }
@@ -80,6 +94,10 @@ public class ResourceType implements Serializable {
 
     @Override
     public String toString() {
-        return "ResourceType{" + "description=" + description + ", symbol=" + symbol + ", percentUsed=" + percentUsed + '}';
+        return "ResourceType{" + "description=" + description + ", symbol=" + symbol + ", percentUsed=" + percentUsed + ", price=" + price + '}';
     }
+
+    
+
+    
 }
