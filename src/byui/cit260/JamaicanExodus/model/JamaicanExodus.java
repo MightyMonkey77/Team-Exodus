@@ -19,9 +19,8 @@ public class JamaicanExodus {
     // Daryl's work   
         Player playerOne = new Player();
         playerOne.setName("Fred Flinstone");
-        String playerOneName = playerOne.getName();
-       
-       System.out.println("Name = " + playerOneName + " is a stud.");
+               
+       System.out.println(playerOne.toString());
      //Daryl's
         Actor.Father.getName();
         Actor.Father.getDescription();
