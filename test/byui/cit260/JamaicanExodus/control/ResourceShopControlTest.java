@@ -37,10 +37,10 @@ public class ResourceShopControlTest {
 
     {
         System.out.println("\tTest case 2");
-        double itemWeight = 500;
+        double itemWeight = 501;
         double maxWeight = 500;
         double loadedWeight = 120;
-        double expResult = 380;
+        double expResult = -1;
         double result = ResourceShopControl.addToChest(itemWeight, maxWeight, loadedWeight);
         assertEquals(expResult, result, 0.0001);
    
@@ -48,15 +48,24 @@ public class ResourceShopControlTest {
     
     {
         System.out.println("\tTest case 3");
-        double itemWeight = 0;
+        double itemWeight = -1;
         double maxWeight = 500;
         double loadedWeight = 120;
-        double expResult = 380;
+        double expResult = -1;
         double result = ResourceShopControl.addToChest(itemWeight, maxWeight, loadedWeight);
         assertEquals(expResult, result, 0.0001);
    
     }
     
-     
+     {
+        System.out.println("\tTest case 3");
+        double itemWeight = 150;
+        double maxWeight = 500;
+        double loadedWeight = 400;
+        double expResult = -1;
+        double result = ResourceShopControl.addToChest(itemWeight, maxWeight, loadedWeight);
+        assertEquals(expResult, result, 0.0001);
+   
+    }
     
 }   

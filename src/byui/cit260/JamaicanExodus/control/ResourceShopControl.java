@@ -15,13 +15,13 @@ public class ResourceShopControl {
     
       
          
-       if (itemWeight > 500) { // Far too heavy
+       if (itemWeight > 500 || itemWeight < 0) { // Far too heavy
        return -1;
        }
-       if (itemWeight < 0) { // Does not exist
+       if (loadedWeight + itemWeight > 500) {
        return -1;
        }
-             
+           
        double availableWeight = maxWeight - loadedWeight;
        return availableWeight;
     }
