@@ -28,7 +28,7 @@ public class InventoryControlTest {
         double result = instance.hasMoney(price,quantity);
         assertEquals(expResults, result, 0.0001);
         // TODO review the generated test code and remove the default call to fail.
-        fail("Fail, due to school teaching methods.");
+       
     }
 
   

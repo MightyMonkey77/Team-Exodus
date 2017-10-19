@@ -11,17 +11,19 @@ package byui.cit260.JamaicanExodus.control;
  */
 public class ResourceShopControl {
  
-    public static double addToChest(double itemWieght, double maxWieght, double loadedWieght) {
+    public static double addToChest(double itemWeight, double maxWeight, double loadedWeight) {
     
-       if (itemWieght <= 0) { // Does not exist
-        return -1;
-       }   
-       if (itemWieght > 500) { // Far too heavy
+      
+         
+       if (itemWeight > 500) { // Far too heavy
+       return -1;
+       }
+       if (itemWeight < 0) { // Does not exist
        return -1;
        }
              
-       double availableWieght = maxWieght - loadedWieght;
-       return availableWieght;
+       double availableWeight = maxWeight - loadedWeight;
+       return availableWeight;
     }
     
     }
