@@ -11,4 +11,20 @@ package byui.cit260.JamaicanExodus.control;
  */
 public class InventoryControl {
     
+    public double hasMoney(double price, double quantity){
+    
+        if (quantity < 0 ) {
+            return -1;
+        }
+            
+        if (price < 0) {
+            return -1;
+        }
+       
+        double totalItemPrice = quantity * price;
+        return totalItemPrice;
+    } 
+   
+    
 }
+
