@@ -16,15 +16,29 @@ import java.util.Scanner;
 public class DistanceTravelled {
     public static void main( String [] arg) {
         Scanner scanner = new Scanner( System.in) ;
-        double travelingSpeed;
-        int timeTravelled;
+        double travellingSpeed = -1;
+        int timeTravelled = 0;
+        double distanceTravelled;
         
-        System.out.println( "Please enter your speed");
-        travelingSpeed = scanner.nextDouble();
+        while( travellingSpeed <0){
+            System.out.println( "Please enter your speed");
+            travellingSpeed = scanner.nextDouble();
+    }
         
+        while( travellingSpeed >3){
+            System.out.println( "Please enter your speed");
+            travellingSpeed = scanner.nextDouble();
+    }
         
-        for( int hour = 1; hour <= travelingSpeed; hour++ ){
+        timeTravelled = scanner.nextInt();
         
+        System.out.println( "Time\tDistance Travelled\n----\t---------" );
+            for( int time = 1; time <= timeTravelled; time++ ){
+            distanceTravelled = ( time * travellingSpeed );
+            System.out.println( time + "\t" + distanceTravelled);
+            }
+            {
+            
         }
     }
 }
