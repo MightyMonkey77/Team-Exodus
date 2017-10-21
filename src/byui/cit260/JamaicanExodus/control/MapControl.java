@@ -10,5 +10,5 @@ package byui.cit260.JamaicanExodus.control;
  * @author Office Payne
  */
 public class MapControl {
-    
+          
 }
