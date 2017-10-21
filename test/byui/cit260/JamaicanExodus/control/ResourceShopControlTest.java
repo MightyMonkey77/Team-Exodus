@@ -30,11 +30,9 @@ public class ResourceShopControlTest {
         ResourceShopControl instance = new ResourceShopControl();
         double expResult = 380;
         double result = ResourceShopControl.addToChest(itemWeight, maxWeight, loadedWeight);
-        assertEquals(expResult, result, 0.0001);
-        // TODO review the generated test code and remove the default call to fail.
-       
+        assertEquals(expResult, result, 0.00000);
+      
     }
-
     {
         System.out.println("\tTest case 2");
         double itemWeight = 501;
@@ -42,7 +40,7 @@ public class ResourceShopControlTest {
         double loadedWeight = 120;
         double expResult = -1;
         double result = ResourceShopControl.addToChest(itemWeight, maxWeight, loadedWeight);
-        assertEquals(expResult, result, 0.0001);
+        assertEquals(expResult, result, 0.00000);
    
     }
     
