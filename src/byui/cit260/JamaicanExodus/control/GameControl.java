@@ -5,11 +5,34 @@
  */
 package byui.cit260.JamaicanExodus.control;
 
+
+import byui.cit260.JamaicanExodus.model.JamaicanExodus;
+import byui.cit260.JamaicanExodus.model.Player;
+
+
+
 /**
  *
  * @author Office Payne
  */
 public class GameControl {
+    
+
+    public static Player createPlayer(String name) {
+        
+               
+     if (name == null) {
+         return null;
+     }
+     Player player = new Player();
+     player.setName(name);
+     
+     JamaicanExodus.setPlayer(player);
+     
+    return player;
+    }
+
+   
     
     
 }

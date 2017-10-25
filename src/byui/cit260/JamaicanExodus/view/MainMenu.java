@@ -9,6 +9,10 @@ package byui.cit260.JamaicanExodus.view;
  *
  * @author Office Payne
  */
-public class OpeningScreen {
+public class MainMenu {
+
+    void displayMainMenu() {
+        System.out.println("Hurray");
+    }
     
 }
