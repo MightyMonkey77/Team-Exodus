@@ -19,7 +19,7 @@ public class ConsumptionControl {
 
         if (pace < 0) 
         {
-            System.out.println("\t'Error: Minimum  pace is 0.'");
+            System.out.println("\t'Error: Minimum pace is 0.'");
             return 0.00;
         }
         else if(pace == 0) 
