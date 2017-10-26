@@ -6,51 +6,100 @@
 package byui.cit260.JamaicanExodus.model;
 
 import java.awt.Point;
+import java.io.Serializable;
+import java.util.Objects;
 
 /**
  *
  * @author Office Payne
  */
-public enum Actor {
-    
-    
-    Father("Gerain","He is the head of the houshold in whom all trust.",new Point (1,1),5),
-    Mother("Aigay","Mother and Patron of the family, she is the strength.",new Point (0,1),5),
-    Son("Shamar","16 years old, definatly a mommas boy.",new Point (2,2), 5),
-    Daughter("Zhade","14 years old, loves her family.",new Point (2,3), 5),
-    Friend1("Libano","Male, worked with Gerain before the occupation.",new Point (3,1), 5),
-    Friend2("Kenise","Female, mothers best friend, single, age 25.",new Point (2,3), 5),
-    Female("Ini","Female, work associate, was the head of reliefe projects.", new Point (1,3), 5);
-    
-    private final String name;
-    private final String description;
-    private final Point coordinates;
+public class Actor implements Serializable {
+     
+     
+    private String name;
+    private String description;
+    private Point coordinates;
     private int startingHealth = 5;
 
-    Actor(String name, String description, Point coordinates, int startingHealth) {
-          this.name = name;
-          this.description = description;
-          this.coordinates = coordinates;
-          this.startingHealth = startingHealth;
-}
-    
+    public Actor() {
+    }
+        
     public String getName() {
-       return name;
-}
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public String getDescription() {
-       return description;
-}
-    public Point getCoordinates(){
-       return coordinates;
-}
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Point getCoordinates() {
+        return coordinates;
+    }
+
+    public void setCoordinates(Point coordinates) {
+        this.coordinates = coordinates;
+    }
+
     public int getStartingHealth() {
-       return startingHealth;
-} 
-    
+        return startingHealth;
+    }
+
+    public void setStartingHealth(int startingHealth) {
+        this.startingHealth = startingHealth;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 19 * hash + Objects.hashCode(this.name);
+        hash = 19 * hash + Objects.hashCode(this.description);
+        hash = 19 * hash + Objects.hashCode(this.coordinates);
+        hash = 19 * hash + this.startingHealth;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Actor other = (Actor) obj;
+        if (this.startingHealth != other.startingHealth) {
+            return false;
+        }
+        if (!Objects.equals(this.name, other.name)) {
+            return false;
+        }
+        if (!Objects.equals(this.description, other.description)) {
+            return false;
+        }
+        if (!Objects.equals(this.coordinates, other.coordinates)) {
+            return false;
+        }
+        return true;
+    }
 
     @Override
     public String toString() {
         return "Actor{" + "name=" + name + ", description=" + description + ", coordinates=" + coordinates + ", startingHealth=" + startingHealth + '}';
     }
+
     
-}
+   
+    }
+    
+
