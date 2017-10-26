@@ -103,8 +103,9 @@ class HelpMenu {
 
     private void exitHelpMenu() {
         System.out.println("\n Exit Help Menu");
-        MainMenu mainMenu = new MainMenu();       
-        mainMenu.displayMainMenu();
+        //MainMenu mainMenu = new MainMenu();       
+        //mainMenu.displayMainMenu();
+        return;
     }
 }
         
