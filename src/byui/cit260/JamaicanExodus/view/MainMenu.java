@@ -28,6 +28,7 @@ public class MainMenu {
     }
     
     public void displayMainMenu() {
+        System.out.println(menu);
         boolean done = false;
         
         do{
