@@ -32,6 +32,10 @@ public class GameControl {
     return player;
     }
 
+    public static void createNewGame(Player player) {
+        System.out.println("Pardon our dust, we're building for a better tomorrow.."); //To change body of generated methods, choose Tools | Templates.
+    }
+
    
     
     

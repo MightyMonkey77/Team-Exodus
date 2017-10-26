@@ -5,31 +5,27 @@
  */
 package byui.cit260.JamaicanExodus.view;
 
-import byui.cit260.JamaicanExodus.control.GameControl;
-import byui.cit260.JamaicanExodus.model.JamaicanExodus;
 import java.util.Scanner;
 
 /**
  *
- * @author Office Payne
+ * @author Kim
  */
-public class MainMenu {
+class HelpMenu {
 
     private String menu;
     
-    public MainMenu() {
-        this.menu = "\nMain Menu"
+    public HelpMenu() {
+        this.menu = "\nHelp Menu"
                 +"\n"
-                +"\nN - Start New Game"
-                +"\nH - Help"
-                +"\nS - Save Game"
-                +"\nE - Exit Game"
-                +"\nQ - Quit Game"
+                +"\nG - Goal of the Game"
+                +"\nI - Inventory"
+                +"\nR - Resources"
+                +"\nF - Food Levels"
+                +"\nE - Exit Help Menu"
                 +"\n";
-        
-    }
-    
-    public void displayMainMenu() {
+    }    
+    public void displayHelpMenu() {
         System.out.println(menu);
         boolean done = false;
         
@@ -66,20 +62,20 @@ public class MainMenu {
     private boolean doAction(String choice){
         choice = choice.toUpperCase();
         switch(choice){
-            case "N": // this starts the game
-                this.startNewGame();
+            case "G": // this starts the game
+                this.gameGoal();
                 break;
-            case "H":
-                this.displayHelpMenu();
+            case "I":
+                this.inventory();
                 break;
-            case "S":
-                this.saveGame();
+            case "R":
+                this.resources();
+                break;
+            case "F":
+                this.foodLevel();
                 break;
             case "E":
-                this.exitGame();
-                break;
-            case "Q":
-                this.giveUp();    
+                this.exitHelpMenu();    
                 break;
             default :
                 System.out.println("\nInvalid Choice");
@@ -87,32 +83,30 @@ public class MainMenu {
                 
         }
         return false;
-    }    
+    }
 
-    private void startNewGame() {
-        GameControl.createNewGame(JamaicanExodus.getPlayer());
-        GameMenu gameMenu = new GameMenu();
-        gameMenu.displayMenu();
+    private void gameGoal() {
+        System.out.println("\nGame Goal");
+    }
+
+    private void inventory() {
+        System.out.println("\nInventory");
+    }
+
+    private void resources() {
+        System.out.println("\nResources");
+    }
+
+    private void foodLevel() {
+        System.out.println("\nFood Level");
+    }
+
+    private void exitHelpMenu() {
+        System.out.println("\nExit Help Menu");
+        MainMenu mainMenu = new MainMenu();
+        // Main menuy object        
+        mainMenu.displayMainMenu();
+    }
+}
         
-    }
 
-    private void displayHelpMenu() {
-        System.out.println("\nWelcome to the Help Menu, " +JamaicanExodus.getPlayer().getName());
-        HelpMenu helpMenu = new HelpMenu();
-        helpMenu.displayHelpMenu();
-        
-    }
-
-    private void saveGame() {
-        System.out.println("\nSave Your Game");
-    }
-
-    private void exitGame() {
-        System.out.println("\nExit Game");
-    }
-
-    private void giveUp() {
-        System.out.println("\nExit Program");
-    }
-    
-}    
