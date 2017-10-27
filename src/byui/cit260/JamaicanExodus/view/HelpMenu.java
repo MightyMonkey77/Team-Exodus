@@ -82,6 +82,7 @@ class HelpMenu {
                 break;
                 
         }
+        
         return false;
     }
 

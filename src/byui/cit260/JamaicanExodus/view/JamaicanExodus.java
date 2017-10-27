@@ -3,8 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package byui.cit260.JamaicanExodus.model;
+package byui.cit260.JamaicanExodus.view;
 
+import byui.cit260.JamaicanExodus.model.Game;
+import byui.cit260.JamaicanExodus.model.Player;
 import byui.cit260.JamaicanExodus.view.StartProgram;
 
 /**

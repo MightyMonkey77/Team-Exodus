@@ -6,7 +6,7 @@
 package byui.cit260.JamaicanExodus.control;
 
 
-import byui.cit260.JamaicanExodus.model.JamaicanExodus;
+import byui.cit260.JamaicanExodus.view.JamaicanExodus;
 import byui.cit260.JamaicanExodus.model.Player;
 
 

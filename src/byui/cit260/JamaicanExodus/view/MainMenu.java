@@ -6,7 +6,6 @@
 package byui.cit260.JamaicanExodus.view;
 
 import byui.cit260.JamaicanExodus.control.GameControl;
-import byui.cit260.JamaicanExodus.model.JamaicanExodus;
 import java.util.Scanner;
 
 /**
@@ -33,15 +32,15 @@ public class MainMenu {
         System.out.println(menu);
         boolean done = false;
         
-        do{
-        String menuOption = this.getMenuOption();
+        do {
+            String menuOption = this.getMenuOption();
         
-        if (menuOption.toUpperCase().equals("Q"))
-            return;
+            //if (menuOption.toUpperCase().equals("Q"))
+            //    return;
         
-        done = this.doAction (menuOption);
+            done = this.doAction (menuOption);
         
-    }
+        }
         while(!done);
     }
     private String getMenuOption() {
@@ -80,7 +79,7 @@ public class MainMenu {
                 return false;
             case "Q":
                 this.giveUp();    
-                return false;
+                return true; //see line 38,39
             default :
                 System.out.println("\nInvalid Choice");
                 break;
