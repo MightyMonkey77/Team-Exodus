@@ -62,7 +62,7 @@ class HelpMenu {
     private boolean doAction(String choice){
         choice = choice.toUpperCase();
         switch(choice){
-            case "G": // this starts the game
+            case "G": 
                 this.gameGoal();
                 break;
             case "I":
@@ -103,9 +103,8 @@ class HelpMenu {
 
     private void exitHelpMenu() {
         System.out.println("\n Exit Help Menu");
-        //MainMenu mainMenu = new MainMenu();       
-        //mainMenu.displayMainMenu();
-        return;
+        MainMenu mainMenu = new MainMenu();       
+        mainMenu.displayMainMenu();
     }
 }
         
