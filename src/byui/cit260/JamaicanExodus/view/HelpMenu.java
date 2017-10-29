@@ -16,13 +16,13 @@ class HelpMenu {
     private String menu;
     
     public HelpMenu() {
-        this.menu = "\nHelp Menu"
+        this.menu = "\n Help Menu"
                 +"\n"
-                +"\nG - Goal of the Game"
-                +"\nI - Inventory"
-                +"\nR - Resources"
-                +"\nF - Food Levels"
-                +"\nE - Exit Help Menu"
+                +"\n G - Goal of the Game"
+                +"\n I - Inventory"
+                +"\n R - Resources"
+                +"\n F - Food Levels"
+                +"\n E - Exit Help Menu"
                 +"\n";
     }    
     public void displayHelpMenu() {
@@ -46,12 +46,12 @@ class HelpMenu {
         boolean validated = false;
         
         while (!validated) {
-            System.out.println("\nInput Choice");
+            System.out.println("\n Input Choice");
             value = keyboard.nextLine();
             value = value.trim();
             
             if (value.length() <0){
-                System.out.println("\nInvalid Input");
+                System.out.println("\n *Invalid Input*");
                 continue;    
             }
             break;
@@ -62,7 +62,7 @@ class HelpMenu {
     private boolean doAction(String choice){
         choice = choice.toUpperCase();
         switch(choice){
-            case "G": // this starts the game
+            case "G": 
                 this.gameGoal();
                 break;
             case "I":
@@ -78,33 +78,33 @@ class HelpMenu {
                 this.exitHelpMenu();    
                 break;
             default :
-                System.out.println("\nInvalid Choice");
+                System.out.println("\n *Invalid Choice*");
                 break;
                 
         }
+        
         return false;
     }
 
     private void gameGoal() {
-        System.out.println("\nGame Goal");
+        System.out.println("\n Game Goal");
     }
 
     private void inventory() {
-        System.out.println("\nInventory");
+        System.out.println("\n Inventory");
     }
 
     private void resources() {
-        System.out.println("\nResources");
+        System.out.println("\n Resources");
     }
 
     private void foodLevel() {
-        System.out.println("\nFood Level");
+        System.out.println("\n Food Level");
     }
 
     private void exitHelpMenu() {
-        System.out.println("\nExit Help Menu");
-        MainMenu mainMenu = new MainMenu();
-        // Main menuy object        
+        System.out.println("\n Exit Help Menu");
+        MainMenu mainMenu = new MainMenu();       
         mainMenu.displayMainMenu();
     }
 }

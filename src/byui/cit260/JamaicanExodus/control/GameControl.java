@@ -6,7 +6,7 @@
 package byui.cit260.JamaicanExodus.control;
 
 
-import byui.cit260.JamaicanExodus.model.JamaicanExodus;
+import byui.cit260.JamaicanExodus.view.JamaicanExodus;
 import byui.cit260.JamaicanExodus.model.Player;
 
 
@@ -33,7 +33,7 @@ public class GameControl {
     }
 
     public static void createNewGame(Player player) {
-        System.out.println("Pardon our dust, we're building for a better tomorrow.."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Pardon our dust, we're building for a better tomorrow."); //To change body of generated methods, choose Tools | Templates.
     }
 
    

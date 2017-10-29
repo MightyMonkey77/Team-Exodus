@@ -6,7 +6,6 @@
 package byui.cit260.JamaicanExodus.view;
 
 import byui.cit260.JamaicanExodus.control.GameControl;
-import byui.cit260.JamaicanExodus.model.JamaicanExodus;
 import java.util.Scanner;
 
 /**
@@ -18,13 +17,13 @@ public class MainMenu {
     private String menu;
     
     public MainMenu() {
-        this.menu = "\nMain Menu"
+        this.menu = "\n Main Menu"
                 +"\n"
-                +"\nN - Start New Game"
-                +"\nH - Help"
-                +"\nS - Save Game"
-                +"\nE - Exit Game"
-                +"\nQ - Quit Game"
+                +"\n N - Start New Game"
+                +"\n H - Help"
+                +"\n S - Save Game"
+                +"\n E - Exit Game"
+                +"\n Q - Quit Game"
                 +"\n";
         
     }
@@ -33,15 +32,15 @@ public class MainMenu {
         System.out.println(menu);
         boolean done = false;
         
-        do{
-        String menuOption = this.getMenuOption();
+        do {
+            String menuOption = this.getMenuOption();
         
-        if (menuOption.toUpperCase().equals("Q"))
-            return;
+            //if (menuOption.toUpperCase().equals("Q"))
+            //    return;
         
-        done = this.doAction (menuOption);
+            done = this.doAction (menuOption);
         
-    }
+        }
         while(!done);
     }
     private String getMenuOption() {
@@ -66,25 +65,24 @@ public class MainMenu {
     private boolean doAction(String choice){
         choice = choice.toUpperCase();
         switch(choice){
-            case "N": // this starts the game
+            case "N":
                 this.startNewGame();
-                break;
+                return false;
             case "H":
                 this.displayHelpMenu();
-                break;
+                return false;
             case "S":
                 this.saveGame();
-                break;
+                return false;
             case "E":
                 this.exitGame();
-                break;
+                return false;
             case "Q":
                 this.giveUp();    
-                break;
+                return true; //see line 38,39
             default :
                 System.out.println("\nInvalid Choice");
                 break;
-                
         }
         return false;
     }    
@@ -97,22 +95,24 @@ public class MainMenu {
     }
 
     private void displayHelpMenu() {
-        System.out.println("\nWelcome to the Help Menu, " +JamaicanExodus.getPlayer().getName());
+        System.out.println("\n ================================================="
+                +"\n Welcome to the Help Menu, " +JamaicanExodus.getPlayer().getName()
+                +"\n =================================================");
         HelpMenu helpMenu = new HelpMenu();
         helpMenu.displayHelpMenu();
         
     }
 
     private void saveGame() {
-        System.out.println("\nSave Your Game");
+        System.out.println("\n Save Your Game");
     }
 
     private void exitGame() {
-        System.out.println("\nExit Game");
+        System.out.println("\n Exit Game");
     }
 
     private void giveUp() {
-        System.out.println("\nExit Program");
+        System.out.println("\n Exit Program");
     }
     
 }    
