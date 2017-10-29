@@ -17,7 +17,7 @@ public class MainMenu {
     private String menu;
     
     public MainMenu() {
-        this.menu = "\n Main Menu"
+        this.menu = "\n MAIN Menu"
                 +"\n"
                 +"\n N - Start New Game"
                 +"\n H - Help"
@@ -29,7 +29,7 @@ public class MainMenu {
     }
     
     public void displayMainMenu() {
-        System.out.println(menu);
+        //System.out.println(menu); - moved to line 52 
         boolean done = false;
         
         do {
@@ -49,6 +49,7 @@ public class MainMenu {
         boolean validated = false;
         
         while (!validated) {
+            System.out.println(menu);
             System.out.println("\nInput Choice");
             value = keyboard.nextLine();
             value = value.trim();
@@ -70,7 +71,7 @@ public class MainMenu {
                 return false;
             case "H":
                 this.displayHelpMenu();
-                return false;
+                return true;
             case "S":
                 this.saveGame();
                 return false;
@@ -82,13 +83,13 @@ public class MainMenu {
                 return true; //see line 38,39
             default :
                 System.out.println("\nInvalid Choice");
-                break;
+                return false;
         }
-        return false;
+        //return true;
     }    
 
     private void startNewGame() {
-        GameControl.createNewGame(JamaicanExodus.getPlayer());
+        //GameControl.createNewGame(JamaicanExodus.getPlayer());
         GameMenu gameMenu = new GameMenu();
         gameMenu.displayMenu();
         
@@ -104,15 +105,18 @@ public class MainMenu {
     }
 
     private void saveGame() {
-        System.out.println("\n Save Your Game");
+        System.out.println("\n Exciting 'Save Your Game' function coming soon!");
     }
 
     private void exitGame() {
-        System.out.println("\n Exit Game");
+        System.out.println("\n Revolutionary 'Exit Game' function coming soon!");
     }
 
     private void giveUp() {
-        System.out.println("\n Exit Program");
+        System.out.println("\n So long, and thanks for all the fish. "
+                         + "\n "
+                         + "\n P.S. Don't Panic!!"                      
+                         + "\n ");
     }
     
 }    

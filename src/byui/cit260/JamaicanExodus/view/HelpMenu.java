@@ -12,11 +12,11 @@ import java.util.Scanner;
  * @author Kim
  */
 class HelpMenu {
-
+    
     private String menu;
     
     public HelpMenu() {
-        this.menu = "\n Help Menu"
+        this.menu = "\n HELP Menu"
                 +"\n"
                 +"\n G - Goal of the Game"
                 +"\n I - Inventory"
@@ -26,7 +26,7 @@ class HelpMenu {
                 +"\n";
     }    
     public void displayHelpMenu() {
-        System.out.println(menu);
+        //System.out.println(menu); - moved to line 49
         boolean done = false;
         
         do{
@@ -46,6 +46,7 @@ class HelpMenu {
         boolean validated = false;
         
         while (!validated) {
+            System.out.println(menu);
             System.out.println("\n Input Choice");
             value = keyboard.nextLine();
             value = value.trim();
@@ -64,46 +65,51 @@ class HelpMenu {
         switch(choice){
             case "G": 
                 this.gameGoal();
-                break;
+                return false;
             case "I":
                 this.inventory();
-                break;
+                return false;
             case "R":
                 this.resources();
-                break;
+                return false;
             case "F":
                 this.foodLevel();
-                break;
+                return false;
             case "E":
                 this.exitHelpMenu();    
-                break;
+                return true;
             default :
                 System.out.println("\n *Invalid Choice*");
-                break;
+                return false;
                 
         }
-        
-        return false;
+        //return true;
     }
 
     private void gameGoal() {
-        System.out.println("\n Game Goal");
+        System.out.println("\n The goal of the game will be "
+                         + "\n displayed, someday, herein.");
     }
 
     private void inventory() {
-        System.out.println("\n Inventory");
+        System.out.println("\n You don't have anything right now, "
+                         + "\n we haven't programmed that yet.");
     }
 
     private void resources() {
-        System.out.println("\n Resources");
+        System.out.println("\n You've got a chocolate bar and a paper clip. "
+                         + "\n MacGyver is that you?");
     }
 
     private void foodLevel() {
-        System.out.println("\n Food Level");
+        System.out.println("\n There's that chocolate bar, "
+                         + "\n but its a resource, "
+                         + "\n so you can't eat it.");
     }
 
     private void exitHelpMenu() {
-        System.out.println("\n Exit Help Menu");
+        System.out.println("\n Exit, and go back to the place"
+                         + "\n from which you came.");
         MainMenu mainMenu = new MainMenu();       
         mainMenu.displayMainMenu();
     }
