@@ -6,6 +6,7 @@
 package byui.cit260.JamaicanExodus.view;
 
 import byui.cit260.JamaicanExodus.control.GameControl;
+import byui.cit260.JamaicanExodus.model.Player;
 import java.util.Scanner;
 
 /**
@@ -100,8 +101,9 @@ public class MainMenu {
                 +"\n =================================================");
         HelpMenu helpMenu = new HelpMenu();
         helpMenu.displayHelpMenu();
-        
     }
+              
+    
 
     private void saveGame() {
         System.out.println("\n Save Your Game");
@@ -115,4 +117,5 @@ public class MainMenu {
         System.out.println("\n Exit Program");
     }
     
+  
 }    
