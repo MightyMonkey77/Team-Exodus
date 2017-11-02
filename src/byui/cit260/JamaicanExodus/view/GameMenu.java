@@ -78,6 +78,9 @@ class GameMenu {
             case "O":
                 this.occupations();
                 return false;
+            case "L":
+                this.locationContents();
+                return false;    
             case "P":
                 this.moveToNewLocation();
                 return false;
@@ -143,11 +146,11 @@ class GameMenu {
     }    
 
     private void actors() {
-        System.out.println("Pardon our dust, we're building for a better tomorrow.");
+        System.out.println("All the world's a stage.");
     }
 
     private void occupations() {
-        System.out.println("Pardon our dust, we're building for a better tomorrow.");
+        System.out.println("Workin' 9 to 5, what a way to make a livin'...");
     }
    
 }
