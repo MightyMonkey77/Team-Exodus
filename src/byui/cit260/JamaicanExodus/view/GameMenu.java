@@ -5,14 +5,149 @@
  */
 package byui.cit260.JamaicanExodus.view;
 
+import java.util.Scanner;
+
 /**
  *
- * @author Kim
+ * @author Kim on a PC
  */
 class GameMenu {
-
-    void displayMenu() {
-        System.out.println("Pardon our dust, we're building for a better tomorrow!"); //To change body of generated methods, choose Tools | Templates.
+    
+    private final String menu;
+    
+    public GameMenu() {
+        this.menu = "\n GAME Menu"
+                +"\n"
+                +"\n I - Inventory"
+                +"\n A - Actors"
+                +"\n O - Choose Occupation"
+                +"\n L - View contents of location"
+                +"\n P - Move person to new location"
+                +"\n E - Estimate the resource needed"
+                +"\n G - Go into shop"
+                +"\n C - Confront Obstacle"
+                +"\n S - Solve Equation"
+                +"\n H - Help Menu"
+                +"\n M - Main Menu"
+                +"\n";
+    }    
+    public void displayGameMenu() 
+    {
+        boolean done = false;    
+            do
+            {
+                String menuOption = this.getMenuOption();
+                done = this.doAction (menuOption);   
+            }
+            while(!done);
+    }
+    private String getMenuOption()
+    {
+        Scanner keyboard = new Scanner(System.in); 
+        String value = "";
+        boolean validated = false;
+        
+        while (!validated) 
+        {
+            System.out.println(menu);
+            System.out.println("\n Input Choice");
+            value = keyboard.nextLine();
+            value = value.trim();
+            
+            if (value.length() <0)
+            {
+                System.out.println("\n *Invalid Input*");
+                continue;    
+            }
+            break;
+        }
+        return value;
+    }
+    
+    private boolean doAction(String choice)
+    {
+        choice = choice.toUpperCase();
+        switch(choice)
+        {
+            case "I":
+                this.inventory();
+                return false;
+            case "A":
+                this.actors();
+                return false;
+            case "O":
+                this.occupations();
+                return false;
+            case "P":
+                this.moveToNewLocation();
+                return false;
+            case "E":
+                this.estimateResources();    
+                return false;
+            case "G":
+                this.goInShop();    
+                return false;
+            case "C":
+                this.confrontObstacle();    
+                return false;
+            case "S":
+                this.solveEquation();    
+                return false;
+            case "H":
+                this.help();    
+                return true;
+            case "M":
+                this.main();    
+                return true;       
+            default :
+                System.out.println("\n *Invalid Choice*");
+                return false;              
+        }
+    }    
+    private void inventory() {
+        System.out.println("Coming soon to a game near you.");
     }
 
+    private void locationContents() {
+        System.out.println("Lots and lots of stuff around you.");
+    }
+
+    private void moveToNewLocation() {
+        System.out.println("Wherever you go, there you are.");
+    }
+
+    private void estimateResources() {
+        System.out.println("If you have to ask, you probably can't afford it.");
+    }
+
+    private void goInShop() {
+        System.out.println("Come on in, we've got cookies.");
+    }
+
+    private void confrontObstacle() {
+        System.out.println("Do or do not.  There is no try.");
+    }
+
+    private void solveEquation() {
+        System.out.println("Think hard, don't kill yourself.");
+    }
+
+    private void help() {
+        HelpMenu helpMenu = new HelpMenu();
+        helpMenu.displayHelpMenu();
+    }
+    
+    private void main() {
+        MainMenu mainMenu = new MainMenu();       
+        mainMenu.displayMainMenu();
+    }    
+
+    private void actors() {
+        System.out.println("Pardon our dust, we're building for a better tomorrow.");
+    }
+
+    private void occupations() {
+        System.out.println("Pardon our dust, we're building for a better tomorrow.");
+    }
+   
 }

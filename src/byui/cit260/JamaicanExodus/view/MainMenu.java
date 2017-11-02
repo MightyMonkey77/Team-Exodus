@@ -7,7 +7,6 @@ package byui.cit260.JamaicanExodus.view;
 
 import java.util.Scanner;
 
-
 /**
  *
  * @author Office Payne
@@ -68,7 +67,7 @@ public class MainMenu {
         switch(choice){
             case "N":
                 this.startNewGame();
-                return false;
+                return true;
             case "H":
                 this.displayHelpMenu();
                 return true;
@@ -91,7 +90,7 @@ public class MainMenu {
     private void startNewGame() {
         //GameControl.createNewGame(JamaicanExodus.getPlayer());
         GameMenu gameMenu = new GameMenu();
-        gameMenu.displayMenu();
+        gameMenu.displayGameMenu();
         
     }
 
