@@ -12,7 +12,7 @@ package byui.cit260.JamaicanExodus.view;
 class GameMenu {
 
     void displayMenu() {
-       System.out.println("Pardon our dust, we're building for a better tomorrow!"); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Pardon our dust, we're building for a better tomorrow!"); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
 }
