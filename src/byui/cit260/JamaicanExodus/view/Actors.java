@@ -70,67 +70,18 @@ public class Actors {
               continue;                                        
             }
             
-            System.out.println(actorsNames);
-            String actor2 = "";
-           
-            while (!validated) {
-            System.out.println("\n Enter First Name.");
-            actor2 = keyboard.nextLine();
-            actor2 = actor2.trim();
             
-            if (actor2.length() <0){
-                System.out.println("\n *Invalid Input*");
-              continue;                                        
-            }
-            
-             System.out.println(actorsNames);
-            String actor3 = "";
-           
-            while (!validated) {
-            System.out.println("\n Enter First Name.");
-            actor3 = keyboard.nextLine();
-            actor3 = actor3.trim();
-            
-            if (actor3.length() <0){
-                System.out.println("\n *Invalid Input*");
-              continue;                                        
-            }
-            
-             System.out.println(actorsNames);
-            String actor4 = "";
-           
-            while (!validated) {
-            System.out.println("\n Enter First Name.");
-            actor4 = keyboard.nextLine();
-            actor4 = actor4.trim();
-            
-            if (actor4.length() <0){
-                System.out.println("\n *Invalid Input*");
-              continue;                                        
-            }
-                            
-             System.out.println(actorsNames);
-            String actor5 = "";
-           
-            while (!validated) {
-            System.out.println("\n Enter First Name.");
-            actor5 = keyboard.nextLine();
-            actor5 = actor5.trim();
-            
-            if (actor5.length() <0){
-                System.out.println("\n *Invalid Input*");
-              continue;                                        
-            }
                 break;
         }
         return actor1;
     }
-           
+        
          
 
-   
-  
-    
+    private boolean doAction(String actorsNameGet) {
+        System.out.println("Future Home");
+          return false;
+    }
             
         
     }

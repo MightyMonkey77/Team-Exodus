@@ -77,7 +77,10 @@ class GameMenu {
                 return false;
             case "O":
                 this.occupations();
-                return true;
+                return false;
+            case "L":
+                this.locationContents();
+                return false;    
             case "P":
                 this.moveToNewLocation();
                 return false;
@@ -139,14 +142,18 @@ class GameMenu {
     }    
 
     private void actors() {
-         Actors actors = new Actors();
-         actors.displayActorsNames();
+        Actors actors = new Actors();
+        actors.displayActorsNames();
     }
 
     private void occupations() {
      
         Occupations occupations = new Occupations();
         occupations.displayOccupations();
+    }
+
+    private void locationContents() {
+       System.out.println("");
     }
    
 }
