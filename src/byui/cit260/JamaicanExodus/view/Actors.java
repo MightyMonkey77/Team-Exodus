@@ -11,12 +11,12 @@ import java.util.Scanner;
  *
  * @author Office Payne
  */
-public class GroupNames {
+public class Actors {
         
       private final String groupNames;
       
       
-      public GroupNames() {
+      public Actors() {
             System.out.println(JamaicanExodus.getPlayer().getName() + "Enter your actors name as well as 4 additional"
                             + " party member names. ");
             this.groupNames = "\n***********************************************"
