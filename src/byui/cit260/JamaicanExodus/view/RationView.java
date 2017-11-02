@@ -12,36 +12,49 @@ package byui.cit260.JamaicanExodus.view;
 public class RationView {
  
     
-        public enum Ration {
-	BARE(0, "Crumbs"), MEAGER(1, "Still Hungry"), NORMAL(2, "Normal"), WELLFED(3, "Stuffed");
-	
-	
-	private final int portion;
-
-	
-	private final String name;
-
-	
-	public static final int PROPER_PORTION = 2;
-	
-	
-	private Ration(int p, String name){
-		portion = p;
-		this.name = name;
-	}
-
-            /**
-             *
-             * @return
-             */
-            @Override
-	public String toString(){
-		return name;
-	}
-
-	
-	public int getPortion(){
-		return portion;
-	}
+        public String RationView;
+        public RationView() {
+            
+        this.RationView = "\n ration Menu"
+                +"\n"
+                +"\n 0 - eating air"
+                +"\n 1 - crumbs"
+                +"\n 2 - still hungry"
+                +"\n 3 - stuffed"
+                +"\n H - Help Menu"
+                +"\n M - Main Menu"
+                +"\n";
+    }    
+        public void displayRationView() 
+    {
+        boolean done = false;    
+            do
+            {
+                String RationViewOption = this.getRationView();
+                done = this.doAction (RationViewOption);   
+            }
+            while(!done);
+    }
+        private String getRationViewOption()
+    {
+        Scanner keyboard = new Scanner(System.in); 
+        String value = "";
+        boolean validated = false;
+        
+        while (!validated) 
+        {
+            System.out.println(RationView);
+            System.out.println("\n Input Choice");
+            value = keyboard.nextLine();
+            value = value.trim();
+            
+            if (value.length() <0)
+            {
+                System.out.println("\n *Invalid Input*");
+                continue;    
+            }
+            break;
         }
+        return value;
+}
 }
