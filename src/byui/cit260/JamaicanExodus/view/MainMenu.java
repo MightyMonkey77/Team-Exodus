@@ -9,6 +9,7 @@ import byui.cit260.JamaicanExodus.control.GameControl;
 import byui.cit260.JamaicanExodus.model.Player;
 import java.util.Scanner;
 
+
 /**
  *
  * @author Office Payne
@@ -52,7 +53,7 @@ public class MainMenu {
         while (!validated) {
             System.out.println(menu);
             System.out.println("\nInput Choice");
-            value = keyboard.nextLine();
+            value = keyboard.next();
             value = value.trim();
             
             if (value.length() <0){
