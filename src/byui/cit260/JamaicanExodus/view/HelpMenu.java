@@ -31,12 +31,7 @@ class HelpMenu {
         
         do{
         String menuOption = this.getMenuOption();
-        
-        if (menuOption.toUpperCase().equals("Q"))
-            return;
-        
-        done = this.doAction (menuOption);
-        
+        done = this.doAction (menuOption);   
     }
         while(!done);
     }
