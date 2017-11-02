@@ -18,6 +18,7 @@ private String descriptions;
     public Banker() {
     }
 
+  
     public double getStartingMoney() {
         return startingMoney;
     }

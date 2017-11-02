@@ -8,6 +8,7 @@ package byui.cit260.JamaicanExodus.control;
 
 import byui.cit260.JamaicanExodus.view.JamaicanExodus;
 import byui.cit260.JamaicanExodus.model.Player;
+import byui.cit260.JamaicanExodus.view.Occupations;
 
 
 
@@ -36,6 +37,13 @@ public class GameControl {
         System.out.println("Pardon our dust, we're building for a better tomorrow."); //To change body of generated methods, choose Tools | Templates.
                   
        
+    }
+     private void displayOccupations() {
+        System.out.println("\n ================================================="
+                +"\n Welcome to the Occupations Menu, " +JamaicanExodus.getPlayer().getName()
+                +"\n =================================================");
+        Occupations occupations = new Occupations();
+        occupations.displayOccupations();
     }
     }
 

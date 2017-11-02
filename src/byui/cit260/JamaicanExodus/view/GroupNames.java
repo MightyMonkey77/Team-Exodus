@@ -17,7 +17,7 @@ public class GroupNames {
       
       
       public GroupNames() {
-            System.out.println("Enter your actors name as well as 4 additional"
+            System.out.println(JamaicanExodus.getPlayer().getName() + "Enter your actors name as well as 4 additional"
                             + " party member names. ");
             this.groupNames = "\n***********************************************"
                             + "\n          Memebers of Your group:              "
@@ -28,11 +28,11 @@ public class GroupNames {
                             + "\n 4.                                            "
                             + "\n 5.                                            "
                             + "\n***********************************************";
-            
-      }
+      }   
+      
       
           public void displayGroupNames() {
-        System.out.println(groupNames);
+     
         boolean done = false;
         
         do{
@@ -47,6 +47,7 @@ public class GroupNames {
         while(!done);
     }
         private String getGroupNames() {
+            System.out.println(groupNames);
             Scanner keyboard = new Scanner(System.in); 
             String actor1 = "";
             boolean validated = false;
@@ -66,12 +67,11 @@ public class GroupNames {
         return actor1;
     }
         
- 
-
-        
+         
 
     private boolean doAction(String groupNamesGet) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Future Home");
+          return false;
     }
             
         
