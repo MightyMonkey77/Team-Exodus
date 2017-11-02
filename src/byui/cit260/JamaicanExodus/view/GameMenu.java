@@ -71,13 +71,13 @@ class GameMenu {
         {
             case "I":
                 this.inventory();
-                return false;
+                return true;
             case "A":
                 this.actors();
-                return false;
+                return true;
             case "O":
                 this.occupations();
-                return false;
+                return true;
             case "L":
                 this.locationContents();
                 return false;    
@@ -89,7 +89,7 @@ class GameMenu {
                 return false;
             case "G":
                 this.goInShop();    
-                return false;
+                return true;
             case "C":
                 this.confrontObstacle();    
                 return false;
@@ -108,7 +108,8 @@ class GameMenu {
         }
     }    
     private void inventory() {
-        System.out.println("Coming soon to a game near you.");
+        ItemMenu itemMenu = new ItemMenu();
+        itemMenu.displayItemMenu();
     }
 
     private void moveToNewLocation() {
@@ -120,7 +121,8 @@ class GameMenu {
     }
 
     private void goInShop() {
-        System.out.println("Come on in, we've got cookies.");
+        ShopMenu shopMenu = new ShopMenu();
+        shopMenu.displayShop();
     }
 
     private void confrontObstacle() {
