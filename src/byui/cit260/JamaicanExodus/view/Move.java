@@ -9,6 +9,6 @@ package byui.cit260.JamaicanExodus.view;
  *
  * @author mikeg
  */
-public boolean Move (){
-    Move[]
+public Move (){
+   
 }

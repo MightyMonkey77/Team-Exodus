@@ -83,7 +83,7 @@ class GameMenu {
                 return false;    
             case "P":
                 this.moveToNewLocation();
-                return false;
+                return true;
             case "E":
                 this.estimateResources();    
                 return false;
@@ -113,7 +113,8 @@ class GameMenu {
     }
 
     private void moveToNewLocation() {
-        System.out.println("Wherever you go, there you are.");
+       RationView rationView = new RationView();
+       rationView.displayRationView();
     }
 
     private void estimateResources() {

@@ -18,8 +18,8 @@ public class Actors {
       
       
       public Actors() {
-            System.out.println(JamaicanExodus.getPlayer().getName() + "Enter your actors name as well as 4 additional"
-                            + " party member names. ");
+            System.out.println(JamaicanExodus.getPlayer().getName() + "Enter your fellow travellers. "
+                            + " (Enter Five Names) ");
           String actor1 = "";
           String actor2 = "";
           String actor3 = "";
@@ -57,7 +57,13 @@ public class Actors {
         private String getActorsNames() {
             System.out.println(actorsNames);
             Scanner keyboard = new Scanner(System.in); 
+            //String actors[] = new actors[5];
+            //String actors = "";
             String actor1 = "";
+            //  String actor2 = "";
+            //  String actor3 = "";
+            //  String actor4 = "";
+            //  String actor5 = "";
             boolean validated = false;
         
             while (!validated) {
@@ -74,9 +80,9 @@ public class Actors {
                 break;
         }
         return actor1;
+     
     }
         
-         
 
     private boolean doAction(String actorsNameGet) {
         System.out.println("Future Home");

@@ -5,6 +5,8 @@
  */
 package byui.cit260.JamaicanExodus.view;
 
+import java.util.Scanner;
+
 /**
  *
  * @author mikeg
@@ -12,10 +14,10 @@ package byui.cit260.JamaicanExodus.view;
 public class RationView {
  
     
-        public String RationView;
+        public String rationView;
         public RationView() {
             
-        this.RationView = "\n ration Menu"
+        this.rationView = "\n ration Menu"
                 +"\n"
                 +"\n 0 - eating air"
                 +"\n 1 - crumbs"
@@ -30,8 +32,9 @@ public class RationView {
         boolean done = false;    
             do
             {
-                String RationViewOption = this.getRationView();
-                done = this.doAction (RationViewOption);   
+                String rationViewOption = this.getRationViewOption();
+                
+                done = this.doAction (rationViewOption);
             }
             while(!done);
     }
@@ -43,8 +46,8 @@ public class RationView {
         
         while (!validated) 
         {
-            System.out.println(RationView);
-            System.out.println("\n Input Choice");
+            System.out.println(rationView);
+            System.out.println("\n How many do you wish to eat? ");
             value = keyboard.nextLine();
             value = value.trim();
             
@@ -57,4 +60,59 @@ public class RationView {
         }
         return value;
 }
+
+    private boolean doAction(String choice) {
+            choice = choice.toUpperCase();
+        switch(choice){
+            case "0":
+                this.eatingAir();
+                return true;
+            case "1":
+                this.crumbs();
+                return true;
+            case "2":
+                this.stillHungry();
+                return true;
+            case "3":
+                this.stuffed();
+                return true;
+            case "H":
+                 this.helpMenu();
+                 return true;
+            case "M":
+                this.mainMenu();
+                return true;
+            default :
+                System.out.println("\nInvalid Choice");
+                return false;
+        }
+        //return true;
+    }
+
+    private void eatingAir() {
+       System.out.println("Want to starve do you!");  
+    }
+
+    private void crumbs() {
+       System.out.println("Small meal.");
+    }
+
+    private void stillHungry() {
+       System.out.println("Need more food?");
+    }
+
+    private void stuffed() {
+       System.out.println("Most food one could have.");
+    }
+
+    private void helpMenu() {
+        HelpMenu helpMenu = new HelpMenu();
+        helpMenu.displayHelpMenu();
+    }
+
+    private void mainMenu() {
+        MainMenu mainMenu = new MainMenu();       
+        mainMenu.displayMainMenu();
+    }
+    
 }
