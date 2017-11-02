@@ -7,7 +7,6 @@ package byui.cit260.JamaicanExodus.view;
 
 import byui.cit260.JamaicanExodus.model.Game;
 import byui.cit260.JamaicanExodus.model.Player;
-import byui.cit260.JamaicanExodus.view.StartProgram;
 
 /**
  *

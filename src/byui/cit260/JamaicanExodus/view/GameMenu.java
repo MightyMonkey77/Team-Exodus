@@ -77,7 +77,7 @@ class GameMenu {
                 return false;
             case "O":
                 this.occupations();
-                return false;
+                return true;
             case "P":
                 this.moveToNewLocation();
                 return false;
@@ -106,10 +106,6 @@ class GameMenu {
     }    
     private void inventory() {
         System.out.println("Coming soon to a game near you.");
-    }
-
-    private void locationContents() {
-        System.out.println("Lots and lots of stuff around you.");
     }
 
     private void moveToNewLocation() {
@@ -143,11 +139,14 @@ class GameMenu {
     }    
 
     private void actors() {
-        System.out.println("Pardon our dust, we're building for a better tomorrow.");
+         Actors actors = new Actors();
+         actors.displayActorsNames();
     }
 
     private void occupations() {
-        System.out.println("Pardon our dust, we're building for a better tomorrow.");
+     
+        Occupations occupations = new Occupations();
+        occupations.displayOccupations();
     }
    
 }

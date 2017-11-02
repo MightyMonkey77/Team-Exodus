@@ -14,12 +14,12 @@ import java.util.Scanner;
  * @author Office Payne
  */
 public class Occupations {
-    
+             
       private String occuMenu;
         
       public Occupations() {
         
-        this.occuMenu = "\n*****************************************************"
+        this.occuMenu = "\n       ****************************************************"
                 +"\n       |             OccupationSelection                   |"
                 +"\n       ****************************************************"
                 +"\n        B - Banker"
@@ -27,6 +27,7 @@ public class Occupations {
                 +"\n        F - Farmer"
                 +"\n        S - Shipwrieght"
                 +"\n        E - Software Engineer"
+                +"\n        Q - Quit"
                 +"\n       *****************************************************";
         
     }
@@ -38,8 +39,8 @@ public class Occupations {
         do {
             String occupationsOption = this.getOccupationsOption();
         
-            //if (menuOption.toUpperCase().equals("Q"))
-            //    return;
+           if (occupationsOption.toUpperCase().equals("Q"))
+               return;
         
             done = this.doAction (occupationsOption);
         
@@ -71,19 +72,19 @@ public class Occupations {
         switch(choice){
             case "B":
                 this.banker();
-                return false;
+                return true;
             case "C":
                 this.carpenter();
                 return true;
             case "F":
                 this.farmer();
-                return false;
+                return true;
             case "S":
                 this.shipwrieght();
-                return false;
+                return true;
             case "E":
                 this.softwareEngineer();    
-                return true; //see line 38,39
+                return true;                      
             default :
                 System.out.println("\nInvalid Choice");
                 return false;

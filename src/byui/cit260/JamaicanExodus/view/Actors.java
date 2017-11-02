@@ -13,41 +13,49 @@ import java.util.Scanner;
  */
 public class Actors {
         
-      private final String groupNames;
+      private final String actorsNames;
+      
       
       
       public Actors() {
             System.out.println(JamaicanExodus.getPlayer().getName() + "Enter your actors name as well as 4 additional"
                             + " party member names. ");
-            this.groupNames = "\n***********************************************"
+          String actor1 = "";
+          String actor2 = "";
+          String actor3 = "";
+          String actor4 = "";
+          String actor5 = "";
+                    
+                    this.actorsNames = "\n***********************************************"
                             + "\n          Memebers of Your group:              "
                             + "\n                                               "
-                            + "\n 1.                                            "
-                            + "\n 2.                                            "
-                            + "\n 3.                                            "
-                            + "\n 4.                                            "
-                            + "\n 5.                                            "
+                            + "\n 1." + actor1 + "                              "
+                            + "\n 2." + actor2 + "                              "
+                            + "\n 3." + actor3 + "                              "
+                            + "\n 4." + actor4 + "                              "
+                            + "\n 5." + actor5 + "                              "
                             + "\n***********************************************";
+            
       }   
       
       
-          public void displayGroupNames() {
+        public void displayActorsNames() {
      
         boolean done = false;
         
         do{
-        String groupNamesGet= this.getGroupNames();
+        String actorsNamesGet= this.getActorsNames();
         
-        if (groupNamesGet.toUpperCase().equals("Q"))
+        if (actorsNamesGet.toUpperCase().equals("Q"))
             return;
         
-        done = this.doAction (groupNamesGet);
+        done = this.doAction (actorsNamesGet);
         
     }
         while(!done);
     }
-        private String getGroupNames() {
-            System.out.println(groupNames);
+        private String getActorsNames() {
+            System.out.println(actorsNames);
             Scanner keyboard = new Scanner(System.in); 
             String actor1 = "";
             boolean validated = false;
@@ -59,20 +67,70 @@ public class Actors {
             
             if (actor1.length() <0){
                 System.out.println("\n *Invalid Input*");
-               continue; 
-                                        
+              continue;                                        
             }
-            break;
+            
+            System.out.println(actorsNames);
+            String actor2 = "";
+           
+            while (!validated) {
+            System.out.println("\n Enter First Name.");
+            actor2 = keyboard.nextLine();
+            actor2 = actor2.trim();
+            
+            if (actor2.length() <0){
+                System.out.println("\n *Invalid Input*");
+              continue;                                        
+            }
+            
+             System.out.println(actorsNames);
+            String actor3 = "";
+           
+            while (!validated) {
+            System.out.println("\n Enter First Name.");
+            actor3 = keyboard.nextLine();
+            actor3 = actor3.trim();
+            
+            if (actor3.length() <0){
+                System.out.println("\n *Invalid Input*");
+              continue;                                        
+            }
+            
+             System.out.println(actorsNames);
+            String actor4 = "";
+           
+            while (!validated) {
+            System.out.println("\n Enter First Name.");
+            actor4 = keyboard.nextLine();
+            actor4 = actor4.trim();
+            
+            if (actor4.length() <0){
+                System.out.println("\n *Invalid Input*");
+              continue;                                        
+            }
+                            
+             System.out.println(actorsNames);
+            String actor5 = "";
+           
+            while (!validated) {
+            System.out.println("\n Enter First Name.");
+            actor5 = keyboard.nextLine();
+            actor5 = actor5.trim();
+            
+            if (actor5.length() <0){
+                System.out.println("\n *Invalid Input*");
+              continue;                                        
+            }
+                break;
         }
         return actor1;
     }
-        
+           
          
 
-    private boolean doAction(String groupNamesGet) {
-        System.out.println("Future Home");
-          return false;
-    }
+   
+  
+    
             
         
     }
