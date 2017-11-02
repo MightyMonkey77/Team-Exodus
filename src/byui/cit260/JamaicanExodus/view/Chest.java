@@ -9,6 +9,29 @@ package byui.cit260.JamaicanExodus.view;
  *
  * @author mikeg
  */
-public class Chest {
-    
+public Chest  {
+    private String Chest;
+
+        private String Chest(){
+        
+            this.Chest =  ("\n*********************************************"
+                  +"\n                      Chest Inventory                "
+                  +"\n_____________________________________________________"
+                  +"\n      MaxWeight                                      "
+                  +"\n      AmountLoaded                                   "
+                  +"\n      LoadedWright                                   "
+                  +"\n*****************************************************");
+
+}
+
+    @override
+    public boolean doAction(String value) {
+        boolean done = false;
+        value = value.t
+
+
+}
+
+
+
 }
