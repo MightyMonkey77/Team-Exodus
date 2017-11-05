@@ -1,37 +1,26 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+ * This is an experimaental view.
+*/
 package byui.cit260.JamaicanExodus.view;
-
 
 import byui.cit260.JamaicanExodus.model.Actor;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+
 /**
  *
  * @author Office Payne
  */
-public class Actors {
-        
+public class Companions {
+    
     private final List<Actor> actors = new ArrayList<>();
     
   
-    public Actors() {}
+    public Companions() {
        
-      public void displayActorsNames() {
-          
-           boolean done = false;
+     
         
-        do{
-        String menuOption = this.getMenuOption();
-        done = this.doAction (menuOption);   
-    }
-        while(!done);
-    }
-          private String getMenuOption() {
       Scanner keyboard = new Scanner(System.in);
       System.out.println("Enter first companions name: ");
       String actorName1 = keyboard.nextLine();
@@ -67,21 +56,18 @@ public class Actors {
       companionFive.setName(actorName5);
       
       actors.add(companionFive);
-        return null;
-          }  
-
-    private boolean doAction(String menuOption) {
-        for (Actor actor : actors) {
-            System.out.println(actor);
-        }
-        return true;
+      
+       printActors();  
+       
     }
+
+    private void printActors() {
+           for (Actor actor : actors) {
+                System.out.println(actors);
+        }
+    }
+
+    
+    
+    
 }
-  
-        
-   
-
-   
- 
-   
-
