@@ -19,7 +19,7 @@ public class Actor implements Serializable {
     private String name;
     private String description;
     private Point coordinates;
-    private int startingHealth = 5;
+    private int startingHealth = 100;
 
     public Actor() {
     }
