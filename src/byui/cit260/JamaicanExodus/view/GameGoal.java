@@ -20,8 +20,8 @@ public class GameGoal extends View{
              +"\n****************************************************" 
              +"\n****************************************************"  
              +"\n   Your goal is to travel from ____ to _____ in one "
-             +"     piece! You will incounter, obsticale and hunger  "
-             +"     make the right choices.....                      "
+             +"     piece! You will incounter, obsticale, equations  "
+             +"     and hunger make the right choices.....           "
              +"\n"  
              +"\n"  
              +"\n"  
@@ -35,7 +35,7 @@ public class GameGoal extends View{
 }
 
 
-@override
+@Override
     public boolean doAction(String choice){
         choice = choice.toUpperCase();
         switch(choice){
@@ -47,4 +47,9 @@ public class GameGoal extends View{
                 return false;
         }
         //return true;
-    }    
+    }   
+
+    private void exitGame() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+}
