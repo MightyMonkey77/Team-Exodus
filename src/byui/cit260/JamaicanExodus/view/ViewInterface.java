@@ -9,7 +9,7 @@ package byui.cit260.JamaicanExodus.view;
  *
  * @author Office Payne
  */
-public class ViewInterface {
+public interface ViewInterface {
     
     public void display();
     public String getInput();

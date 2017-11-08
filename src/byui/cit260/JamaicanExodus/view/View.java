@@ -24,29 +24,33 @@ public abstract class View implements ViewInterface {
     
     @Override
     public void display() {
+        
         boolean done = false;
         do {
-        String choice = this.getInput();
-        if (choice.toUpperCase().equals("Q"))
-            return;
-        done = this.doAction(choice);
-        }   
-        while (!done);
+            String choice = this.getInput();
+            if (choice.toUpperCase().equals("Q"))
+                return;
+            done = this.doAction(choice);
+        
+        }while (!done);
     
     }
     
     @Override
     public String getInput() {
+        
         Scanner keyboard = new Scanner(System.in); 
-        String value = "";
         boolean valid = false;
+        String value = null;
         
         while (!valid) {
+            
             System.out.println("\n" + this.displayMessage);
-            value = keyboard.next();
+            
+            value = keyboard.nextLine();
             value = value.trim();
                        
-            if (value.length() <0){
+            if (value.length() <1){
                 System.out.println("\nInvalid Input");
                 continue;    
             }

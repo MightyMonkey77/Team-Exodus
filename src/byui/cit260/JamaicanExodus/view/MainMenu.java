@@ -25,7 +25,8 @@ public class MainMenu extends View  {
     }
     
 
-    private boolean doAction(String choice){
+    @Override
+    public boolean doAction(String choice){
         choice = choice.toUpperCase();
         switch(choice){
             case "N":
