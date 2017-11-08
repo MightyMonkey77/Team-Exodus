@@ -5,8 +5,6 @@
  */
 package byui.cit260.JamaicanExodus.view;
 
-import java.util.Scanner;
-
 /**
  *
  * @author Kim on a PC
@@ -27,6 +25,7 @@ class GameMenu extends View {
                 +"\n G - Go into shop"
                 +"\n C - Confront Obstacle"
                 +"\n S - Solve Equation"
+                +"\n T - Time of Month Leaving"
                 +"\n H - Help Menu"
                 +"\n M - Main Menu"
                 +"\n");
