@@ -54,7 +54,7 @@ public class MainMenu extends View  {
     private void startNewGame() {
         //GameControl.createNewGame(JamaicanExodus.getPlayer());
         GameMenu gameMenu = new GameMenu();
-        gameMenu.displayGameMenu();
+        gameMenu.display();
         
     }
 
@@ -63,7 +63,7 @@ public class MainMenu extends View  {
                 +"\n Welcome to the Help Menu, " +JamaicanExodus.getPlayer().getName()
                 +"\n =================================================");
         HelpMenu helpMenu = new HelpMenu();
-        helpMenu.displayHelpMenu();
+        helpMenu.display();
     }
               
     

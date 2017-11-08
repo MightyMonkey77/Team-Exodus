@@ -11,12 +11,12 @@ import java.util.Scanner;
  *
  * @author Kim on a PC
  */
-class GameMenu {
+class GameMenu extends View {
     
-    private final String menu;
+    
     
     public GameMenu() {
-        this.menu = "\n GAME Menu"
+        super( "\n GAME Menu"
                 +"\n"
                 +"\n I - Inventory"
                 +"\n A - Actors"
@@ -29,42 +29,12 @@ class GameMenu {
                 +"\n S - Solve Equation"
                 +"\n H - Help Menu"
                 +"\n M - Main Menu"
-                +"\n";
+                +"\n");
     }    
-    public void displayGameMenu() 
-    {
-        boolean done = false;    
-            do
-            {
-                String menuOption = this.getMenuOption();
-                done = this.doAction (menuOption);   
-            }
-            while(!done);
-    }
-    private String getMenuOption()
-    {
-        Scanner keyboard = new Scanner(System.in); 
-        String value = "";
-        boolean validated = false;
-        
-        while (!validated) 
-        {
-            System.out.println(menu);
-            System.out.println("\n Input Choice");
-            value = keyboard.nextLine();
-            value = value.trim();
-            
-            if (value.length() <0)
-            {
-                System.out.println("\n *Invalid Input*");
-                continue;    
-            }
-            break;
-        }
-        return value;
-    }
+  
     
-    private boolean doAction(String choice)
+    @Override
+    public boolean doAction(String choice)
     {
         choice = choice.toUpperCase();
         switch(choice)
@@ -101,7 +71,10 @@ class GameMenu {
                 return true;
             case "M":
                 this.main();    
-                return true;       
+                return true; 
+            case "T":
+                this.months();    
+                return true; 
             default :
                 System.out.println("\n *Invalid Choice*");
                 return false;              
@@ -109,12 +82,12 @@ class GameMenu {
     }    
     private void inventory() {
         ItemMenu itemMenu = new ItemMenu();
-        itemMenu.displayItemMenu();
+        itemMenu.display();
     }
 
     private void moveToNewLocation() {
        RationView rationView = new RationView();
-       rationView.displayRationView();
+       rationView.display();
     }
 
     private void estimateResources() {
@@ -123,7 +96,7 @@ class GameMenu {
 
     private void goInShop() {
         ShopMenu shopMenu = new ShopMenu();
-        shopMenu.displayShop();
+        shopMenu.display();
     }
 
     private void confrontObstacle() {
@@ -136,7 +109,7 @@ class GameMenu {
 
     private void help() {
         HelpMenu helpMenu = new HelpMenu();
-        helpMenu.displayHelpMenu();
+        helpMenu.display();
     }
     
     private void main() {
@@ -152,11 +125,19 @@ class GameMenu {
     private void occupations() {
      
         Occupations occupations = new Occupations();
-        occupations.displayOccupations();
+        occupations.display();
     }
 
     private void locationContents() {
        System.out.println("");
     }
+
+    private void months() {
+       Months months = new Months();
+       months.display();
+    }
+
+ 
+    
    
 }

@@ -13,13 +13,13 @@ import java.util.Scanner;
  *
  * @author Office Payne
  */
-public class Occupations {
+public class Occupations extends View {
              
-      private String occuMenu;
+    
         
       public Occupations() {
         
-        this.occuMenu = "\n       ****************************************************"
+        super( "\n       ****************************************************"
                 +"\n       |             OccupationSelection                   |"
                 +"\n       ****************************************************"
                 +"\n        B - Banker"
@@ -28,46 +28,14 @@ public class Occupations {
                 +"\n        S - Shipwrieght"
                 +"\n        E - Software Engineer"
                 +"\n        Q - Quit"
-                +"\n       *****************************************************";
+                +"\n       *****************************************************");
         
     }
     
-    public void displayOccupations() {
-      
-        boolean done = false;
-        
-        do {
-            String occupationsOption = this.getOccupationsOption();
-        
-           if (occupationsOption.toUpperCase().equals("Q"))
-               return;
-        
-            done = this.doAction (occupationsOption);
-        
-        }
-        while(!done);
-    }
-    private String getOccupationsOption() {
-        Scanner keyboard = new Scanner(System.in); 
-        String value = "";
-        boolean validated = false;
-        
-        while (!validated) {
-            System.out.println(occuMenu);
-            System.out.println("\nSelect Occupation from the list.");
-            value = keyboard.nextLine();
-            value = value.trim();
-            
-            if (value.length() <0){
-                System.out.println("\nInvalid Input");
-                continue;    
-            }
-            break;
-        }
-        return value;
-    }
+  
     
-    private boolean doAction(String choice){
+      @Override
+    public boolean doAction(String choice){
         choice = choice.toUpperCase();
         switch(choice){
             case "B":

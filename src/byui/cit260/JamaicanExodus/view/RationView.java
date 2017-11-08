@@ -11,13 +11,13 @@ import java.util.Scanner;
  *
  * @author mikeg
  */
-public class RationView {
+public class RationView extends View {
  
     
-        public String rationView;
+      
         public RationView() {
             
-        this.rationView = "\n ration Menu"
+        super( "\n ration Menu"
                 +"\n"
                 +"\n 0 - eating air"
                 +"\n 1 - crumbs"
@@ -25,43 +25,12 @@ public class RationView {
                 +"\n 3 - stuffed"
                 +"\n H - Help Menu"
                 +"\n M - Main Menu"
-                +"\n";
+                +"\n");
     }    
-        public void displayRationView() 
-    {
-        boolean done = false;    
-            do
-            {
-                String rationViewOption = this.getRationViewOption();
-                
-                done = this.doAction (rationViewOption);
-            }
-            while(!done);
-    }
-        private String getRationViewOption()
-    {
-        Scanner keyboard = new Scanner(System.in); 
-        String value = "";
-        boolean validated = false;
-        
-        while (!validated) 
-        {
-            System.out.println(rationView);
-            System.out.println("\n How many do you wish to eat? ");
-            value = keyboard.nextLine();
-            value = value.trim();
-            
-            if (value.length() <0)
-            {
-                System.out.println("\n *Invalid Input*");
-                continue;    
-            }
-            break;
-        }
-        return value;
-}
+    
 
-    private boolean doAction(String choice) {
+        @Override
+    public boolean doAction(String choice) {
             choice = choice.toUpperCase();
         switch(choice){
             case "0":
@@ -107,7 +76,7 @@ public class RationView {
 
     private void helpMenu() {
         HelpMenu helpMenu = new HelpMenu();
-        helpMenu.displayHelpMenu();
+        helpMenu.display();
     }
 
     private void mainMenu() {
