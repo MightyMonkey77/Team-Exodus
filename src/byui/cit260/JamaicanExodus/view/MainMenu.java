@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author Office Payne
  */
-public class MainMenu {
+public class MainMenu  {
 
     private String menu;
     
@@ -34,8 +34,8 @@ public class MainMenu {
         do {
             String menuOption = this.getMenuOption();
         
-            //if (menuOption.toUpperCase().equals("Q"))
-            //    return;
+            if (menuOption.toUpperCase().equals("Q"))
+                return;
         
             done = this.doAction (menuOption);
         
