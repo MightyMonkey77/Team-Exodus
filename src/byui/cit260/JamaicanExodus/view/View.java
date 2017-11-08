@@ -5,10 +5,56 @@
  */
 package byui.cit260.JamaicanExodus.view;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Office Payne
  */
-public class View {
+public abstract class View implements ViewInterface {
     
+    protected String displayMessage;
+    
+    public View() {
+    }
+    
+    public View(String message){
+        this.displayMessage = message;
+    }
+    
+    @Override
+    public void display() {
+        boolean done = false;
+        do {
+        String choice = this.getInput();
+        if (choice.toUpperCase().equals("Q"))
+            return;
+        done = this.doAction(choice);
+        }   
+        while (!done);
+    
+    }
+    
+    @Override
+    public String getInput() {
+        Scanner keyboard = new Scanner(System.in); 
+        String value = "";
+        boolean valid = false;
+        
+        while (!valid) {
+            System.out.println("\n" + this.displayMessage);
+            value = keyboard.next();
+            value = value.trim();
+                       
+            if (value.length() <0){
+                System.out.println("\nInvalid Input");
+                continue;    
+            }
+            break;
+        }
+        return value;
+    }
+  
 }
+    
+

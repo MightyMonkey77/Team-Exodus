@@ -5,63 +5,26 @@
  */
 package byui.cit260.JamaicanExodus.view;
 
-import java.util.Scanner;
-
 /**
  *
  * @author Office Payne
  */
-public class MainMenu  {
+public class MainMenu extends View  {
 
-    private String menu;
-    
+     
     public MainMenu() {
-        this.menu = "\n MAIN Menu"
+       super("\n MAIN Menu"
                 +"\n"
                 +"\n N - Start New Game"
                 +"\n H - Help"
                 +"\n S - Save Game"
                 +"\n E - Exit Game"
                 +"\n Q - Quit Game"
-                +"\n";
+                +"\n");
         
     }
     
-    public void displayMainMenu() {
-        //System.out.println(menu); - moved to line 52 
-        boolean done = false;
-        
-        do {
-            String menuOption = this.getMenuOption();
-        
-            if (menuOption.toUpperCase().equals("Q"))
-                return;
-        
-            done = this.doAction (menuOption);
-        
-        }
-        while(!done);
-    }
-    private String getMenuOption() {
-        Scanner keyboard = new Scanner(System.in); 
-        String value = "";
-        boolean validated = false;
-        
-        while (!validated) {
-            System.out.println(menu);
-            System.out.println("\nInput Choice");
-            value = keyboard.next();
-            value = value.trim();
-            
-            if (value.length() <0){
-                System.out.println("\nInvalid Input");
-                continue;    
-            }
-            break;
-        }
-        return value;
-    }
-    
+
     private boolean doAction(String choice){
         choice = choice.toUpperCase();
         switch(choice){

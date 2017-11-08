@@ -112,7 +112,7 @@ public class RationView {
 
     private void mainMenu() {
         MainMenu mainMenu = new MainMenu();       
-        mainMenu.displayMainMenu();
+        mainMenu.display();
     }
     
 }

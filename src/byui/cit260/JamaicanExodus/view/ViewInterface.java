@@ -11,4 +11,8 @@ package byui.cit260.JamaicanExodus.view;
  */
 public class ViewInterface {
     
+    public void display();
+    public String getInput();
+    public boolean doAction(String choice);
+    
 }

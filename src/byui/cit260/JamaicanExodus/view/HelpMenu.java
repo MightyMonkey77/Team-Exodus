@@ -106,7 +106,7 @@ class HelpMenu {
         System.out.println("\n Exit, and go back to the place"
                          + "\n from which you came.");
         MainMenu mainMenu = new MainMenu();       
-        mainMenu.displayMainMenu();
+        mainMenu.display();
     }
     
    

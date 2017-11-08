@@ -141,7 +141,7 @@ class GameMenu {
     
     private void main() {
         MainMenu mainMenu = new MainMenu();       
-        mainMenu.displayMainMenu();
+        mainMenu.display();
     }    
 
     private void actors() {

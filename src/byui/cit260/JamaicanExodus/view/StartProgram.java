@@ -126,7 +126,7 @@ public class StartProgram {
         
         MainMenu mainMenu = new MainMenu();
         // Main menuy object        
-        mainMenu.displayMainMenu();
+        mainMenu.display();
     }
     
     
