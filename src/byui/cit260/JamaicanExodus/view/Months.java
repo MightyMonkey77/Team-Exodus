@@ -17,12 +17,12 @@ public class Months extends View{
      super(" \n************************************************* "
          + " \n             Select your Month                    "
          + " \n**************************************************"
-         + " \n January "
-         + " \n Febuary "
-         + " \n March "
-         + " \n April "
-         + " \n May "
-         + " \n June"
+         + " \n J - January "
+         + " \n F - Febuary "
+         + " \n M - March "
+         + " \n A - April "
+         + " \n C - May "
+         + " \n D - June"
          + "\n***************************************************"         
     );
     }
@@ -31,22 +31,22 @@ public class Months extends View{
     public boolean doAction(String choice) {
              choice = choice.toUpperCase();
         switch(choice){
-            case "January": 
+            case "J": 
                 this.January();
-                return false;
-            case "Febuary":
+                return true;
+            case "F":
                 this.Febuary();
-                return false;
-            case "March":
+                return true;
+            case "M":
                 this.March();
-                return false;
-            case "April":
+                return true;
+            case "A":
                 this.April();
-                return false;
-            case "May":
+                return true;
+            case "C":
                 this.May();    
                 return true;
-            case "June":
+            case "D":
                 this.June();    
                 return true;    
             default :
@@ -59,29 +59,39 @@ public class Months extends View{
     }
 
     private int January() {
-        System.out.println("The cold month of January. Snow is heavy with little chance of lightening");
-        int value = 3;
+        System.out.println("Month of January. Average temp of 86F dry season.");
+        int value = (int) 0.25;
         return value;
     }
 
-    private void Febuary() {
-        System.out.println("");
+    private int Febuary() {
+        System.out.println("Month of Feburary. Average temp of 86F dry season. ");
+         int value = (int) 0.35;
+        return value;
     }
 
-    private void March() {
-        System.out.println("");
+    private int March() {
+        System.out.println("Month of March. Average temp of 88F dry season.");
+         int value = (int) 0.45;
+        return value;
     }
 
-    private void April() {
-        System.out.println("");
+    private int April() {
+        System.out.println("Month of April. Average temp of 88F begining of the first wet season.");
+         int value = (int) 0.25;
+        return value;
     }
 
-    private void May() {
-        System.out.println("");
+    private int May() {
+        System.out.println("Month of May. Average temp of 88F first wet season.");
+         int value = (int) 0.35;
+        return value;
     }
 
-    private void June() {
-       System.out.println("");
+    private int June() {
+       System.out.println("Month of June. Average temp of 90F lightening of the first wet season.");
+        int value = (int) 0.45;
+        return value;
     }
     
     
