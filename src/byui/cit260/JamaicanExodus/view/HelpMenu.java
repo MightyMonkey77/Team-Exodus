@@ -73,6 +73,8 @@ class HelpMenu extends View {
         System.out.println("\n There's that chocolate bar, "
                          + "\n but its a resource, "
                          + "\n so you can't eat it.");
+        FoodLevel foodLevel = new FoodLevel();
+        foodLevel.display();
     }
 
     private void exitHelpMenu() {
