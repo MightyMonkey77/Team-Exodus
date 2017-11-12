@@ -105,8 +105,8 @@ public class ResourceMenu extends View{
         System.out.println("\n Skittles"
                 + "\n These are magical little treats that cure any illness"
                 + "\n and fill anyone's belly.  Good luck finding any, and be"
-                + "\n advised, you may have to confront Marshawn Lynch to "
-                + "\n get some.  #worthit"
+                + "\n advised, you may have to confront an angry Marshawn Lynch"
+                + "\n to get some.  #soWorthIt #Yummmm"
                 + "\n");
     }
 }
