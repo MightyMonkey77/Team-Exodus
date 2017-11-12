@@ -65,14 +65,16 @@ class HelpMenu extends View {
     }
 
     private void resources() {
-        System.out.println("\n You've got a chocolate bar and a paper clip. "
-                         + "\n MacGyver is that you?");
+        //System.out.println("\n You've got a chocolate bar and a paper clip. "
+        //                 + "\n MacGyver is that you?");
+        ResourceMenu resourceMenu = new ResourceMenu();
+        resourceMenu.display();
     }
 
     private void foodLevel() {
-        System.out.println("\n There's that chocolate bar, "
-                         + "\n but its a resource, "
-                         + "\n so you can't eat it.");
+        //System.out.println("\n There's that chocolate bar, "
+        //                 + "\n but its a resource, "
+        //                 + "\n so you can't eat it.");
         FoodLevel foodLevel = new FoodLevel();
         foodLevel.display();
     }
