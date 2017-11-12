@@ -1,16 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+//
+// @Kimbuilt
+//
+
 package byui.cit260.JamaicanExodus.view;
 
 import java.util.Scanner;
 
-/**
- *
- * @author Kim
- */
 public class ResourceMenu extends View{
    
       public ResourceMenu() {
@@ -27,7 +22,6 @@ public class ResourceMenu extends View{
                +"\n    X - Exit" 
                +"\n  --------------------------------------------------"
                +"\n");
-        
    }   
       @Override 
     public boolean doAction(String choice){
@@ -35,7 +29,7 @@ public class ResourceMenu extends View{
         switch(choice){
             case "A":
                 this.Ammunition();
-                return false; 
+                return false; //false to keep looping
                 
             case "C":
                 this.Clothing();
@@ -59,14 +53,12 @@ public class ResourceMenu extends View{
                 
             case "X":
                 System.out.println("\n Godspeed and Good Luck!");  
-                return true;    
+                return true; // true to end the loop and return   
                 
             default :
                 System.out.println("\nInvalid Selection"); 
                 return false;    
         }
-      
-        
     }
 
     private void Ammunition() {
@@ -112,15 +104,11 @@ public class ResourceMenu extends View{
     private void Skittles() {
         System.out.println("\n Skittles"
                 + "\n These are magical little treats that cure any illness"
-                + "\n and fill any belly.  Good luck finding any, and be"
+                + "\n and fill anyone's belly.  Good luck finding any, and be"
                 + "\n advised, you may have to confront Marshawn Lynch to "
-                + "\n get any."
+                + "\n get some.  #worthit"
                 + "\n");
     }
-    
-   // private void Exit() {
-   //     System.out.println("\n Godspeed and Good Luck!");
-   // }
 }
 
 
