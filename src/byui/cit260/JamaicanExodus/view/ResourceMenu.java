@@ -58,14 +58,14 @@ public class ResourceMenu extends View{
             default :
                 System.out.println("\nInvalid Selection"); 
                 return false;    
-        }
-    }
+      }
+   }
 
-    private void Ammunition() {
+   private void Ammunition() {
         System.out.println("\n Ammunition:"
                 + "\n The stuff we like to talk about to drive Daryl nuts. "
                 + "\n");
-    }
+   }
 
     private void Clothing() {
         System.out.println("\n Clothing: "
@@ -74,7 +74,7 @@ public class ResourceMenu extends View{
                 + "\n Depending on the month, you may want more..."
                 + "\n                            - just sayin'"
                 + "\n");
-    }
+   }
 
     private void Food() {
         System.out.println("\n Food: "
@@ -83,7 +83,7 @@ public class ResourceMenu extends View{
                 + "\n If you decide to travel further, you will need more."
                 + "\n If you are sick, you will need to eat well to regain health."
                 + "\n");
-    }
+   }
 
     private void Medicine() {
         System.out.println("\n Medicine: "
@@ -92,14 +92,14 @@ public class ResourceMenu extends View{
                 + "\n There are also conditions which can't be remedied by"
                 + "\n simply eating. "
                 + "\n");
-    }
+   }
      
     private void Oxen() {
         System.out.println("\n Oxen: "
                 + "\n These are the big four-legged ugly things that carry"
                 + "\n your stuff.  Rumor has it, they taste like chicken."
                 + "\n");
-    }
+   }
     
     private void Skittles() {
         System.out.println("\n Skittles"
@@ -108,7 +108,7 @@ public class ResourceMenu extends View{
                 + "\n advised, you may have to confront an angry Marshawn Lynch"
                 + "\n to get some.  #soWorthIt #Yummmm"
                 + "\n");
-    }
+   }
 }
 
 
