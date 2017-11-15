@@ -18,8 +18,7 @@ import byui.cit260.JamaicanExodus.model.Player;
 public class GameControl {
     
 
-    public static Player createPlayer(String name) {
-        
+    public static Player createPlayer(String name) {  
                
      if (name == null) {
          return null;
@@ -32,11 +31,13 @@ public class GameControl {
     return player;
     }
 
-    public static void createNewGame(Player player) {
-        System.out.println("Pardon our dust, we're building for a better tomorrow."); //To change body of generated methods, choose Tools | Templates.
-                  
+    public void createNewGame() {
+        System.out.println("What why.");
        
     }
+    
+
+   
    
     }
 

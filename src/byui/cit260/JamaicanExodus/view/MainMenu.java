@@ -5,6 +5,9 @@
  */
 package byui.cit260.JamaicanExodus.view;
 
+import byui.cit260.JamaicanExodus.control.GameControl;
+import byui.cit260.JamaicanExodus.model.Player;
+
 /**
  *
  * @author Office Payne
@@ -17,6 +20,7 @@ public class MainMenu extends View  {
                 +"\n"
                 +"\n N - Start New Game"
                 +"\n H - Help"
+                +"\n L - Load Saved Game"
                 +"\n S - Save Game"
                 +"\n E - Exit Game"
                 +"\n Q - Quit Game"
@@ -31,30 +35,40 @@ public class MainMenu extends View  {
         switch(choice){
             case "N":
                 this.startNewGame();
-                return true;
+                break;
             case "H":
                 this.displayHelpMenu();
-                return true;
+                break;
+            case "L":
+                this.loadSavedGame();
+                break;
             case "S":
                 this.saveGame();
-                return false;
+                break;
             case "E":
                 this.exitGame();
-                return false;
+                break;
             case "Q":
                 this.giveUp();    
-                return true; //see line 38,39
+                break; //see line 38,39
             default :
                 System.out.println("\nInvalid Choice");
                 return false;
         }
         //return true;
+        return true;
     }    
 
-    private void startNewGame() {
+    private void startNewGame() { 
+        // create new game
+       // int returnValue = GameControl.createNewGame();
+       // if (returnValue < 0) {
+        //    System.out.println("ERROR - Failiure to Launch.");
+       // }
         //GameControl.createNewGame(JamaicanExodus.getPlayer());
-        GameMenu gameMenu = new GameMenu();
-        gameMenu.display();
+        GameControl gameControl = new GameControl();
+        gameControl.createNewGame();
+       
         
     }
 
@@ -81,6 +95,10 @@ public class MainMenu extends View  {
                          + "\n "
                          + "\n P.S. Don't Panic!!"                      
                          + "\n ");
+    }
+
+    private void loadSavedGame() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
   

@@ -35,9 +35,7 @@ public class JamaicanExodus {
     
     
     
-    public static void main(String[] args) {
-        
-         
+    public static void main(String[] args) {     
         
         StartProgram startProgram = new StartProgram();
         startProgram.displayStartProgram();
