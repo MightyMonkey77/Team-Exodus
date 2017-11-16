@@ -3,24 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package byui.cit260.JamaicanExodus.control;
+package byui.cit260.JamaicanExodus.view;
 
-
-import byui.cit260.JamaicanExodus.view.JamaicanExodus;
+import byui.cit260.JamaicanExodus.model.Map;
 import byui.cit260.JamaicanExodus.model.Player;
-
-
 
 /**
  *
  * @author Office Payne
  */
-public class GameControl {
-    
+class GameControl {
 
-    public static Player createPlayer(String name) {  
-               
-     if (name == null) {
+    public static Player createPlayer(String name) {
+        
+       if (name == null) {
          return null;
      }
      Player player = new Player();
@@ -32,16 +28,9 @@ public class GameControl {
     }
 
     public void createNewGame() {
-        System.out.println("What why.");
+       System.out.println("Craptastic, still cannot get this to work.");
+       
        
     }
     
-
-   
-   
-    }
-
-   
-    
-    
-
+}

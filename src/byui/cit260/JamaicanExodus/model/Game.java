@@ -13,12 +13,15 @@ import java.util.Objects;
  */
 public class Game implements Serializable {
     
+    private Player player;
+    private Map map;
+    private Shop shop;
     private String description;
     private double totalTimePlayed;
     private double timePace;
     private double mapCoordinates;
     private double days;
-    private Player player;
+  
 
     public Game() {
     }
