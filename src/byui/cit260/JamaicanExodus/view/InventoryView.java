@@ -17,7 +17,8 @@ public enum InventoryView {
        TOOLS ("Tools", "Tools used by carpenter, Shipwrieght", 40.00, 30.56),
     COMPUTER ("Laptop","Used by Software Engineer", 1000.00, 8.03 ),
         CALC ("Calculater", "Bankers Calculater", 80.00, 1 ),
-    FARMTOOLS("Farming Tools", "Tools used by a farmer", 60.00, 26.38);
+    FARMTOOLS("Farming Tools", "Tools used by a farmer", 60.00, 26.38),
+    MEDICINE ("Medicine", "To heal peoples", 25.00, 2.36);
     
     private final String name;
     private final String description;
