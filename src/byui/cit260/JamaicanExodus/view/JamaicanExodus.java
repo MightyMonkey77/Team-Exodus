@@ -5,6 +5,8 @@
  */
 package byui.cit260.JamaicanExodus.view;
 
+
+import byui.cit260.JamaicanExodus.model.Actor;
 import byui.cit260.JamaicanExodus.model.Game;
 import byui.cit260.JamaicanExodus.model.Player;
 
@@ -16,7 +18,17 @@ public class JamaicanExodus {
 
     private static Game currentGame = null;
     private static Player player = null;
+    private static Actor actor = null;
+    
 
+    public static Actor getActor() {
+        return actor;
+    }
+
+    public static void setActor(Actor actor) {
+        JamaicanExodus.actor = actor;
+    }
+        
     public static Game getCurrentGame() {
         return currentGame;
     }

@@ -18,6 +18,7 @@ public class Inventory implements Serializable {
     private String description;
     private double cost;
     private double weight;
+    private int quantity;
 
     public Inventory() {
     }
@@ -50,17 +51,26 @@ public class Inventory implements Serializable {
         return weight;
     }
 
-    public void setWeihgt(double weihgt) {
-        this.weight = weihgt;
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 83 * hash + Objects.hashCode(this.name);
-        hash = 83 * hash + Objects.hashCode(this.description);
-        hash = 83 * hash + (int) (Double.doubleToLongBits(this.cost) ^ (Double.doubleToLongBits(this.cost) >>> 32));
-        hash = 83 * hash + (int) (Double.doubleToLongBits(this.weight) ^ (Double.doubleToLongBits(this.weight) >>> 32));
+        int hash = 3;
+        hash = 37 * hash + Objects.hashCode(this.name);
+        hash = 37 * hash + Objects.hashCode(this.description);
+        hash = 37 * hash + (int) (Double.doubleToLongBits(this.cost) ^ (Double.doubleToLongBits(this.cost) >>> 32));
+        hash = 37 * hash + (int) (Double.doubleToLongBits(this.weight) ^ (Double.doubleToLongBits(this.weight) >>> 32));
+        hash = 37 * hash + this.quantity;
         return hash;
     }
 
@@ -82,6 +92,9 @@ public class Inventory implements Serializable {
         if (Double.doubleToLongBits(this.weight) != Double.doubleToLongBits(other.weight)) {
             return false;
         }
+        if (this.quantity != other.quantity) {
+            return false;
+        }
         if (!Objects.equals(this.name, other.name)) {
             return false;
         }
@@ -93,8 +106,9 @@ public class Inventory implements Serializable {
 
     @Override
     public String toString() {
-        return "Inventory{" + "name=" + name + ", description=" + description + ", cost=" + cost + ", weight=" + weight + '}';
+        return "Inventory{" + "name=" + name + ", description=" + description + ", cost=" + cost + ", weight=" + weight + ", quantity=" + quantity + '}';
     }
+
     
     
 

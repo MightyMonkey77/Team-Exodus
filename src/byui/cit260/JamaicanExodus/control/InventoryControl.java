@@ -24,6 +24,10 @@ public class InventoryControl {
         double totalItemPrice = quantity * price;
         return totalItemPrice;
     } 
+
+    public void inventorySort(String[] items) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
    
     
 }

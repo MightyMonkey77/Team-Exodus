@@ -5,6 +5,7 @@
  */
 package byui.cit260.JamaicanExodus.view;
 
+
 /**
  *
  * @author Office Payne
@@ -63,10 +64,12 @@ public class MainMenu extends View  {
         //    System.out.println("ERROR - Failiure to Launch.");
        // }
         //GameControl.createNewGame(JamaicanExodus.getPlayer());
-        GameControl gameControl = new GameControl();
-        gameControl.createNewGame();
-       
-        
+        //GameControl gameControl = new GameControl();
+        //gameControl.createNewGame();
+       GameControl.createNewGame(JamaicanExodus.getPlayer()); //New game
+             
+       GameMenu gameMenu = new GameMenu();
+       gameMenu.display();
     }
 
     private void displayHelpMenu() {

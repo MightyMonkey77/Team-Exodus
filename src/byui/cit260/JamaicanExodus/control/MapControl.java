@@ -5,11 +5,18 @@
  */
 package byui.cit260.JamaicanExodus.control;
 
+import byui.cit260.JamaicanExodus.model.Map;
+
 /**
  *
  * @author Office Payne
  */
 public class MapControl {
+
+    public static Map createMap() {
+        System.out.println("Not supported yet."); //To be implemented later?
+        return null;
+    }
  
     public double timeTraveled( double rate, double distance){
         

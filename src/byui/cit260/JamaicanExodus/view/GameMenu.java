@@ -80,8 +80,8 @@ class GameMenu extends View {
         }
     }    
     private void inventory() {
-        ItemMenu itemMenu = new ItemMenu();
-        itemMenu.display();
+        InventoryView inventoryView = new InventoryView();
+        inventoryView.display();
     }
 
     private void moveToNewLocation() {

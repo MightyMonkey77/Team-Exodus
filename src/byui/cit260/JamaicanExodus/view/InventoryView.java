@@ -5,60 +5,84 @@
  */
 package byui.cit260.JamaicanExodus.view;
 
+import byui.cit260.JamaicanExodus.control.InventoryControl;
+
 /**
  *
  * @author Office Payne
  */
-public enum InventoryView {
-     
-    CLOTHING ("Clothing", "Full set of traveling clothes", 20.00, 7.25),
-     RATIONS ("Rations", "Sustinace needed", 5.00, 1.11),
-        FUEL ("Gasoline", "For first viehicle", 3.25, 21.23),
-       TOOLS ("Tools", "Tools used by carpenter, Shipwrieght", 40.00, 30.56),
-    COMPUTER ("Laptop","Used by Software Engineer", 1000.00, 8.03 ),
-        CALC ("Calculater", "Bankers Calculater", 80.00, 1 ),
-    FARMTOOLS("Farming Tools", "Tools used by a farmer", 60.00, 26.38),
-    MEDICINE ("Medicine", "To heal peoples", 25.00, 2.36);
+public class InventoryView extends View{
     
-    private final String name;
-    private final String description;
-    private final double cost;
-    private final double weight;
-    
-    private InventoryView(String name, String description, double cost, double weight ) {
-        this.name = name;
-        this.description = description;
-        this.cost = cost;
-        this.weight = weight; 
+    public InventoryView() {
         
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public double getCost() {
-        return cost;
-    }
-
-    public double getWeight() {
-        return weight;
-    }
-
-    @Override
-    public String toString() {
-        return "InventoryView{" + "name=" + name + ", description=" + description + ", cost=" + cost + ", weight=" + weight + '}';
+       super("\n"
+            + "\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+            + "\n+                      Inventory Menu                          +"               
+            + "\n+      You collect items in different areas of the map         +"
+            + "\n+     Here you can Look at what Items you currently have       +" 
+            + "\n+     You can use these items to help you on your journey      +"
+            + "\n+   You can also drop these items if you are carrying to much  +"                                        
+            + "\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+            + "\n+ V - View Your Inventory                                      +"
+            + "\n+ U - Use Inventory Item                                       +"                                 
+            + "\n+ R - Run inventory report                                     +"
+            + "\n+ D - Drop Inventory Item                                      +"
+            + "\n+ Q - Quit                                                     +"   
+            + "\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+            );
     }
     
-    
+         @Override
+        public boolean doAction(String value) {
+            
+            value = value.toUpperCase(); //convert choice to upper case
+        
+            switch (value){
+            
+            case "V"://View inventory items?
+                this.viewInventoryItems();
+                break;
+                
+            case "R"://run report on inventory items?
+                this.printInventoryReport();
+                break;
+            
+            case "U"://Use inventory item
+                this.useInventoryItem();
+               break;
+               
+            case "D"://Drop item
+                this.dropInventoryItem();
+                break;
+        }        
+            return false;
+    }            
+
+    private void viewInventoryItems() {
+            System.out.println("\nInventory called YO!");          
+     
+             String[] items = {"Clothing", "Rations", "Fuel", "Tools", "Computer", "Calculator", "FarmTools", "Medicine" };
+             InventoryControl viewSortedInventory = new InventoryControl();
+             
+             viewSortedInventory.inventorySort(items);
+             
+             for (String item : items) {
+                  System.out.println(item);
+        }
+    }
+
+    private void printInventoryReport() {
+         System.out.println("\n Future home possibly. Not sure how to code this.");
+    }
+
+    private void useInventoryItem() {
+       System.out.println("\n Just used it.");
+    }
+
+    private void dropInventoryItem() {
+        
+         DropItemView dropItem = new DropItemView();
+         dropItem.dropInventoryItem();
+    }
 }
-
-    
-    
-    
-    
     
