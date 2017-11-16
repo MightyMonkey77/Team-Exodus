@@ -17,7 +17,7 @@ public class Inventory implements Serializable {
     private String name;
     private String description;
     private double cost;
-    private double weihgt;
+    private double weight;
 
     public Inventory() {
     }
@@ -46,12 +46,12 @@ public class Inventory implements Serializable {
         this.cost = cost;
     }
 
-    public double getWeihgt() {
-        return weihgt;
+    public double getWeight() {
+        return weight;
     }
 
     public void setWeihgt(double weihgt) {
-        this.weihgt = weihgt;
+        this.weight = weihgt;
     }
 
     @Override
