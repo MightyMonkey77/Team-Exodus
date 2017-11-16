@@ -48,56 +48,56 @@ class GameControl {
           
           Inventory clothing = new Inventory();
           clothing.setDescription("clothing");
-          clothing.setQuantity(5);
+          clothing.setQuantity(1);
           clothing.setWeight(2.03);
           clothing.setCost(15.55);
           inventory[Item.clothing.ordinal()] = clothing;
           
           Inventory rations = new Inventory();
           rations.setDescription("rations");
-          rations.setQuantity(5);
+          rations.setQuantity(1);
           rations.setWeight(2.03);
           rations.setCost(15.55);
           inventory[Item.rations.ordinal()] = rations;
           
           Inventory fuel = new Inventory();
-          fuel.setDescription("clothing");
-          fuel.setQuantity(5);
+          fuel.setDescription("fuel");
+          fuel.setQuantity(1);
           fuel.setWeight(2.03);
           fuel.setCost(15.55);
           inventory[Item.fuel.ordinal()] = fuel;
           
           Inventory tools = new Inventory();
           tools.setDescription("tools used by carpenter, shipwrieght");
-          tools.setQuantity(5);
+          tools.setQuantity(1);
           tools.setWeight(2.03);
           tools.setCost(15.55);
           inventory[Item.tools.ordinal()] = tools;
           
           Inventory computer = new Inventory();
           computer.setDescription("computer");
-          computer.setQuantity(5);
+          computer.setQuantity(1);
           computer.setWeight(2.03);
           computer.setCost(15.55);
           inventory[Item.computer.ordinal()] = computer;
           
           Inventory calc = new Inventory();
           calc.setDescription("calculator");
-          calc.setQuantity(5);
+          calc.setQuantity(1);
           calc.setWeight(2.03);
           calc.setCost(15.55);
           inventory[Item.calc.ordinal()] = calc;
           
           Inventory farmtools = new Inventory();
           farmtools.setDescription("farmtools");
-          farmtools.setQuantity(5);
+          farmtools.setQuantity(1);
           farmtools.setWeight(2.03);
           farmtools.setCost(15.55);
           inventory[Item.farmtools.ordinal()] = farmtools;
           
           Inventory medicine = new Inventory();
           medicine.setDescription("medicine");
-          medicine.setQuantity(5);
+          medicine.setQuantity(1);
           medicine.setWeight(2.03);
           medicine.setCost(15.55);
           inventory[Item.medicine.ordinal()] = farmtools;
