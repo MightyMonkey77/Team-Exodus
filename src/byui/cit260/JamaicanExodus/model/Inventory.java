@@ -60,7 +60,7 @@ public class Inventory implements Serializable {
         hash = 83 * hash + Objects.hashCode(this.name);
         hash = 83 * hash + Objects.hashCode(this.description);
         hash = 83 * hash + (int) (Double.doubleToLongBits(this.cost) ^ (Double.doubleToLongBits(this.cost) >>> 32));
-        hash = 83 * hash + (int) (Double.doubleToLongBits(this.weihgt) ^ (Double.doubleToLongBits(this.weihgt) >>> 32));
+        hash = 83 * hash + (int) (Double.doubleToLongBits(this.weight) ^ (Double.doubleToLongBits(this.weight) >>> 32));
         return hash;
     }
 
@@ -79,7 +79,7 @@ public class Inventory implements Serializable {
         if (Double.doubleToLongBits(this.cost) != Double.doubleToLongBits(other.cost)) {
             return false;
         }
-        if (Double.doubleToLongBits(this.weihgt) != Double.doubleToLongBits(other.weihgt)) {
+        if (Double.doubleToLongBits(this.weight) != Double.doubleToLongBits(other.weight)) {
             return false;
         }
         if (!Objects.equals(this.name, other.name)) {
@@ -93,7 +93,7 @@ public class Inventory implements Serializable {
 
     @Override
     public String toString() {
-        return "Inventory{" + "name=" + name + ", description=" + description + ", cost=" + cost + ", weihgt=" + weihgt + '}';
+        return "Inventory{" + "name=" + name + ", description=" + description + ", cost=" + cost + ", weihgt=" + weight + '}';
     }
     
     
