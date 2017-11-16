@@ -93,7 +93,7 @@ public class Inventory implements Serializable {
 
     @Override
     public String toString() {
-        return "Inventory{" + "name=" + name + ", description=" + description + ", cost=" + cost + ", weihgt=" + weight + '}';
+        return "Inventory{" + "name=" + name + ", description=" + description + ", cost=" + cost + ", weight=" + weight + '}';
     }
     
     

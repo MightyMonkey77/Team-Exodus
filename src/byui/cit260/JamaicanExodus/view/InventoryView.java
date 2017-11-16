@@ -28,9 +28,31 @@ public enum InventoryView {
         this.name = name;
         this.description = description;
         this.cost = cost;
-        this.weight = weight;
+        this.weight = weight; 
         
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public double getCost() {
+        return cost;
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    @Override
+    public String toString() {
+        return "InventoryView{" + "name=" + name + ", description=" + description + ", cost=" + cost + ", weight=" + weight + '}';
+    }
+    
     
 }
 

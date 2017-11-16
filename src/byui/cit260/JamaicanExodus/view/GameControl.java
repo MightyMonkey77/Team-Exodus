@@ -5,6 +5,8 @@
  */
 package byui.cit260.JamaicanExodus.view;
 
+import byui.cit260.JamaicanExodus.model.Actor;
+import byui.cit260.JamaicanExodus.model.Game;
 import byui.cit260.JamaicanExodus.model.Map;
 import byui.cit260.JamaicanExodus.model.Player;
 
@@ -28,9 +30,16 @@ class GameControl {
     }
 
     public void createNewGame() {
-       System.out.println("Craptastic, still cannot get this to work.");
-       
-       
-    }
+      System.out.println("Craptastic, still cannot get this to work.");
+     // Player player = new Player();
+     // player.getName();
+      
+     
+      
     
+      
+      
+    }
+
+       
 }

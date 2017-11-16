@@ -26,12 +26,12 @@ public class Actors {
            boolean done = false;
         
         do{
-        String menuOption = this.getMenuOption();
-        done = this.doAction (menuOption);   
+        String actor = this.getActor();
+        done = this.doAction (actor);   
     }
         while(!done);
     }
-          private String getMenuOption() {
+          private String getActor() {
       Scanner keyboard = new Scanner(System.in);
       System.out.println("Enter first companions name: ");
       String actorName1 = keyboard.nextLine();

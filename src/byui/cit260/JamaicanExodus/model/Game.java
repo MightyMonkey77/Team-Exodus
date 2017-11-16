@@ -73,14 +73,33 @@ public class Game implements Serializable {
         this.days = days;
     }
 
+    public Map getMap() {
+        return map;
+    }
+
+    public void setMap(Map map) {
+        this.map = map;
+    }
+
+    public Shop getShop() {
+        return shop;
+    }
+
+    public void setShop(Shop shop) {
+        this.shop = shop;
+    }
+
     @Override
     public int hashCode() {
         int hash = 5;
-        hash = 29 * hash + Objects.hashCode(this.description);
-        hash = 29 * hash + (int) (Double.doubleToLongBits(this.totalTimePlayed) ^ (Double.doubleToLongBits(this.totalTimePlayed) >>> 32));
-        hash = 29 * hash + (int) (Double.doubleToLongBits(this.timePace) ^ (Double.doubleToLongBits(this.timePace) >>> 32));
-        hash = 29 * hash + (int) (Double.doubleToLongBits(this.mapCoordinates) ^ (Double.doubleToLongBits(this.mapCoordinates) >>> 32));
-        hash = 29 * hash + (int) (Double.doubleToLongBits(this.days) ^ (Double.doubleToLongBits(this.days) >>> 32));
+        hash = 17 * hash + Objects.hashCode(this.player);
+        hash = 17 * hash + Objects.hashCode(this.map);
+        hash = 17 * hash + Objects.hashCode(this.shop);
+        hash = 17 * hash + Objects.hashCode(this.description);
+        hash = 17 * hash + (int) (Double.doubleToLongBits(this.totalTimePlayed) ^ (Double.doubleToLongBits(this.totalTimePlayed) >>> 32));
+        hash = 17 * hash + (int) (Double.doubleToLongBits(this.timePace) ^ (Double.doubleToLongBits(this.timePace) >>> 32));
+        hash = 17 * hash + (int) (Double.doubleToLongBits(this.mapCoordinates) ^ (Double.doubleToLongBits(this.mapCoordinates) >>> 32));
+        hash = 17 * hash + (int) (Double.doubleToLongBits(this.days) ^ (Double.doubleToLongBits(this.days) >>> 32));
         return hash;
     }
 
@@ -111,13 +130,25 @@ public class Game implements Serializable {
         if (!Objects.equals(this.description, other.description)) {
             return false;
         }
+        if (!Objects.equals(this.player, other.player)) {
+            return false;
+        }
+        if (!Objects.equals(this.map, other.map)) {
+            return false;
+        }
+        if (!Objects.equals(this.shop, other.shop)) {
+            return false;
+        }
         return true;
     }
 
     @Override
     public String toString() {
-        return "Game{" + "description=" + description + ", totalTimePlayed=" + totalTimePlayed + ", timePace=" + timePace + ", mapCoordinates=" + mapCoordinates + ", days=" + days + '}';
+        return "Game{" + "player=" + player + ", map=" + map + ", shop=" + shop + ", description=" + description + ", totalTimePlayed=" + totalTimePlayed + ", timePace=" + timePace + ", mapCoordinates=" + mapCoordinates + ", days=" + days + '}';
     }
+    
+
+    
     
     
 }
