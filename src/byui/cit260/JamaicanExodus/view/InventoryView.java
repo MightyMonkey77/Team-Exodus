@@ -55,34 +55,40 @@ public class InventoryView extends View{
                 this.dropInventoryItem();
                 break;
         }        
-            return false;
+            return true;
     }            
 
     private void viewInventoryItems() {
             System.out.println("\nInventory called YO!");          
      
-             String[] items = {"Clothing", "Rations", "Fuel", "Tools", "Computer", "Calculator", "FarmTools", "Medicine" };
-             InventoryControl viewSortedInventory = new InventoryControl();
+             //String[] items = {"Clothing", "Rations", "Fuel", "Tools", "Computer", "Calculator", "FarmTools", "Medicine" };
+             //InventoryControl viewSortedInventory = new InventoryControl();
              
-             viewSortedInventory.inventorySort(items);
+            // viewSortedInventory.inventorySort(items);
              
-             for (String item : items) {
-                  System.out.println(item);
-        }
+            // for (String item : items) {
+              //    System.out.println(item);
     }
 
     private void printInventoryReport() {
-         System.out.println("\n Future home possibly. Not sure how to code this.");
+        System.out.println("\n Future home possibly. Not sure how to code this.");
     }
 
     private void useInventoryItem() {
-       System.out.println("\n Just used it.");
+        System.out.println("\n Just used it.");
     }
 
     private void dropInventoryItem() {
-        
          DropItemView dropItem = new DropItemView();
          dropItem.dropInventoryItem();
     }
+    
 }
+
+    
+
+    
+
+   
+
     
