@@ -16,23 +16,20 @@ import byui.cit260.JamaicanExodus.model.Player;
  * @author Office Payne
  */
 class GameControl {
- 
+     // Need it to be able to display certain pieces first like gathering the actors names choosing the month of departure occupation and such. 
+     // should this not be in here to do first before the game menu is launched? 
     public static void createNewGame(Player player) {
      // System.out.println("Craptastic, still cannot get this to work.");
      Game currentGame = new Game(); // Starts the game.
      JamaicanExodus.setCurrentGame(currentGame); // Sets it to the main program.
     
-     JamaicanExodus.setPlayer(player);//sets current player into main program.
-     
-     
+     JamaicanExodus.setPlayer(player);//sets current player into main program.  
     }
-
-    private static class game {
-
-      
-        public game() {
-        }
+    public static Actor[] createActorList() {
+      // Do we really have to add the way the inventory is. We worked so hard to create an array already. Can we not just use that?  
+        return null;
     }
+   
     
     public enum Item {
     
@@ -121,7 +118,10 @@ class GameControl {
      
     return player;
     } 
-
+    
+    public static Map[][] createNewMap(){
+        return null;
+    }
    
     }
     

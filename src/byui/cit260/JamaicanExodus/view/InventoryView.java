@@ -60,14 +60,6 @@ public class InventoryView extends View{
 
     private void viewInventoryItems() {
             System.out.println("\nInventory called YO!");          
-     
-             //String[] items = {"Clothing", "Rations", "Fuel", "Tools", "Computer", "Calculator", "FarmTools", "Medicine" };
-             //InventoryControl viewSortedInventory = new InventoryControl();
-             
-            // viewSortedInventory.inventorySort(items);
-             
-            // for (String item : items) {
-              //    System.out.println(item);
     }
 
     private void printInventoryReport() {
