@@ -6,7 +6,6 @@
 package byui.cit260.JamaicanExodus.control;
 
 import byui.cit260.JamaicanExodus.model.Game;
-import byui.cit260.JamaicanExodus.model.Inventory;
 import byui.cit260.JamaicanExodus.model.Map;
 import byui.cit260.JamaicanExodus.view.JamaicanExodus;
 import javafx.scene.Scene;
@@ -16,12 +15,15 @@ import javafx.scene.Scene;
  * @author Office Payne
  */
 public class MapControl {
+    
+    
 
     public static Map createMap(int x, int y) {
        
-       Map map = new Map(13 ,22);
-       
-       
+        if (x < 0 || y < 0){
+        }
+        
+       Map map = new Map(13 ,22);      
        
        //Scenes array
        Scene[] scenes = createScenes();

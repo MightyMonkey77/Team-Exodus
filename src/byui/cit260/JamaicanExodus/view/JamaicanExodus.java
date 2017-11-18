@@ -22,7 +22,25 @@ public class JamaicanExodus {
     private static Actor[] actors = null;
     private static Inventory[] inventoryList = null;
     private static Map map = null;
+    private static Map x;
+    private static Map y;
 
+    public static Map getX() {
+        return x;
+    }
+
+    public static void setX(Map x) {
+        JamaicanExodus.x = x;
+    }
+
+    public static Map getY() {
+        return y;
+    }
+
+    public static void setY(Map y) {
+        JamaicanExodus.y = y;
+    }
+    
     public static Map getMap() {
         return map;
     }
@@ -78,6 +96,8 @@ public class JamaicanExodus {
     static void setMap() {
         System.out.println("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    
 
     
 
