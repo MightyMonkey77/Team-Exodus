@@ -20,9 +20,9 @@ public class Map implements Serializable {
     private int location;
     private double traveled;
 
-    public Map() {
+    public Map(int x, int y) {
     }
-
+    
     public String getDescription() {
         return description;
     }

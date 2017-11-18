@@ -66,7 +66,7 @@ public class MainMenu extends View  {
         //GameControl.createNewGame(JamaicanExodus.getPlayer());
         //GameControl gameControl = new GameControl();
         //gameControl.createNewGame();
-       GameControl.createNewGame(JamaicanExodus.getPlayer()); //New game
+      // GameControl.createNewGame(JamaicanExodus.getPlayer()); //New game
              
        GameMenu gameMenu = new GameMenu();
        gameMenu.display();

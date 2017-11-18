@@ -5,6 +5,7 @@
  */
 package byui.cit260.JamaicanExodus.view;
 
+import byui.cit260.JamaicanExodus.control.MapControl;
 import byui.cit260.JamaicanExodus.model.Actor;
 import byui.cit260.JamaicanExodus.model.Game;
 import byui.cit260.JamaicanExodus.model.Inventory;
@@ -23,14 +24,24 @@ class GameControl {
      Game currentGame = new Game(); // Starts the game.
      JamaicanExodus.setCurrentGame(currentGame); // Sets it to the main program.
     
-     JamaicanExodus.setPlayer(player);//sets current player into main program.  
+     JamaicanExodus.setPlayer(player);//sets current player into main program. 
+     
+     Actor[] actors = GameControl.createActor();
+     JamaicanExodus.setActor(actors);
+     
+     Inventory[] inventoryList = GameControl.createInvetoryList();
+     JamaicanExodus.setInventoryList(inventoryList);// save me!
+     
+     Map map = MapControl.createMap(); // Start the Map
+     JamaicanExodus.setMap(map);
     }
-    public static Actor[] createActorList() {
-      // Do we really have to add the way the inventory is. We worked so hard to create an array already. Can we not just use that?  
+
+    private static Actor[] createActor() {
+        System.out.println("Future home of actors."); //To change body of generated methods, choose Tools | Templates.
         return null;
+   
     }
    
-    
     public enum Item {
     
     clothing,
@@ -44,65 +55,65 @@ class GameControl {
     }
      
      public static Inventory[] createInvetoryList() {
-          Inventory[] inventory = new Inventory [8];
+          Inventory[] inventoryList = new Inventory [8];
           
           Inventory clothing = new Inventory();
           clothing.setDescription("clothing");
           clothing.setQuantity(1);
           clothing.setWeight(2.03);
           clothing.setCost(15.55);
-          inventory[Item.clothing.ordinal()] = clothing;
+          inventoryList[Item.clothing.ordinal()] = clothing;
           
           Inventory rations = new Inventory();
           rations.setDescription("rations");
           rations.setQuantity(1);
           rations.setWeight(2.03);
           rations.setCost(15.55);
-          inventory[Item.rations.ordinal()] = rations;
+          inventoryList[Item.rations.ordinal()] = rations;
           
           Inventory fuel = new Inventory();
           fuel.setDescription("fuel");
           fuel.setQuantity(1);
           fuel.setWeight(2.03);
           fuel.setCost(15.55);
-          inventory[Item.fuel.ordinal()] = fuel;
+          inventoryList[Item.fuel.ordinal()] = fuel;
           
           Inventory tools = new Inventory();
           tools.setDescription("tools used by carpenter, shipwrieght");
           tools.setQuantity(1);
           tools.setWeight(2.03);
           tools.setCost(15.55);
-          inventory[Item.tools.ordinal()] = tools;
+          inventoryList[Item.tools.ordinal()] = tools;
           
           Inventory computer = new Inventory();
           computer.setDescription("computer");
           computer.setQuantity(1);
           computer.setWeight(2.03);
           computer.setCost(15.55);
-          inventory[Item.computer.ordinal()] = computer;
+          inventoryList[Item.computer.ordinal()] = computer;
           
           Inventory calc = new Inventory();
           calc.setDescription("calculator");
           calc.setQuantity(1);
           calc.setWeight(2.03);
           calc.setCost(15.55);
-          inventory[Item.calc.ordinal()] = calc;
+          inventoryList[Item.calc.ordinal()] = calc;
           
           Inventory farmtools = new Inventory();
           farmtools.setDescription("farmtools");
           farmtools.setQuantity(1);
           farmtools.setWeight(2.03);
           farmtools.setCost(15.55);
-          inventory[Item.farmtools.ordinal()] = farmtools;
+          inventoryList[Item.farmtools.ordinal()] = farmtools;
           
           Inventory medicine = new Inventory();
           medicine.setDescription("medicine");
           medicine.setQuantity(1);
           medicine.setWeight(2.03);
           medicine.setCost(15.55);
-          inventory[Item.medicine.ordinal()] = farmtools;
+          inventoryList[Item.medicine.ordinal()] = farmtools;
           
-          return inventory;
+          return inventoryList;
      }
      
      

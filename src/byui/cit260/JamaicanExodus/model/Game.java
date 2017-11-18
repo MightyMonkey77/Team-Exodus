@@ -19,7 +19,39 @@ public class Game implements Serializable {
     private double totalTime;
 
     public Game() {
-    }   
+    }  
+
+    public Player getPlayer() {
+        return player;
+    }
+
+    public void setPlayer(Player player) {
+        this.player = player;
+    }
+
+    public Map getMap() {
+        return map;
+    }
+
+    public void setMap(Map map) {
+        this.map = map;
+    }
+
+    public Shop getShop() {
+        return shop;
+    }
+
+    public void setShop(Shop shop) {
+        this.shop = shop;
+    }
+
+    public Inventory[] getInventory() {
+        return Inventory;
+    }
+
+    public void setInventory(Inventory[] Inventory) {
+        this.Inventory = Inventory;
+    }
 
     public double getTotalTime() {
         return totalTime;

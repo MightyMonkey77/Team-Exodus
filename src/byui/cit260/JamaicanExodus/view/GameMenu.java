@@ -5,6 +5,8 @@
  */
 package byui.cit260.JamaicanExodus.view;
 
+import byui.cit260.JamaicanExodus.control.Actors;
+
 /**
  *
  * @author Kim on a PC
@@ -17,6 +19,7 @@ class GameMenu extends View {
         super( "\n GAME Menu"
                 +"\n"
                 +"\n I - Inventory"
+                +"\n D - Map View"
                 +"\n A - Actors"
                 +"\n O - Choose Occupation"
                 +"\n L - View contents of location"
@@ -40,6 +43,9 @@ class GameMenu extends View {
         {
             case "I":
                 this.inventory();
+                return true;
+            case "D":
+                this.displayMap();
                 return true;
             case "A":
                 this.actors();
@@ -134,6 +140,11 @@ class GameMenu extends View {
     private void months() {
        Months months = new Months();
        months.display();
+    }
+
+    private void displayMap() {
+       Map map = new Map();
+       map.display();
     }
 
  

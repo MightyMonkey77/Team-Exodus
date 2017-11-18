@@ -5,7 +5,11 @@
  */
 package byui.cit260.JamaicanExodus.control;
 
+import byui.cit260.JamaicanExodus.model.Game;
+import byui.cit260.JamaicanExodus.model.Inventory;
 import byui.cit260.JamaicanExodus.model.Map;
+import byui.cit260.JamaicanExodus.view.JamaicanExodus;
+import javafx.scene.Scene;
 
 /**
  *
@@ -14,46 +18,39 @@ import byui.cit260.JamaicanExodus.model.Map;
 public class MapControl {
 
     public static Map createMap() {
-        System.out.println("Not supported yet."); //To be implemented later?
-        return null;
+        
+        
+       // System.out.println("Not supported yet."); //To be implemented later?
+       // return null;
+       //Creation of the Map
+       Map map = new Map(13,22);
+       
+       
+       //Scenes array
+       Scene[] scenes = createScenes();
+       
+       MapControl.sceneToLocations(map, scenes);
+       
+       return map; //brings up the map
+       
     }
- 
-    public double timeTraveled( double rate, double distance){
-        
-        if ( rate <0){
-            return -1;
-        }
-        
-        if ( rate >120){
-            return -1; }            
 
-        if ( distance <0){
-            return -1;
-        }
+    public static Scene[] createScenes() {
+     
+        Game game = JamaicanExodus.getCurrentGame();
+
+        Scene[] scenes = new Scene[SceneType.values().length];
         
-        if ( distance > 750){
-            return -1;}        
-           
         
-        double timeTraveled = distance / rate;
-            return timeTraveled;
-                
-                
-                }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+        
+        return scenes;      
     
     }
+
+    private static void sceneToLocations(Map map, Scene[] scenes) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    
+    
+}

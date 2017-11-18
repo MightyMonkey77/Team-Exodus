@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package byui.cit260.JamaicanExodus.view;
+package byui.cit260.JamaicanExodus.control;
 
 
 import byui.cit260.JamaicanExodus.model.Actor;
@@ -71,9 +71,9 @@ public class Actors {
           }  
 
     private boolean doAction(String menuOption) {
-        for (Actor actor : actors) {
+        actors.forEach((actor) -> {
             System.out.println(actor);
-        }
+        });
         return true;
     }
 }
