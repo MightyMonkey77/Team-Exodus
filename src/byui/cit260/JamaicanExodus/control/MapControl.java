@@ -17,14 +17,10 @@ import javafx.scene.Scene;
  */
 public class MapControl {
 
-    public static Map createMap(int x, int y, Inventory[] inventory) {
-        
-        if (x < 0 || y < 0) {
-        System.out.println("Invalid");
-        }
+    public static Map createMap(int x, int y) {
        
+       Map map = new Map(13 ,22);
        
-       Map map = new Map(13,22);
        
        
        //Scenes array
@@ -52,6 +48,7 @@ public class MapControl {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+       
     
     
 }

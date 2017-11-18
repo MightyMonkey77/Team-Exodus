@@ -32,8 +32,9 @@ class GameControl {
      Inventory[] inventoryList = GameControl.createInvetoryList();
      JamaicanExodus.setInventoryList(inventoryList);// save me!
      
-     Map map = MapControl.createMap(); // Start the Map
-     JamaicanExodus.setMap();
+     Map map = MapControl.createMap(13, 22); // Start the Map
+     if (map == null) {
+     }
 
     }
 
@@ -131,7 +132,7 @@ class GameControl {
     return player;
     } 
     
-   
+    
    
     }
     

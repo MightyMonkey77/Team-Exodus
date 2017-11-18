@@ -13,8 +13,8 @@ import java.io.Serializable;
  */
 public class Location implements Serializable  {
     
-    private int xCord;
-    private int yCord;
+    private int x;
+    private int y;
     private boolean visited;
     private int next;
 
@@ -22,19 +22,19 @@ public class Location implements Serializable  {
     }
 
     public int getxCord() {
-        return xCord;
+        return x;
     }
 
     public void setxCord(int xCord) {
-        this.xCord = xCord;
+        this.x = xCord;
     }
 
     public int getyCord() {
-        return yCord;
+        return y;
     }
 
     public void setyCord(int yCord) {
-        this.yCord = yCord;
+        this.y = yCord;
     }
 
     public boolean getVisited() {
@@ -56,8 +56,8 @@ public class Location implements Serializable  {
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 59 * hash + this.xCord;
-        hash = 59 * hash + this.yCord;
+        hash = 59 * hash + this.x;
+        hash = 59 * hash + this.y;
         hash = 59 * hash + (this.visited ? 1 : 0);
         hash = 59 * hash + this.next;
         return hash;
@@ -77,10 +77,10 @@ public class Location implements Serializable  {
             return false;
         }
         final Location other = (Location) obj;
-        if (this.xCord != other.xCord) {
+        if (this.x != other.x) {
             return false;
         }
-        if (this.yCord != other.yCord) {
+        if (this.y != other.y) {
             return false;
         }
         if (this.visited != other.visited) {
@@ -94,7 +94,7 @@ public class Location implements Serializable  {
 
     @Override
     public String toString() {
-        return "Location{" + "xCord=" + xCord + ", yCord=" + yCord + ", visited=" + visited + ", next=" + next + '}';
+        return "Location{" + "xCord=" + x + ", yCord=" + y + ", visited=" + visited + ", next=" + next + '}';
     }
     
     
