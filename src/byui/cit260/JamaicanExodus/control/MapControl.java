@@ -17,12 +17,13 @@ import javafx.scene.Scene;
  */
 public class MapControl {
 
-    public static Map createMap() {
+    public static Map createMap(int x, int y, Inventory[] inventory) {
         
-        
-       // System.out.println("Not supported yet."); //To be implemented later?
-       // return null;
-       //Creation of the Map
+        if (x < 0 || y < 0) {
+        System.out.println("Invalid");
+        }
+       
+       
        Map map = new Map(13,22);
        
        

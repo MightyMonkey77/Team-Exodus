@@ -33,7 +33,8 @@ class GameControl {
      JamaicanExodus.setInventoryList(inventoryList);// save me!
      
      Map map = MapControl.createMap(); // Start the Map
-     JamaicanExodus.setMap(map);
+     JamaicanExodus.setMap();
+
     }
 
     private static Actor[] createActor() {
@@ -130,9 +131,7 @@ class GameControl {
     return player;
     } 
     
-    public static Map[][] createNewMap(){
-        return null;
-    }
+   
    
     }
     

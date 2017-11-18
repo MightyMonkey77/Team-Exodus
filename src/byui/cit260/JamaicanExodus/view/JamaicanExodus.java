@@ -75,9 +75,11 @@ public class JamaicanExodus {
     
   }
 
-    static void setMap(byui.cit260.JamaicanExodus.model.Map map) {
+    static void setMap() {
         System.out.println("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    
 
     
       
