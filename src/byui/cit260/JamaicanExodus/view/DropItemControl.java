@@ -9,10 +9,10 @@ package byui.cit260.JamaicanExodus.view;
  *
  * @author Office Payne
  */
-class DropItemView {
+class DropItemControl {
 
     void dropInventoryItem() {
-        System.out.println("Future Home of Dropping your stuffs. Litterer."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }

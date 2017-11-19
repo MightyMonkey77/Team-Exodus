@@ -5,8 +5,6 @@
  */
 package byui.cit260.JamaicanExodus.view;
 
-import byui.cit260.JamaicanExodus.control.InventoryControl;
-
 /**
  *
  * @author Office Payne
@@ -71,7 +69,7 @@ public class InventoryView extends View{
     }
 
     private void dropInventoryItem() {
-         DropItemView dropItem = new DropItemView();
+         DropItemControl dropItem = new DropItemControl();
          dropItem.dropInventoryItem();
     }
     
