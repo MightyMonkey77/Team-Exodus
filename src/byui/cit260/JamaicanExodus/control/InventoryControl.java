@@ -101,7 +101,7 @@ public class InventoryControl {
   //                              double medicine)  {
   public double calcChestWireght(Inventory[] createInventoryList) {   
   //      double totalWeight = (clothing + tools + chest + rations + fuel + computer + calc + farmtools + medicine);
-          double totalWeight = Inventory[] inventoryList = new Inventory [8];
+          double totalWeight = 6;
           
         if (totalWeight >= 10 && totalWeight <= 500) {
 
