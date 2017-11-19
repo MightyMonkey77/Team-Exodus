@@ -109,6 +109,7 @@ public class Inventory implements Serializable {
         return "Inventory{" + "name=" + name + ", description=" + description + ", cost=" + cost + ", weight=" + weight + ", quantity=" + quantity + '}';
     }
 
+  
     
     
 

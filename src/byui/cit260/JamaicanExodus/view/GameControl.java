@@ -53,7 +53,8 @@ class GameControl {
     computer,
     calc,
     farmtools,
-    medicine;
+    medicine,
+    chest;
     }
      
      public static Inventory[] createInvetoryList() {
@@ -76,44 +77,51 @@ class GameControl {
           Inventory fuel = new Inventory();
           fuel.setDescription("fuel");
           fuel.setQuantity(1);
-          fuel.setWeight(2.03);
+          fuel.setWeight(10.00);
           fuel.setCost(15.55);
           inventoryList[Item.fuel.ordinal()] = fuel;
           
           Inventory tools = new Inventory();
           tools.setDescription("tools used by carpenter, shipwrieght");
           tools.setQuantity(1);
-          tools.setWeight(2.03);
+          tools.setWeight(6.53);
           tools.setCost(15.55);
           inventoryList[Item.tools.ordinal()] = tools;
           
           Inventory computer = new Inventory();
           computer.setDescription("computer");
           computer.setQuantity(1);
-          computer.setWeight(2.03);
+          computer.setWeight(8.5);
           computer.setCost(15.55);
           inventoryList[Item.computer.ordinal()] = computer;
           
           Inventory calc = new Inventory();
           calc.setDescription("calculator");
           calc.setQuantity(1);
-          calc.setWeight(2.03);
+          calc.setWeight(1.01);
           calc.setCost(15.55);
           inventoryList[Item.calc.ordinal()] = calc;
           
           Inventory farmtools = new Inventory();
           farmtools.setDescription("farmtools");
           farmtools.setQuantity(1);
-          farmtools.setWeight(2.03);
+          farmtools.setWeight(8.36);
           farmtools.setCost(15.55);
           inventoryList[Item.farmtools.ordinal()] = farmtools;
           
           Inventory medicine = new Inventory();
           medicine.setDescription("medicine");
           medicine.setQuantity(1);
-          medicine.setWeight(2.03);
+          medicine.setWeight(0.75);
           medicine.setCost(15.55);
           inventoryList[Item.medicine.ordinal()] = farmtools;
+          
+          Inventory chest = new Inventory();
+          chest.setDescription("Chest of holding.");
+          chest.setQuantity(1);
+          chest.setWeight(10.00);
+          inventoryList[Item.chest.ordinal()] = chest;          
+         
           
           return inventoryList;
      }

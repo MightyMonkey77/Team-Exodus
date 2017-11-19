@@ -66,3 +66,38 @@ public class ConsumptionControl {
 }
 } 
 
+/* Possible change. Daryl
+public double calcRemainingFood(double startingFood, int partyMembers
+                                    ) {
+        
+        int rate = 0 ;        
+        
+        //repeats function if invalid input detected
+      while (rate >5 || rate <3 )    {
+        System.out.println("Choose your food rations /n F - Filling /n M - Meager /n B -Bare Bones");
+      Scanner scanner = new Scanner(System.in);
+      String choice = scanner.next();
+	if (choice.equals("F || f")){
+            rate = 5;
+        } 
+        else if (choice.equals("M || m")){
+            rate = 4;
+        }
+        else if (choice.equals("B || b")){
+            rate = 3;
+        }
+        else { System.out.println(" Not a valid selection");
+        
+        }
+      }
+        //calculate amount of food eaten per day at new rate
+        double foodEaten = (rate * partyMembers);
+        double foodRemaining = (startingFood - foodEaten);
+        //display remaining food
+        System.out.println(foodRemaining);
+        
+        
+        return foodRemaining;
+
+
+*/
