@@ -6,6 +6,7 @@
 package byui.cit260.JamaicanExodus.view;
 
 import byui.cit260.JamaicanExodus.control.Actors;
+import byui.cit260.JamaicanExodus.control.MinMax;
 
 /**
  *
@@ -14,7 +15,7 @@ import byui.cit260.JamaicanExodus.control.Actors;
 class GameMenu extends View {
     
     
-    
+        
     public GameMenu() {
         super( "\n GAME Menu"
                 +"\n"
@@ -27,6 +28,7 @@ class GameMenu extends View {
                 +"\n E - Estimate the resource needed"
                 +"\n G - Go into shop"
                 +"\n C - Confront Obstacle"
+                +"\n Z - Mikes control"
                 +"\n S - Solve Equation"
                 +"\n T - Time of Month Leaving"
                 +"\n H - Help Menu"
@@ -68,6 +70,9 @@ class GameMenu extends View {
             case "C":
                 this.confrontObstacle();    
                 return false;
+            case "Z":
+                this.mikesControl();
+                return true;
             case "S":
                 this.solveEquation();    
                 return false;
@@ -145,6 +150,11 @@ class GameMenu extends View {
     private void displayMap() {
        Map map = new Map();
        map.display();
+    }
+
+    private void mikesControl() {
+       MinMax minMax = new MinMax();
+       System.out.println(minMax);
     }
 
  
