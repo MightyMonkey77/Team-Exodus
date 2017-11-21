@@ -100,11 +100,13 @@ public class JamaicanExodus {
     public static void main(String[] args) {     
         
         StartProgram startProgram = new StartProgram();
+        try {
         startProgram.displayStartProgram();
-        
-        
- 
-    
+        } catch (Throwable te) {
+        System.out.println(te.getMessage());
+        te.printStackTrace();
+        startProgram.displayStartProgram();
+        }
   }
 
     public static void setMap(byui.cit260.JamaicanExodus.model.Map map) {

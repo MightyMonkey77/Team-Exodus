@@ -28,7 +28,7 @@ public class MapControl {
        //Scenes array
        Scene[] scenes = createScenes();
        
-       MapControl.sceneToLocations(map, scenes);
+       //MapControl.sceneToLocations(map, scenes);
        
        return map; //brings up the map
        
@@ -45,12 +45,35 @@ public class MapControl {
         return scenes;      
     
     }
+   /* private static int moveActorToLocation(Actor actor, Point coordinates) throws MapControlException {
+        Map map = JamaicanExodus.getCurrentGame().getMap();
+        int newx = coordinates.x-1;
+        int newy = coordinates.y-1;
+        
+        if (newx < 0 || newx >= map.getX() || newy < 0 || newy >= map.getY()) {
+        throw new MapControlException("Can not move actor to location" + coordinates.x  
+                + ", " + coordinates.y + " it is out bounds.");
+        }
+        return 0;
+    } 
+    
+    private static int moveActorsToStart(Map map) throws MapControlException {
+    Actor[] actors = Actor.values();
+    
+    for (Actor actor : actors) {
+    Point coordinates = actor.getCoordinates();
+    MapControl.moveActorToLocation(actor, coordinates);
 
-    private static void sceneToLocations(Map map, Scene[] scenes) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+        return 0;
+    */   
+    
+ }
+      
+   
+
+   
 
        
     
     
-}

@@ -31,7 +31,8 @@ public class Actors {
     }
         while(!done);
     }
-          private String getActor() {
+      private String getActor() {
+          
       Scanner keyboard = new Scanner(System.in);
       System.out.println("Enter first companions name: ");
       String actorName1 = keyboard.nextLine();
@@ -71,6 +72,7 @@ public class Actors {
           }  
 
     private boolean doAction(String menuOption) {
+                 
         actors.forEach((actor) -> {
             System.out.println(actor);
         });
