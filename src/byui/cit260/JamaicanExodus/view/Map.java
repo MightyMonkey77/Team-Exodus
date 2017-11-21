@@ -5,6 +5,8 @@
  */
 package byui.cit260.JamaicanExodus.view;
 
+import java.util.IllegalFormatException;
+
 /**
  *
  * @author Office Payne
@@ -38,6 +40,7 @@ public class Map extends View{
     
         // this is the help menu do action function
        
+        try{
         choice = choice.toUpperCase(); //convert choice to upper case
         
         switch (choice){
@@ -52,10 +55,19 @@ public class Map extends View{
                 break;
    
             }
-                
+        } catch
+             (IllegalFormatException me){
+                System.out.println(me.getMessage());
+                }
+        
         return false;
         
     } 
+
+    String buildMap(int x, int y) {
+       System.out.println("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+         return null;
+    }
  
    
 }

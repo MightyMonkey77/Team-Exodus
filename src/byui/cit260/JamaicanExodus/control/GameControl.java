@@ -17,6 +17,9 @@ import byui.cit260.JamaicanExodus.model.Actor;
 import byui.cit260.JamaicanExodus.model.Location;
 import byui.cit260.JamaicanExodus.model.Obstacles;
 import byui.cit260.JamaicanExodus.model.Scene;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.ObjectInputStream;
 
 
 
@@ -80,9 +83,7 @@ public class GameControl {
      JamaicanExodus.setCurrentGame(currentGame);
      return 1;
      }
-    }
-     
-       
+    }   
 
     private static Months[] createMonths() {
        System.out.println("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -374,6 +375,29 @@ public class GameControl {
          //locations [7][10].setObstacles(obstacles[obstaclesPosistion.Seven.ordinal()]);
          locations [8][1].setScenes(scenes[SceneArea.medford.ordinal()]);
          
+
+    }
+         public static void getSavedGame(String filepath) throws GameControlException 
+
+       {
+        Game game = null;
+
+        try( FileInputStream fips = new FileInputStream(filepath)) {
+            ObjectInputStream output = new ObjectInputStream(fips);
+            
+            game = (Game) output.readObject(); // read the game object from file
+        }
+        catch(FileNotFoundException fnfe) {
+            throw new GameControlException(fnfe.getMessage());
+        }
+        catch(Exception e) {
+            throw new GameControlException(e.getMessage());
+        }
+
+       // close the outuput file
+       JamaicanExodus.setCurrentGame(game); 
+
+    
 
     }
      

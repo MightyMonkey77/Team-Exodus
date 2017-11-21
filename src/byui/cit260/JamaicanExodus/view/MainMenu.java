@@ -6,6 +6,8 @@
 package byui.cit260.JamaicanExodus.view;
 
 import byui.cit260.JamaicanExodus.JamaicanExodus;
+import byui.cit260.JamaicanExodus.control.GameControl;
+import byui.cit260.JamaicanExodus.control.GameControlException;
 
 
 /**
@@ -100,8 +102,28 @@ public class MainMenu extends View  {
     }
 
     private void loadSavedGame() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                  
+       // prompt for and get the name of the file to save the game in
+        System.out.println("\n\nEnter the path and filename for file where the game "
+                           + "is to be saved:");
+        
+        String filePath = this.getInput();
+        
+        try {
+            // start a saved game
+            GameControl.getSavedGame(filePath);
+        } catch (GameControlException ex) {
+            ErrorView.display("MainMenuView", ex.getMessage());
+        } 
+
+        // display the game menu
+        GameMenu gameMenu = new GameMenu();
+        gameMenu.display();
+    
     }
+
+
+}
     
   
-}    
+   

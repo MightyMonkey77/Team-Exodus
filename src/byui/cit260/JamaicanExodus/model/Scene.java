@@ -83,6 +83,10 @@ public class Scene implements Serializable {
         return "Scene{" + "description=" + description + ", sceneName=" + sceneName + ", symbol=" + symbol + '}';
     }
 
+    public String buildSceneDescription(int x, int y) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     
      
      

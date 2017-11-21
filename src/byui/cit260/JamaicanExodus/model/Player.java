@@ -17,8 +17,35 @@ public class Player implements Serializable {
 
 private String name;  
 private final ArrayList<Game> games = new ArrayList<>();
-
+private int x;
+private int y;
+private double charHealth = 100;
+   
     public Player() {
+    }
+
+    public double getCharHealth() {
+        return charHealth;
+    }
+    
+    public void setCharHealth(double charHealth) {
+        this.charHealth = charHealth;
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public void setY(int y) {
+        this.y = y;
     }
 
     public ArrayList<Game> getGames() {
