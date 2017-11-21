@@ -5,6 +5,7 @@
  */
 package byui.cit260.JamaicanExodus.model;
 
+import byui.cit260.JamaicanExodus.control.Actors;
 import java.io.Serializable;
 /**
  *
@@ -15,11 +16,28 @@ public class Game implements Serializable {
     private Player player;
     private Map map;
     private Shop shop;
-    private Inventory[] Inventory;
+    private Inventory[] inventory;
     private double totalTime;
+    private Actors[] actor;
 
     public Game() {
     }  
+
+    public Actors[] getActor() {
+        return actor;
+    }
+
+    public void setActor(Actors[] actor) {
+        this.actor = actor;
+    }
+    
+    public Inventory[] getInventory() {
+        return inventory;
+    }
+    
+    public void setInventory(Inventory[] inventory) {
+        this.inventory = inventory;
+    }
 
     public Player getPlayer() {
         return player;
@@ -43,14 +61,6 @@ public class Game implements Serializable {
 
     public void setShop(Shop shop) {
         this.shop = shop;
-    }
-
-    public Inventory[] getInventory() {
-        return Inventory;
-    }
-
-    public void setInventory(Inventory[] Inventory) {
-        this.Inventory = Inventory;
     }
 
     public double getTotalTime() {

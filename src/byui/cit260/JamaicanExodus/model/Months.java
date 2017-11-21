@@ -5,19 +5,17 @@
  */
 package byui.cit260.JamaicanExodus.model;
 
-import java.io.Serializable;
 import java.util.Objects;
 
 /**
  *
  * @author Office Payne
  */
-public class Scenes implements Serializable {
+public class Months {
+    private String description;
+    private String name;
     
-     private String description;
-     private String map;
-
-    public Scenes() {
+    public Months() {
     }
 
     public String getDescription() {
@@ -28,19 +26,19 @@ public class Scenes implements Serializable {
         this.description = description;
     }
 
-    public String getMap() {
-        return map;
+    public String getName() {
+        return name;
     }
 
-    public void setMap(String map) {
-        this.map = map;
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 83 * hash + Objects.hashCode(this.description);
-        hash = 83 * hash + Objects.hashCode(this.map);
+        int hash = 3;
+        hash = 47 * hash + Objects.hashCode(this.description);
+        hash = 47 * hash + Objects.hashCode(this.name);
         return hash;
     }
 
@@ -55,11 +53,11 @@ public class Scenes implements Serializable {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Scenes other = (Scenes) obj;
+        final Months other = (Months) obj;
         if (!Objects.equals(this.description, other.description)) {
             return false;
         }
-        if (!Objects.equals(this.map, other.map)) {
+        if (!Objects.equals(this.name, other.name)) {
             return false;
         }
         return true;
@@ -67,8 +65,8 @@ public class Scenes implements Serializable {
 
     @Override
     public String toString() {
-        return "Scenes{" + "description=" + description + ", map=" + map + '}';
+        return "Months{" + "description=" + description + ", name=" + name + '}';
     }
-     
-     
+    
+    
 }

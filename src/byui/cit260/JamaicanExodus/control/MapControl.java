@@ -7,7 +7,7 @@ package byui.cit260.JamaicanExodus.control;
 
 import byui.cit260.JamaicanExodus.model.Game;
 import byui.cit260.JamaicanExodus.model.Map;
-import byui.cit260.JamaicanExodus.view.JamaicanExodus;
+import byui.cit260.JamaicanExodus.JamaicanExodus;
 import javafx.scene.Scene;
 
 /**
@@ -23,7 +23,7 @@ public class MapControl {
         if (x < 0 || y < 0){
         }
         
-       Map map = new Map(13 ,22);      
+       Map map = new Map(8 ,10);      
        
        //Scenes array
        Scene[] scenes = createScenes();

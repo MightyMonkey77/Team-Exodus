@@ -5,6 +5,8 @@
  */
 package byui.cit260.JamaicanExodus.view;
 
+import byui.cit260.JamaicanExodus.JamaicanExodus;
+
 
 /**
  *

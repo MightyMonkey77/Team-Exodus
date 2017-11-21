@@ -5,7 +5,9 @@
  */
 package byui.cit260.JamaicanExodus.model;
 
+import byui.cit260.JamaicanExodus.control.Actors;
 import java.io.Serializable;
+import java.util.ArrayList;
 
 /**
  *
@@ -17,24 +19,52 @@ public class Location implements Serializable  {
     private int y;
     private boolean visited;
     private int next;
+    private Scene scenes;
+    private Obstacles obstacles;
+    private ArrayList<Actors> actors = new ArrayList<Actors>();
+
+    public ArrayList<Actors> getActors() {
+        return actors;
+    }
+
+    public void setActors(ArrayList<Actors> actors) {
+        this.actors = actors;
+    }
+    
+
+    public Scene getScenes() {
+        return scenes;
+    }
+
+    public void setScenes(Scene scenes) {
+        this.scenes = scenes;
+    }
+
+    public Obstacles getObstacles() {
+        return obstacles;
+    }
+
+    public void setObstacles(Obstacles obstacles) {
+        this.obstacles = obstacles;
+    }
 
     public Location() {
     }
 
-    public int getxCord() {
+    public int getX() {
         return x;
     }
 
-    public void setxCord(int xCord) {
-        this.x = xCord;
+    public void setX(int x) {
+        this.x = x;
     }
 
-    public int getyCord() {
+    public int getY() {
         return y;
     }
 
-    public void setyCord(int yCord) {
-        this.y = yCord;
+    public void setY(int y) {
+        this.y = y;
     }
 
     public boolean getVisited() {
