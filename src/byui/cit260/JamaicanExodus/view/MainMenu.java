@@ -8,6 +8,7 @@ package byui.cit260.JamaicanExodus.view;
 import byui.cit260.JamaicanExodus.JamaicanExodus;
 import byui.cit260.JamaicanExodus.control.GameControl;
 import byui.cit260.JamaicanExodus.control.GameControlException;
+import java.io.IOException;
 
 
 /**
@@ -87,8 +88,21 @@ public class MainMenu extends View  {
     
 
     private void saveGame() {
-        System.out.println("\n Exciting 'Save Your Game' function coming soon!");
+       
+          // prompt for and get the name of the file to save the game in
+        System.out.println("\nEnter the path and filename for file where the game "
+                           + "is to be saved:");
+        String filePath = this.getInput();     
+        
+        try {
+            // save the game to the speciried file
+            GameControl.saveGame(JamaicanExodus.getCurrentGame(), filePath);
+        } catch (GameControlException | IOException ex) {
+            ErrorView.display("MainMenuView", ex.getMessage());
+        } 
+
     }
+    
 
     private void exitGame() {
         System.out.println("\n Revolutionary 'Exit Game' function coming soon!");
