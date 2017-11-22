@@ -300,44 +300,44 @@ public class GameControl {
      
       private static Obstacles[] createObstacles() {
           
-          Obstacles[] obstaclePosistion = new Obstacles[7];
+          Obstacles[] obstaclePosition = new Obstacles[7];
           
           Obstacles obstacleOne = new Obstacles();
           obstacleOne.getObstacleDescription();
           obstacleOne.getAnswer();
-          obstaclePosistion[ObName.one.ordinal()] = one;
+          obstaclePosition[ObName.one.ordinal()] = one;
           
           Obstacles obstacleTwo = new Obstacles();
           obstacleTwo.getObstacleDescription();
           obstacleTwo.getAnswer();
-          obstaclePosistion[ObName.Two.ordinal()] = Two;             
+          obstaclePosition[ObName.Two.ordinal()] = Two;             
           
           Obstacles obstacleThree = new Obstacles();
           obstacleThree.getObstacleDescription();
           obstacleThree.getAnswer();
-          obstaclePosistion[ObName.Three.ordinal()] = Three;
+          obstaclePosition[ObName.Three.ordinal()] = Three;
           
           Obstacles obstacleFour = new Obstacles();
           obstacleFour.getObstacleDescription();
           obstacleFour.getAnswer();
-          obstaclePosistion[ObName.Four.ordinal()] = Four;
+          obstaclePosition[ObName.Four.ordinal()] = Four;
           
           Obstacles obstacleFive = new Obstacles();
           obstacleFive.getObstacleDescription();
           obstacleFive.getAnswer();
-          obstaclePosistion[ObName.Five.ordinal()] = Five;
+          obstaclePosition[ObName.Five.ordinal()] = Five;
           
           Obstacles obstacleSix = new Obstacles();
           obstacleSix.getObstacleDescription();
           obstacleSix.getAnswer();
-          obstaclePosistion[ObName.Six.ordinal()] = Six;
+          obstaclePosition[ObName.Six.ordinal()] = Six;
           
           Obstacles obstacleSeven = new Obstacles();
           obstacleSeven.getObstacleDescription();
           obstacleSeven.getAnswer();
-          obstaclePosistion[ObName.Seven.ordinal()] = Seven;
+          obstaclePosition[ObName.Seven.ordinal()] = Seven;
           
-          return obstaclePosistion;
+          return obstaclePosition;
     }
 
      
@@ -358,24 +358,24 @@ public class GameControl {
 
         return locationsSpot;
     }
-     private static void scenesToLocation(Map map, Scene[] scenes, Obstacles[] obstacles) {
+     private static void scenesToLocation(Map map, Scene[] scenes, Obstacles[] obstaclesPosition, Obstacles[] obstacles) {
         
          Location[][] locations = map.getLocations();
          
          locations [1][1].setScenes(scenes[SceneArea.froome.ordinal()]);
-         //locations [1][10].setObstacles(obstacles[obstaclePosistion.One.ordinal()]);
+         locations [1][10].setObstacles(obstacles[obstaclePosition.One.ordinal()]);
          locations [2][1].setScenes(scenes[SceneArea.kingston.ordinal()]);
-         //location [2][10].setObstacles(obstacles[obstaclesPosistion.Two.ordinal()]):
+         locations [2][10].setObstacles([obstaclesPosition.Two.ordinal()]):
          locations [3][1].setScenes(scenes[SceneArea.saintPetersburg.ordinal()]);
-         //locations [3][10].setObstacles(obstacles[obstaclesPosistion.Three.ordinal()]);
+         locations [3][10].setObstacles(obstacles[obstaclesPosistion.Three.ordinal()]);
          locations [4][1].setScenes(scenes[SceneArea.birmingham.ordinal()]);
-         //locations [4][10].setObstacles(obstacles[obstaclesPosistion.Four.ordinal()]);
+         locations [4][10].setObstacles(obstacles[obstaclesPosition.Four.ordinal()]);
          locations [5][1].setScenes(scenes[SceneArea.elPaso.ordinal()]);
-         //locations [5][10].setObstacles(obstacles[obstaclesPosistion.Five.ordinal()]);
+         locations [5][10].setObstacles(obstacles[obstaclesPosition.Five.ordinal()]);
          locations [6][1].setScenes(scenes[SceneArea.losAngeles.ordinal()]);
-         //locations [6][10].setObstacles(obstacles[obstaclesPosistion.Six.ordinal()]);
+         locations [6][10].setObstacles(obstacles[obstaclesPosition.Six.ordinal()]);
          locations [7][1].setScenes(scenes[SceneArea.redding.ordinal()]);
-         //locations [7][10].setObstacles(obstacles[obstaclesPosistion.Seven.ordinal()]);
+         locations [7][10].setObstacles(obstacles[obstaclesPosition.Seven.ordinal()]);
          locations [8][1].setScenes(scenes[SceneArea.medford.ordinal()]);
          
 
