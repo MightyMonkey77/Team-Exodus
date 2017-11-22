@@ -5,10 +5,16 @@
  */
 package byui.cit260.JamaicanExodus.control;
 
+import byui.cit260.JamaicanExodus.Exception.MapControlException;
 import byui.cit260.JamaicanExodus.model.Game;
 import byui.cit260.JamaicanExodus.model.Map;
 import byui.cit260.JamaicanExodus.JamaicanExodus;
-import javafx.scene.Scene;
+import byui.cit260.JamaicanExodus.model.Actor;
+import byui.cit260.JamaicanExodus.model.Location;
+import byui.cit260.JamaicanExodus.model.Obstacles;
+import byui.cit260.JamaicanExodus.model.Scene;
+import java.awt.Point;
+
 
 /**
  *
@@ -28,7 +34,9 @@ public class MapControl {
        //Scenes array
        Scene[] scenes = createScenes();
        
-       //MapControl.sceneToLocations(map, scenes);
+       Obstacles[] obstaclePosition = createObstacles();
+       
+       MapControl.sceneToLocations(map, scenes, obstaclePosition);
        
        return map; //brings up the map
        
@@ -38,14 +46,33 @@ public class MapControl {
      
         Game game = JamaicanExodus.getCurrentGame();
 
-        Scene[] scenes = new Scene[SceneType.values().length];
+        Scene[] scenes = new Scene[GameControl.SceneArea.values().length];
+        
+        Scene froomeScenes = new Scene();
+        froomeScenes.setDescription("");
+        froomeScenes.setMap("");
+        scenes[GameControl.SceneArea.froome.ordinal()] = froomeScenes;
         
         
         
-        return scenes;      
+        
+        
+        return scenes;
+    }    
+        
+     private static Obstacles[] createObstacles() {
+        
+         Game game = JamaicanExodus.getCurrentGame();
+         
+         Obstacles[] obstaclePosition = new Obstacles[GameControl.ObName.values().length];
+         
+         Obstacles One = new Obstacles();
+         
+         return obstaclePosition;
+    }    
     
-    }
-   /* private static int moveActorToLocation(Actor actor, Point coordinates) throws MapControlException {
+    
+    private static int moveActorToLocation(Actor actor, Point coordinates) throws MapControlException {
         Map map = JamaicanExodus.getCurrentGame().getMap();
         int newx = coordinates.x-1;
         int newy = coordinates.y-1;
@@ -55,20 +82,31 @@ public class MapControl {
                 + ", " + coordinates.y + " it is out bounds.");
         }
         return 0;
-    } 
-    
-    private static int moveActorsToStart(Map map) throws MapControlException {
-    Actor[] actors = Actor.values();
-    
-    for (Actor actor : actors) {
-    Point coordinates = actor.getCoordinates();
-    MapControl.moveActorToLocation(actor, coordinates);
-
     }
-        return 0;
-    */   
-    
- }
+
+    private static void sceneToLocations(Map map, Scene[] scenes, Obstacles[] obstaclePosition) {
+         
+         Location[][] locations = map.getLocations();
+         
+         locations [1][1].setScenes(scenes[GameControl.SceneArea.froome.ordinal()]);
+         locations [1][10].setObstacles(obstaclePosition[GameControl.ObName.One.ordinal()]);
+         locations [2][1].setScenes(scenes[GameControl.SceneArea.kingston.ordinal()]);
+         locations [2][10].setObstacles(obstaclePosition[GameControl.ObName.Two.ordinal()]);
+         locations [3][1].setScenes(scenes[GameControl.SceneArea.saintPetersburg.ordinal()]);
+         locations [3][10].setObstacles(obstaclePosition[GameControl.ObName.Three.ordinal()]);
+         locations [4][1].setScenes(scenes[GameControl.SceneArea.birmingham.ordinal()]);
+         locations [4][10].setObstacles(obstaclePosition[GameControl.ObName.Four.ordinal()]);
+         locations [5][1].setScenes(scenes[GameControl.SceneArea.elPaso.ordinal()]);
+         locations [5][10].setObstacles(obstaclePosition[GameControl.ObName.Five.ordinal()]);
+         locations [6][1].setScenes(scenes[GameControl.SceneArea.losAngeles.ordinal()]);
+         locations [6][10].setObstacles(obstaclePosition[GameControl.ObName.Six.ordinal()]);
+         locations [7][1].setScenes(scenes[GameControl.SceneArea.redding.ordinal()]);
+         locations [7][10].setObstacles(obstaclePosition[GameControl.ObName.Seven.ordinal()]);
+         locations [8][1].setScenes(scenes[GameControl.SceneArea.medford.ordinal()]);
+    }
+
+   
+}
       
    
 

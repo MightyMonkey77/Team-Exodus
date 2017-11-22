@@ -17,8 +17,17 @@ public class Scene implements Serializable {
      private String description;
      private String sceneName;
      private String symbol;
+     private String map;
 
     public Scene() {
+    }
+
+    public String getMap() {
+        return map;
+    }
+
+    public void setMap(String map) {
+        this.map = map;
     }
 
     public String getDescription() {

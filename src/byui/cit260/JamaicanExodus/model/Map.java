@@ -21,12 +21,21 @@ public class Map implements Serializable {
     private int location;
     private double traveled;
     private Location [][] locations;
+    private String map;
 
     public Map(int x, int y) {
     }
 
     public Map() {
         
+    }
+
+    public String getMap() {
+        return map;
+    }
+
+    public void setMap(String map) {
+        this.map = map;
     }
     
     public Location[][] getLocations() {

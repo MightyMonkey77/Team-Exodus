@@ -5,6 +5,7 @@
  */
 package byui.cit260.JamaicanExodus.view;
 
+import byui.cit260.JamaicanExodus.model.Actor;
 import java.util.IllegalFormatException;
 
 /**
@@ -37,8 +38,9 @@ public class Map extends View{
      
      @Override
     public boolean doAction(String choice) {
-    
-        // this is the help menu do action function
+        Actor actor = null;
+        
+       
        
         try{
         choice = choice.toUpperCase(); //convert choice to upper case

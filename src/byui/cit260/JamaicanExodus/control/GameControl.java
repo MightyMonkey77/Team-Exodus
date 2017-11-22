@@ -6,6 +6,7 @@
 package byui.cit260.JamaicanExodus.control;
 
 
+import byui.cit260.JamaicanExodus.Exception.GameControlException;
 import byui.cit260.JamaicanExodus.model.Game;
 import byui.cit260.JamaicanExodus.model.Inventory;
 import byui.cit260.JamaicanExodus.model.Map;
@@ -32,14 +33,7 @@ import java.io.ObjectOutputStream;
  */
 public class GameControl {
 
-    private static Obstacles one;
-    private static Obstacles Two;
-    private static Obstacles Three;
-    private static Obstacles Four;
-    private static Obstacles Five;
-    private static Obstacles Six;
-    private static Obstacles Seven;
-    
+       
     public static Player createPlayer(String name) {  
                
      if (name == null) {
@@ -70,7 +64,7 @@ public class GameControl {
      Months[] months = GameControl.createMonths();
      JamaicanExodus.setMonths(months);
      
-     Occupations occupations = GameControl.createOccupations();
+     Occupations[] occupations = GameControl.createOccupations();
      JamaicanExodus.setOccupations(occupations);
      
      Inventory[] inventory = GameControl.createInvetoryList();
@@ -93,7 +87,7 @@ public class GameControl {
         return null;
     }
 
-    private static Occupations createOccupations() {
+    private static Occupations[] createOccupations() {
         System.out.println("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         return null;
     }
@@ -228,7 +222,7 @@ public class GameControl {
      elPaso,
      losAngeles,
      redding,
-     medford,
+     medford
      ;
      
      }
@@ -288,8 +282,8 @@ public class GameControl {
          return scenePlace;
     }
      
-      private enum ObName {
-      one,
+      public enum ObName {
+      One,
       Two,
       Three,
       Four,
@@ -300,44 +294,44 @@ public class GameControl {
      
       private static Obstacles[] createObstacles() {
           
-          Obstacles[] obstaclePosistion = new Obstacles[7];
+          Obstacles[] obstaclePosition = new Obstacles[7];
           
-          Obstacles obstacleOne = new Obstacles();
-          obstacleOne.getObstacleDescription();
-          obstacleOne.getAnswer();
-          obstaclePosistion[ObName.one.ordinal()] = one;
+          Obstacles One = new Obstacles();
+          One.getObstacleDescription();
+          One.getAnswer();
+          obstaclePosition[ObName.One.ordinal()] = One;
           
-          Obstacles obstacleTwo = new Obstacles();
-          obstacleTwo.getObstacleDescription();
-          obstacleTwo.getAnswer();
-          obstaclePosistion[ObName.Two.ordinal()] = Two;             
+          Obstacles Two = new Obstacles();
+          Two.getObstacleDescription();
+          Two.getAnswer();
+          obstaclePosition[ObName.Two.ordinal()] = Two;             
           
-          Obstacles obstacleThree = new Obstacles();
-          obstacleThree.getObstacleDescription();
-          obstacleThree.getAnswer();
-          obstaclePosistion[ObName.Three.ordinal()] = Three;
+          Obstacles Three = new Obstacles();
+          Three.getObstacleDescription();
+          Three.getAnswer();
+          obstaclePosition[ObName.Three.ordinal()] = Three;
           
-          Obstacles obstacleFour = new Obstacles();
-          obstacleFour.getObstacleDescription();
-          obstacleFour.getAnswer();
-          obstaclePosistion[ObName.Four.ordinal()] = Four;
+          Obstacles Four = new Obstacles();
+          Four.getObstacleDescription();
+          Four.getAnswer();
+          obstaclePosition[ObName.Four.ordinal()] = Four;
           
-          Obstacles obstacleFive = new Obstacles();
-          obstacleFive.getObstacleDescription();
-          obstacleFive.getAnswer();
-          obstaclePosistion[ObName.Five.ordinal()] = Five;
+          Obstacles Five = new Obstacles();
+          Five.getObstacleDescription();
+          Five.getAnswer();
+          obstaclePosition[ObName.Five.ordinal()] = Five;
           
-          Obstacles obstacleSix = new Obstacles();
-          obstacleSix.getObstacleDescription();
-          obstacleSix.getAnswer();
-          obstaclePosistion[ObName.Six.ordinal()] = Six;
+          Obstacles Six = new Obstacles();
+          Six.getObstacleDescription();
+          Six.getAnswer();
+          obstaclePosition[ObName.Six.ordinal()] = Six;
           
-          Obstacles obstacleSeven = new Obstacles();
-          obstacleSeven.getObstacleDescription();
-          obstacleSeven.getAnswer();
-          obstaclePosistion[ObName.Seven.ordinal()] = Seven;
+          Obstacles Seven = new Obstacles();
+          Seven.getObstacleDescription();
+          Seven.getAnswer();
+          obstaclePosition[ObName.Seven.ordinal()] = Seven;
           
-          return obstaclePosistion;
+          return obstaclePosition;
     }
 
      
@@ -358,24 +352,24 @@ public class GameControl {
 
         return locationsSpot;
     }
-     private static void scenesToLocation(Map map, Scene[] scenes, Obstacles[] obstacles) {
+     private static void scenesToLocation(Map map, Scene[] scenes, Obstacles[] obstaclePosition) {
         
          Location[][] locations = map.getLocations();
          
          locations [1][1].setScenes(scenes[SceneArea.froome.ordinal()]);
-         //locations [1][10].setObstacles(obstacles[obstaclePosistion.One.ordinal()]);
+         locations [1][10].setObstacles(obstaclePosition[ObName.One.ordinal()]);
          locations [2][1].setScenes(scenes[SceneArea.kingston.ordinal()]);
-         //location [2][10].setObstacles(obstacles[obstaclesPosistion.Two.ordinal()]):
+         locations [2][10].setObstacles(obstaclePosition[ObName.Two.ordinal()]);
          locations [3][1].setScenes(scenes[SceneArea.saintPetersburg.ordinal()]);
-         //locations [3][10].setObstacles(obstacles[obstaclesPosistion.Three.ordinal()]);
+         locations [3][10].setObstacles(obstaclePosition[ObName.Three.ordinal()]);
          locations [4][1].setScenes(scenes[SceneArea.birmingham.ordinal()]);
-         //locations [4][10].setObstacles(obstacles[obstaclesPosistion.Four.ordinal()]);
+         locations [4][10].setObstacles(obstaclePosition[ObName.Four.ordinal()]);
          locations [5][1].setScenes(scenes[SceneArea.elPaso.ordinal()]);
-         //locations [5][10].setObstacles(obstacles[obstaclesPosistion.Five.ordinal()]);
+         locations [5][10].setObstacles(obstaclePosition[ObName.Five.ordinal()]);
          locations [6][1].setScenes(scenes[SceneArea.losAngeles.ordinal()]);
-         //locations [6][10].setObstacles(obstacles[obstaclesPosistion.Six.ordinal()]);
+         locations [6][10].setObstacles(obstaclePosition[ObName.Six.ordinal()]);
          locations [7][1].setScenes(scenes[SceneArea.redding.ordinal()]);
-         //locations [7][10].setObstacles(obstacles[obstaclesPosistion.Seven.ordinal()]);
+         locations [7][10].setObstacles(obstaclePosition[ObName.Seven.ordinal()]);
          locations [8][1].setScenes(scenes[SceneArea.medford.ordinal()]);
          
 
