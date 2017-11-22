@@ -6,6 +6,8 @@
 package byui.cit260.JamaicanExodus.view;
 
 
+
+import byui.cit260.JamaicanExodus.control.GameControl;
 import byui.cit260.JamaicanExodus.model.Player;
 import java.util.Scanner;
 

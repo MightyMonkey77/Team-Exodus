@@ -5,6 +5,14 @@
  */
 package byui.cit260.JamaicanExodus.view;
 
+import byui.cit260.JamaicanExodus.Exception.DoubleControlException;
+import byui.cit260.JamaicanExodus.JamaicanExodus;
+import byui.cit260.JamaicanExodus.control.GameControl;
+import byui.cit260.JamaicanExodus.Exception.GameControlException;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 
 /**
  *
@@ -46,6 +54,15 @@ public class MainMenu extends View  {
             case "E":
                 this.exitGame();
                 break;
+            case "D":
+        {
+            try {
+                this.callDoubleNumber();
+            } catch (DoubleControlException ex) {
+                Logger.getLogger(MainMenu.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+                break;
             case "Q":
                 this.giveUp();    
                 break; //see line 38,39
@@ -66,7 +83,7 @@ public class MainMenu extends View  {
         //GameControl.createNewGame(JamaicanExodus.getPlayer());
         //GameControl gameControl = new GameControl();
         //gameControl.createNewGame();
-       GameControl.createNewGame(JamaicanExodus.getPlayer()); //New game
+      // GameControl.createNewGame(JamaicanExodus.getPlayer()); //New game
              
        GameMenu gameMenu = new GameMenu();
        gameMenu.display();
@@ -83,8 +100,21 @@ public class MainMenu extends View  {
     
 
     private void saveGame() {
-        System.out.println("\n Exciting 'Save Your Game' function coming soon!");
+       
+          // prompt for and get the name of the file to save the game in
+        System.out.println("\nEnter the path and filename for file where the game "
+                           + "is to be saved:");
+        String filePath = this.getInput();     
+        
+        try {
+            // save the game to the speciried file
+            GameControl.saveGame(JamaicanExodus.getCurrentGame(), filePath);
+        } catch (GameControlException | IOException ex) {
+            ErrorView.display("MainMenuView", ex.getMessage());
+        } 
+
     }
+    
 
     private void exitGame() {
         System.out.println("\n Revolutionary 'Exit Game' function coming soon!");
@@ -98,8 +128,35 @@ public class MainMenu extends View  {
     }
 
     private void loadSavedGame() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                  
+       // prompt for and get the name of the file to save the game in
+        System.out.println("\n\nEnter the path and filename for file where the game "
+                           + "is to be saved:");
+        
+        String filePath = this.getInput();
+        
+        try {
+            // start a saved game
+            GameControl.getSavedGame(filePath);
+        } catch (GameControlException ex) {
+            ErrorView.display("MainMenuView", ex.getMessage());
+        } 
+
+        // display the game menu
+        GameMenu gameMenu = new GameMenu();
+        gameMenu.display();
+    
     }
+
+    private void callDoubleNumber() throws DoubleControlException {
+       
+        System.out.println("\n*** callDoubleNumber function called");
+        DoubleFormat doubleNumber = new DoubleFormat();
+        doubleNumber.getDoubleNumber();
+    }
+
+
+}
     
   
-}    
+   

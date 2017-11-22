@@ -6,6 +6,7 @@
 package byui.cit260.JamaicanExodus.model;
 
 import java.io.Serializable;
+import java.util.Arrays;
 import java.util.Objects;
 
 /**
@@ -15,14 +16,36 @@ import java.util.Objects;
 public class Map implements Serializable {
     
     private String description;
-    private int xCount;
-    private int yCount;
+    private int x;
+    private int y;
     private int location;
     private double traveled;
+    private Location [][] locations;
+    private String map;
 
-    public Map() {
+    public Map(int x, int y) {
     }
 
+    public Map() {
+        
+    }
+
+    public String getMap() {
+        return map;
+    }
+
+    public void setMap(String map) {
+        this.map = map;
+    }
+    
+    public Location[][] getLocations() {
+        return locations;
+    }
+
+    public void setLocations(Location[][] locations) {
+        this.locations = locations;
+    }
+     
     public String getDescription() {
         return description;
     }
@@ -31,20 +54,20 @@ public class Map implements Serializable {
         this.description = description;
     }
 
-    public int getxCount() {
-        return xCount;
+    public int getX() {
+        return x;
     }
 
-    public void setxCount(int xCount) {
-        this.xCount = xCount;
+    public void setX(int x) {
+        this.x = x;
     }
 
-    public int getyCount() {
-        return yCount;
+    public int getY() {
+        return y;
     }
 
-    public void setyCount(int yCount) {
-        this.yCount = yCount;
+    public void setY(int y) {
+        this.y = y;
     }
 
     public int getLocation() {
@@ -66,11 +89,12 @@ public class Map implements Serializable {
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 83 * hash + Objects.hashCode(this.description);
-        hash = 83 * hash + this.xCount;
-        hash = 83 * hash + this.yCount;
-        hash = 83 * hash + (int) (Double.doubleToLongBits(this.location) ^ (Double.doubleToLongBits(this.location) >>> 32));
-        hash = 83 * hash + (int) (Double.doubleToLongBits(this.traveled) ^ (Double.doubleToLongBits(this.traveled) >>> 32));
+        hash = 89 * hash + Objects.hashCode(this.description);
+        hash = 89 * hash + this.x;
+        hash = 89 * hash + this.y;
+        hash = 89 * hash + this.location;
+        hash = 89 * hash + (int) (Double.doubleToLongBits(this.traveled) ^ (Double.doubleToLongBits(this.traveled) >>> 32));
+        hash = 89 * hash + Arrays.deepHashCode(this.locations);
         return hash;
     }
 
@@ -86,13 +110,13 @@ public class Map implements Serializable {
             return false;
         }
         final Map other = (Map) obj;
-        if (this.xCount != other.xCount) {
+        if (this.x != other.x) {
             return false;
         }
-        if (this.yCount != other.yCount) {
+        if (this.y != other.y) {
             return false;
         }
-        if (Double.doubleToLongBits(this.location) != Double.doubleToLongBits(other.location)) {
+        if (this.location != other.location) {
             return false;
         }
         if (Double.doubleToLongBits(this.traveled) != Double.doubleToLongBits(other.traveled)) {
@@ -101,13 +125,18 @@ public class Map implements Serializable {
         if (!Objects.equals(this.description, other.description)) {
             return false;
         }
+        if (!Arrays.deepEquals(this.locations, other.locations)) {
+            return false;
+        }
         return true;
     }
 
     @Override
     public String toString() {
-        return "Map{" + "description=" + description + ", xCount=" + xCount + ", yCount=" + yCount + ", location=" + location + ", traveled=" + traveled + '}';
+        return "Map{" + "description=" + description + ", x=" + x + ", y=" + y + ", location=" + location + ", traveled=" + traveled + ", locations=" + locations + '}';
     }
+
+    
     
     
     

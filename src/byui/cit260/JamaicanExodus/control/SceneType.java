@@ -5,16 +5,12 @@
  */
 package byui.cit260.JamaicanExodus.control;
 
-//import byui.cit260.JamaicanExodus.model.Inventory;
-
 /**
  *
  * @author Office Payne
  */
-public class InventoryControl {
+public enum SceneType {
+
+      start;
     
-
-
-
-
 }

@@ -3,18 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package byui.cit260.JamaicanExodus.control;
-
-//import byui.cit260.JamaicanExodus.model.Inventory;
+package byui.cit260.JamaicanExodus.Exception;
 
 /**
  *
  * @author Office Payne
  */
-public class InventoryControl {
+public class GameControlException extends Exception {
+
+    public GameControlException(String message) {
+    }
+
+   
     
-
-
-
-
 }

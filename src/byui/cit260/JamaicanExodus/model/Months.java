@@ -5,54 +5,27 @@
  */
 package byui.cit260.JamaicanExodus.model;
 
-
-import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.Objects;
+
 /**
  *
  * @author Office Payne
  */
-public class Player implements Serializable {
-
-private String name;  
-private final ArrayList<Game> games = new ArrayList<>();
-private int x;
-private int y;
-private double charHealth = 100;
-   
-    public Player() {
-    }
-
-    public double getCharHealth() {
-        return charHealth;
-    }
+public class Months {
+    private String description;
+    private String name;
     
-    public void setCharHealth(double charHealth) {
-        this.charHealth = charHealth;
+    public Months() {
     }
 
-    public int getX() {
-        return x;
+    public String getDescription() {
+        return description;
     }
 
-    public void setX(int x) {
-        this.x = x;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public int getY() {
-        return y;
-    }
-
-    public void setY(int y) {
-        this.y = y;
-    }
-
-    public ArrayList<Game> getGames() {
-        return games;
-    }
-   
- 
     public String getName() {
         return name;
     }
@@ -63,8 +36,9 @@ private double charHealth = 100;
 
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 79 * hash + Objects.hashCode(this.name);
+        int hash = 3;
+        hash = 47 * hash + Objects.hashCode(this.description);
+        hash = 47 * hash + Objects.hashCode(this.name);
         return hash;
     }
 
@@ -79,7 +53,10 @@ private double charHealth = 100;
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Player other = (Player) obj;
+        final Months other = (Months) obj;
+        if (!Objects.equals(this.description, other.description)) {
+            return false;
+        }
         if (!Objects.equals(this.name, other.name)) {
             return false;
         }
@@ -88,12 +65,8 @@ private double charHealth = 100;
 
     @Override
     public String toString() {
-        return "Player{" + "name=" + name + ", games=" + games + '}';
+        return "Months{" + "description=" + description + ", name=" + name + '}';
     }
-
     
-    
-
-   
     
 }
