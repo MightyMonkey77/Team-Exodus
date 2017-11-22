@@ -28,9 +28,9 @@ public class StartProgram {
     }
 
     private void displayBanner() {
-        System.out.println("\n*************************************************************"
+         System.out.println("\n*************************************************************"
                           +"\n                                                             "
-                          +"\nThe Jamaican Exodus is a text based game. It begins in the   "
+                          +"\nThe Jamaican Exodus is a text based game. It begins ...      "
                           +"\ntown of Frome. Where those in power subjugated the people    "
                           +"\nwith heavy burdens. They hear of an opportunity to work and  "
                           +"\nlive in Oregon where they have established a refugee camp.   "
@@ -59,7 +59,8 @@ public class StartProgram {
                           +"\nKingston.                                                    "
                           +"\n                                                             "
                           +"\n*************************************************************");
-    }
+    
+   }
 
     public void displayStartProgram() {
         boolean done = false;
