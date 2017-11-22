@@ -66,7 +66,10 @@ public class MapControl {
          
          Obstacles[] obstaclePosition = new Obstacles[GameControl.ObName.values().length];
          
-         Obstacles One = new Obstacles();
+         Obstacles oneScene = new Obstacles();
+         oneScene.setObstacleDescription("");
+         oneScene.setAnswer("");
+         obstaclePosition[GameControl.ObName.One.ordinal()] = oneScene;
          
          return obstaclePosition;
     }    
