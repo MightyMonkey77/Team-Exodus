@@ -81,7 +81,8 @@ public class GameControl {
      return 1;
      }
     }   
-   public enum usableMonths { // kimbuilt     
+
+   public enum usableMonths {      
       January,
       February,
       March,
@@ -90,7 +91,7 @@ public class GameControl {
       June;
    } 
     
-   private static Months[] createMonths() { // kimbuilt
+   private static Months[] createMonths() { 
      Months[] monthList = new Months [6];
       
       Months January = new Months();
@@ -131,12 +132,52 @@ public class GameControl {
           
       return monthList;    
    }       
-   
-    private static Occupations[] createOccupations() {
-        System.out.println("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        return null;
-    }
 
+    public enum jobs {
+        
+      banker,
+      carpenter,
+      farmer,
+      shipwrieght,
+      softwareEngineer;
+     
+    }
+    
+    private static Occupations[] createOccupations() {
+        Occupations[] occupationsList = new Occupations[5]; 
+        
+        Occupations banker = new Occupations();        
+        banker.setDescription("");
+        banker.setName("banker");
+        banker.setStartingMoney(100000000.00);
+        occupationsList[jobs.banker.ordinal()] = banker;
+        
+        Occupations carpenter = new Occupations();        
+        banker.setDescription("");
+        banker.setName("carpenter");
+        banker.setStartingMoney(100000000.00);
+        occupationsList[jobs.carpenter.ordinal()] = carpenter;
+        
+        Occupations farmer = new Occupations();        
+        banker.setDescription("");
+        banker.setName("farmer");
+        banker.setStartingMoney(100000000.00);
+        occupationsList[jobs.farmer.ordinal()] = farmer;
+        
+        Occupations shipwrieght = new Occupations();        
+        banker.setDescription("");
+        banker.setName("shipwrieght");
+        banker.setStartingMoney(100000000.00);
+        occupationsList[jobs.shipwrieght.ordinal()] = shipwrieght;
+        
+        Occupations softwareEngineer = new Occupations();        
+        banker.setDescription("");
+        banker.setName("softwareEngineer");
+        banker.setStartingMoney(100000000.00);
+        occupationsList[jobs.softwareEngineer.ordinal()] = softwareEngineer;
+        return occupationsList;
+    }
+    
     private static Actor[] createActors() {
        
         Actor[] actorList = new Actor[5];
@@ -341,39 +382,39 @@ public class GameControl {
           
           Obstacles[] obstaclePosition = new Obstacles[7];
           
-          Obstacles obstacleOne = new Obstacles();
-          obstacleOne.getObstacleDescription();
-          obstacleOne.getAnswer();
-          obstaclePosition[ObName.one.ordinal()] = one;
+          Obstacles One = new Obstacles();
+          One.getObstacleDescription();
+          One.getAnswer();
+          obstaclePosition[ObName.One.ordinal()] = One;
           
-          Obstacles obstacleTwo = new Obstacles();
-          obstacleTwo.getObstacleDescription();
-          obstacleTwo.getAnswer();
+          Obstacles Two = new Obstacles();
+          Two.getObstacleDescription();
+          Two.getAnswer();
           obstaclePosition[ObName.Two.ordinal()] = Two;             
           
-          Obstacles obstacleThree = new Obstacles();
-          obstacleThree.getObstacleDescription();
-          obstacleThree.getAnswer();
+          Obstacles Three = new Obstacles();
+          Three.getObstacleDescription();
+          Three.getAnswer();
           obstaclePosition[ObName.Three.ordinal()] = Three;
           
-          Obstacles obstacleFour = new Obstacles();
-          obstacleFour.getObstacleDescription();
-          obstacleFour.getAnswer();
+          Obstacles Four = new Obstacles();
+          Four.getObstacleDescription();
+          Four.getAnswer();
           obstaclePosition[ObName.Four.ordinal()] = Four;
           
-          Obstacles obstacleFive = new Obstacles();
-          obstacleFive.getObstacleDescription();
-          obstacleFive.getAnswer();
+          Obstacles Five = new Obstacles();
+          Five.getObstacleDescription();
+          Five.getAnswer();
           obstaclePosition[ObName.Five.ordinal()] = Five;
           
-          Obstacles obstacleSix = new Obstacles();
-          obstacleSix.getObstacleDescription();
-          obstacleSix.getAnswer();
+          Obstacles Six = new Obstacles();
+          Six.getObstacleDescription();
+          Six.getAnswer();
           obstaclePosition[ObName.Six.ordinal()] = Six;
           
-          Obstacles obstacleSeven = new Obstacles();
-          obstacleSeven.getObstacleDescription();
-          obstacleSeven.getAnswer();
+          Obstacles Seven = new Obstacles();
+          Seven.getObstacleDescription();
+          Seven.getAnswer();
           obstaclePosition[ObName.Seven.ordinal()] = Seven;
           
           return obstaclePosition;
@@ -397,24 +438,24 @@ public class GameControl {
 
         return locationsSpot;
     }
-     private static void scenesToLocation(Map map, Scene[] scenes, Obstacles[] obstaclesPosition, Obstacles[] obstacles) {
+     private static void scenesToLocation(Map map, Scene[] scenes, Obstacles[] obstaclePosition) {
         
          Location[][] locations = map.getLocations();
          
          locations [1][1].setScenes(scenes[SceneArea.froome.ordinal()]);
-         locations [1][10].setObstacles(obstacles[obstaclePosition.One.ordinal()]);
+         locations [1][10].setObstacles(obstaclePosition[ObName.One.ordinal()]);
          locations [2][1].setScenes(scenes[SceneArea.kingston.ordinal()]);
-         locations [2][10].setObstacles([obstaclesPosition.Two.ordinal()]):
+         locations [2][10].setObstacles(obstaclePosition[ObName.Two.ordinal()]);
          locations [3][1].setScenes(scenes[SceneArea.saintPetersburg.ordinal()]);
-         locations [3][10].setObstacles(obstacles[obstaclesPosistion.Three.ordinal()]);
+         locations [3][10].setObstacles(obstaclePosition[ObName.Three.ordinal()]);
          locations [4][1].setScenes(scenes[SceneArea.birmingham.ordinal()]);
-         locations [4][10].setObstacles(obstacles[obstaclesPosition.Four.ordinal()]);
+         locations [4][10].setObstacles(obstaclePosition[ObName.Four.ordinal()]);
          locations [5][1].setScenes(scenes[SceneArea.elPaso.ordinal()]);
-         locations [5][10].setObstacles(obstacles[obstaclesPosition.Five.ordinal()]);
+         locations [5][10].setObstacles(obstaclePosition[ObName.Five.ordinal()]);
          locations [6][1].setScenes(scenes[SceneArea.losAngeles.ordinal()]);
-         locations [6][10].setObstacles(obstacles[obstaclesPosition.Six.ordinal()]);
+         locations [6][10].setObstacles(obstaclePosition[ObName.Six.ordinal()]);
          locations [7][1].setScenes(scenes[SceneArea.redding.ordinal()]);
-         locations [7][10].setObstacles(obstacles[obstaclesPosition.Seven.ordinal()]);
+         locations [7][10].setObstacles(obstaclePosition[ObName.Seven.ordinal()]);
          locations [8][1].setScenes(scenes[SceneArea.medford.ordinal()]);
          
 
@@ -453,8 +494,7 @@ public class GameControl {
             throw new GameControlException(e.getMessage());
         } 
     }
-
-     
+ 
 }
      
    
