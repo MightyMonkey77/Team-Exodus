@@ -86,12 +86,50 @@ public class GameControl {
        System.out.println("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         return null;
     }
-
-    private static Occupations[] createOccupations() {
-        System.out.println("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        return null;
+    public enum jobs {
+        
+      banker,
+      carpenter,
+      farmer,
+      shipwrieght,
+      softwareEngineer;
+      
     }
-
+    private static Occupations[] createOccupations() {
+        Occupations[] occupationsList = new Occupations[5]; 
+        
+        Occupations banker = new Occupations();        
+        banker.setDescription("");
+        banker.setName("banker");
+        banker.setStartingMoney(100000000.00);
+        occupationsList[jobs.banker.ordinal()] = banker;
+        
+        Occupations carpenter = new Occupations();        
+        banker.setDescription("");
+        banker.setName("carpenter");
+        banker.setStartingMoney(100000000.00);
+        occupationsList[jobs.carpenter.ordinal()] = carpenter;
+        
+        Occupations farmer = new Occupations();        
+        banker.setDescription("");
+        banker.setName("farmer");
+        banker.setStartingMoney(100000000.00);
+        occupationsList[jobs.farmer.ordinal()] = farmer;
+        
+        Occupations shipwrieght = new Occupations();        
+        banker.setDescription("");
+        banker.setName("shipwrieght");
+        banker.setStartingMoney(100000000.00);
+        occupationsList[jobs.shipwrieght.ordinal()] = shipwrieght;
+        
+        Occupations softwareEngineer = new Occupations();        
+        banker.setDescription("");
+        banker.setName("softwareEngineer");
+        banker.setStartingMoney(100000000.00);
+        occupationsList[jobs.softwareEngineer.ordinal()] = softwareEngineer;
+        return occupationsList;
+    }
+    
     private static Actor[] createActors() {
        
         Actor[] actorList = new Actor[5];
