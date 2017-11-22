@@ -5,10 +5,13 @@
  */
 package byui.cit260.JamaicanExodus.view;
 
+import byui.cit260.JamaicanExodus.Exception.DoubleControlException;
 import byui.cit260.JamaicanExodus.JamaicanExodus;
 import byui.cit260.JamaicanExodus.control.GameControl;
-import byui.cit260.JamaicanExodus.control.GameControlException;
+import byui.cit260.JamaicanExodus.Exception.GameControlException;
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 /**
@@ -50,6 +53,15 @@ public class MainMenu extends View  {
                 break;
             case "E":
                 this.exitGame();
+                break;
+            case "D":
+        {
+            try {
+                this.callDoubleNumber();
+            } catch (DoubleControlException ex) {
+                Logger.getLogger(MainMenu.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
                 break;
             case "Q":
                 this.giveUp();    
@@ -134,6 +146,13 @@ public class MainMenu extends View  {
         GameMenu gameMenu = new GameMenu();
         gameMenu.display();
     
+    }
+
+    private void callDoubleNumber() throws DoubleControlException {
+       
+        System.out.println("\n*** callDoubleNumber function called");
+        DoubleFormat doubleNumber = new DoubleFormat();
+        doubleNumber.getDoubleNumber();
     }
 
 

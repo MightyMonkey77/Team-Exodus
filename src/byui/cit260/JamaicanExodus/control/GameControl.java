@@ -6,6 +6,7 @@
 package byui.cit260.JamaicanExodus.control;
 
 
+import byui.cit260.JamaicanExodus.Exception.GameControlException;
 import byui.cit260.JamaicanExodus.model.Game;
 import byui.cit260.JamaicanExodus.model.Inventory;
 import byui.cit260.JamaicanExodus.model.Map;
@@ -32,14 +33,7 @@ import java.io.ObjectOutputStream;
  */
 public class GameControl {
 
-    private static Obstacles one;
-    private static Obstacles Two;
-    private static Obstacles Three;
-    private static Obstacles Four;
-    private static Obstacles Five;
-    private static Obstacles Six;
-    private static Obstacles Seven;
-    
+       
     public static Player createPlayer(String name) {  
                
      if (name == null) {
@@ -70,7 +64,7 @@ public class GameControl {
      Months[] months = GameControl.createMonths();
      JamaicanExodus.setMonths(months);
      
-     Occupations occupations = GameControl.createOccupations();
+     Occupations[] occupations = GameControl.createOccupations();
      JamaicanExodus.setOccupations(occupations);
      
      Inventory[] inventory = GameControl.createInvetoryList();
@@ -93,7 +87,7 @@ public class GameControl {
         return null;
     }
 
-    private static Occupations createOccupations() {
+    private static Occupations[] createOccupations() {
         System.out.println("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         return null;
     }
@@ -228,7 +222,7 @@ public class GameControl {
      elPaso,
      losAngeles,
      redding,
-     medford,
+     medford
      ;
      
      }
@@ -288,8 +282,8 @@ public class GameControl {
          return scenePlace;
     }
      
-      private enum ObName {
-      one,
+      public enum ObName {
+      One,
       Two,
       Three,
       Four,
