@@ -81,12 +81,57 @@ public class GameControl {
      return 1;
      }
     }   
-
-    private static Months[] createMonths() {
-       System.out.println("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        return null;
-    }
-
+   public enum usableMonths { // kimbuilt     
+      January,
+      February,
+      March,
+      April,
+      May,
+      June;
+   } 
+    
+   private static Months[] createMonths() { // kimbuilt
+     Months[] monthList = new Months [6];
+      
+      Months January = new Months();
+          January.setDescription("Month of January. Average temp of 86F dry season.");
+          January.setName("January");
+          January.setImpact((int) .25);
+          monthList[usableMonths.January.ordinal()] = January;
+          
+      Months February = new Months();
+          February.setDescription("Month of Feburary. Average temp of 86F dry season.");
+          February.setName("February");
+          February.setImpact((int) .35);
+          monthList[usableMonths.February.ordinal()] = February;
+      
+      Months March = new Months();
+          March.setDescription("Month of March. Average temp of 88F dry season.");
+          March.setName("March");
+          March.setImpact((int) .45);
+          monthList[usableMonths.March.ordinal()] = March;
+      
+      Months April = new Months();
+          April.setDescription("Month of April. Average temp of 88F begining of the first wet season.");
+          April.setName("April");
+          April.setImpact((int) .25);
+          monthList[usableMonths.April.ordinal()] = April;
+          
+      Months May = new Months();
+          May.setDescription("Month of May. Average temp of 88F first wet season.");
+          May.setName("May");
+          May.setImpact((int) .35);
+          monthList[usableMonths.May.ordinal()] = May;
+      
+      Months June = new Months();
+          June.setDescription("Month of June. Average temp of 90F lightening of the first wet season.");
+          June.setName("June");
+          June.setImpact((int) .45);
+          monthList[usableMonths.June.ordinal()] = June;    
+          
+      return monthList;    
+   }       
+   
     private static Occupations[] createOccupations() {
         System.out.println("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         return null;
