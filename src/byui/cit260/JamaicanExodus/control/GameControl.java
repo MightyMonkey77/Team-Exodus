@@ -81,7 +81,7 @@ public class GameControl {
      return 1;
      }
     }   
-
+    
    public enum usableMonths {      
       January,
       February,
@@ -176,7 +176,9 @@ public class GameControl {
         banker.setStartingMoney(100000000.00);
         occupationsList[jobs.softwareEngineer.ordinal()] = softwareEngineer;
         return occupationsList;
+  
     }
+  
     
     private static Actor[] createActors() {
        
@@ -191,8 +193,7 @@ public class GameControl {
         return actorList;        
         
     }
-   
-
+  
     public enum Item {
     
     clothing,
@@ -496,16 +497,3 @@ public class GameControl {
     }
  
 }
-     
-   
-     
-    
-     
-     
-     
-     
-
-    
-    
-   
-    
