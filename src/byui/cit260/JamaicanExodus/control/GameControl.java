@@ -91,7 +91,7 @@ public class GameControl {
       banker,
       carpenter,
       farmer,
-      shipwrieght,
+      shipwright,
       softwareEngineer;
       
     }
@@ -116,11 +116,11 @@ public class GameControl {
         banker.setStartingMoney(100000000.00);
         occupationsList[jobs.farmer.ordinal()] = farmer;
         
-        Occupations shipwrieght = new Occupations();        
+        Occupations shipwright = new Occupations();        
         banker.setDescription("");
-        banker.setName("shipwrieght");
+        banker.setName("shipwright");
         banker.setStartingMoney(100000000.00);
-        occupationsList[jobs.shipwrieght.ordinal()] = shipwrieght;
+        occupationsList[jobs.shipwright.ordinal()] = shipwright;
         
         Occupations softwareEngineer = new Occupations();        
         banker.setDescription("");
