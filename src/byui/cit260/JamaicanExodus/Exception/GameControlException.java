@@ -7,7 +7,7 @@ package byui.cit260.JamaicanExodus.Exception;
 
 /**
  *
- * @author Office Payne
+ * @author mikeg
  */
 public class GameControlException extends Exception {
 
