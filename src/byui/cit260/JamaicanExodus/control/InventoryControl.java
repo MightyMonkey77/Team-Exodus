@@ -37,7 +37,7 @@ public class InventoryControl {
                    } 
              } 
       } 
-    /*
+    
     public enum Item {
     
     clothing,
@@ -94,18 +94,18 @@ public class InventoryControl {
           
           return inventoryList;
      }
-    */
+    
     public void calcInventoryAmount() throws InventoryControlException {
 
-       Scanner in = new Scanner(System.in); 
+       Scanner in = new Scanner(System.in); // Ask for user input on quantity.
        int x = 1;
               
        do {
            try{
              System.out.println("Enter quantity ");  
              double quantity = in.nextInt();
-             double weightPerItem = Inventory.setWeight(double weight);
-                                      
+             double weightPerItem = inventory.setWeight(inventoryList[Item.ordinal()]);
+             // Not sure have tried many ways.                         
              double totalWeight = (quantity * weightPerItem);
                 if (totalWeight < 500) {
                 System.out.println("You have enough room.");
