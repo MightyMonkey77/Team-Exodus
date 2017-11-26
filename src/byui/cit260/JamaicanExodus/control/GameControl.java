@@ -7,6 +7,7 @@ package byui.cit260.JamaicanExodus.control;
 
 
 import byui.cit260.JamaicanExodus.Exception.GameControlException;
+import byui.cit260.JamaicanExodus.Exception.MapControlException;
 import byui.cit260.JamaicanExodus.model.Game;
 import byui.cit260.JamaicanExodus.model.Inventory;
 import byui.cit260.JamaicanExodus.model.Map;
@@ -47,10 +48,10 @@ public class GameControl {
     return player;
     } 
     
-    public static int createNewGame(Player player) {
+    public static int createNewGame(Player player) throws GameControlException, MapControlException {
         
-       if (player == null) 
-            return -1; 
+       if (player == null) {
+            throw new GameControlException("You are not welcome here, O' nameless one.");  }
      
      // System.out.println("Craptastic, still cannot get this to work.");
      Game currentGame = new Game(); // Starts the game.
