@@ -13,7 +13,7 @@ import java.util.Objects;
  * @author Office Payne
  */
 public class Inventory implements Serializable {
-    
+
     private String name;
     private String description;
     private double cost;
