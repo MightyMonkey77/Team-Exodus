@@ -43,17 +43,22 @@ public class InventoryControl {
     /**
     Get Inventory item weights. 
      */
-    public void calcGetWeight() throws InventoryControlException {
+    public double calcGetWeight()  {
         
         Game game = JamaicanExodus.getCurrentGame();
         Inventory[] inventoryList = game.getInventory();
-               
-        Inventory inventoryItem = inventoryList[Item.clothing.ordinal()]; 
-        double clothingWeight = inventoryItem.getWeight();
         
+        double totalWeight = 0.0;
+        for(int i = 0; i<inventoryList.length; i++) {
+            double weight = inventoryList[i].getWeight();
+            int quantity = inventoryList[i].getQuantity();
+            totalWeight = totalWeight + weight;
+    }
+        return totalWeight;
+          
         
     }    
-    public void calcInventoryAmount() throws InventoryControlException {
+    public double calcInventoryAmount() throws InventoryControlException {
 
        Scanner in = new Scanner(System.in); // Ask for user input on quantity.
        int x = 1;
@@ -62,11 +67,16 @@ public class InventoryControl {
            try{
              System.out.println("Enter quantity ");  
              double quantity = in.nextInt();
-             double weightPerItem = inventory.setWeight(inventoryList[Item.ordinal()]);
-             // Not sure have tried many ways.                         
-             double totalWeight = (quantity * weightPerItem);
+             double chosenItemWeight = 2000.00;
+             double limit = 500.00;
+             if (calcGetWeight() + chosenItemWeight > limit) {
+                throw new InventoryControlException();
+             } else {
+              System.out.println("You have enough room.");
+             }
+             double totalWeight = (quantity * chosenItemWeight);
                 if (totalWeight < 500) {
-                System.out.println("You have enough room.");
+               
                 }
 
              System.out.println("\n that weighs " + totalWeight+ " Pounds"); 
@@ -74,10 +84,11 @@ public class InventoryControl {
        }
          catch(Exception InventoryException) {  
                 System.out.println("If over current reamianing weight, cannot purchase.");
-       return;
+      
          }
           
        }while(x==1);
+         return 0;
     }
 
 

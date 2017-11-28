@@ -7,9 +7,13 @@ package byui.cit260.JamaicanExodus.view;
 
 
 
+import byui.cit260.JamaicanExodus.Exception.GameControlException;
+import byui.cit260.JamaicanExodus.Exception.MapControlException;
 import byui.cit260.JamaicanExodus.control.GameControl;
 import byui.cit260.JamaicanExodus.model.Player;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -113,7 +117,12 @@ public class StartProgram {
             System.out.println("\nError creating the player.");
             return false;  
         }
-      
+        try {
+            GameControl.createNewGame(player);
+                    
+        } catch (GameControlException | MapControlException  ex) {
+            Logger.getLogger(StartProgram.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
         this.displayNextView(player);
         return true; //success

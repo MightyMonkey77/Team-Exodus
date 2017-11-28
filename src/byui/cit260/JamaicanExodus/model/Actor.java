@@ -97,9 +97,9 @@ public class Actor implements Serializable {
         return "Actor{" + "name=" + name + ", description=" + description + ", coordinates=" + coordinates + ", startingHealth=" + startingHealth + '}';
     }
 
-    public void setCoordinates(int i, int i0) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+  //  public void setCoordinates(int i, int i0) {
+  //      throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+  //  }
 
      
    

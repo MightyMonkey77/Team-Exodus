@@ -197,31 +197,31 @@ public class GameControl {
         Actor companionOne = new Actor();
         companionOne.setDescription("This is your wife/husband that is accompaning you.");
         companionOne.setName("");
-        companionOne.setCoordinates(1, 2);
+    //    companionOne.setCoordinates(1, 2);
         actorList[Companions.companionOne.ordinal()] = companionOne;
       
         Actor companionTwo = new Actor();
         companionTwo.setDescription("Your First child.");
         companionTwo.setName("");
-        companionTwo.setCoordinates(1, 3);
+    //   companionTwo.setCoordinates(1, 3);
         actorList[Companions.companionOne.ordinal()] = companionOne;
         
         Actor companionThree = new Actor();
         companionThree.setDescription("Your second child.");
         companionThree.setName("");
-        companionThree.setCoordinates(1, 4);
+    //    companionThree.setCoordinates(1, 4);
         actorList[Companions.companionOne.ordinal()] = companionOne;
         
         Actor companionFour = new Actor();
         companionFour.setDescription("Best friend.");
         companionFour.setName("");
-        companionFour.setCoordinates(1, 5);
+    //    companionFour.setCoordinates(1, 5);
         actorList[Companions.companionOne.ordinal()] = companionOne;
       
         Actor companionFive = new Actor();
         companionFive.setDescription("Best friends wife/husband.");
         companionFive.setName("");
-        companionFive.setCoordinates(1, 6);
+    //    companionFive.setCoordinates(1, 6);
         actorList[Companions.companionOne.ordinal()] = companionOne;
         
         return actorList;        
@@ -230,7 +230,7 @@ public class GameControl {
      
      public static Inventory[] createInvetoryList() {
           
-          Inventory[] inventoryList = new Inventory [8];
+          Inventory[] inventoryList = new Inventory [10];
           
           Inventory clothing = new Inventory();
           clothing.setDescription("clothing");

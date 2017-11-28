@@ -6,7 +6,9 @@
 package byui.cit260.JamaicanExodus.control;
 
 
+import byui.cit260.JamaicanExodus.JamaicanExodus;
 import byui.cit260.JamaicanExodus.model.Actor;
+import byui.cit260.JamaicanExodus.model.Game;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -36,11 +38,15 @@ public class Actors {
       Scanner keyboard = new Scanner(System.in);
       System.out.println("Enter first companions name: ");
       String actorName1 = keyboard.nextLine();
-      Actor companionOne = new Actor();
-      companionOne.setName(actorName1);
+     // Actor companionOne = new Actor();
+      Game currentGame = JamaicanExodus.getCurrentGame();
+      Actor[] actors = currentGame.getActor();
+      Actor actorOne = actors[0];
+      actorOne.setName(actorName1);
+     // JamaicanExodus.getCurrentGame().getActor()[0] = actorOne;  
+      actors[0] = actorOne;
       
-      actors.add(companionOne);
-      
+  /*          
       System.out.println("Enter second companions name: ");
       String actorName2 = keyboard.nextLine();
       Actor companionTwo = new Actor();
@@ -70,7 +76,7 @@ public class Actors {
       actors.add(companionFive);
         return null;
           }  
-
+*/
     private boolean doAction(String menuOption) {
                  
         actors.forEach((actor) -> {

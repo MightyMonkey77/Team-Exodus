@@ -21,8 +21,8 @@ class ChestView {
              
        viewSortedInventory.inventorySort(items);
             
-       for ( int i = 0;  i < items.length;  i++ )
-       this.console.println( items [ i ] );  
+     //  for ( int i = 0;  i < items.length;  i++ ){
+     //     this.console.println( items [ i ] );  
     }
 
     void displayChestView() {
