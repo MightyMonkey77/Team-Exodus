@@ -15,6 +15,10 @@ import byui.cit260.JamaicanExodus.model.Occupations;
 import byui.cit260.JamaicanExodus.model.Player;
 import byui.cit260.JamaicanExodus.view.Map;
 import byui.cit260.JamaicanExodus.view.StartProgram;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
 
 /**
  *
@@ -30,6 +34,33 @@ public class JamaicanExodus {
     private static Obstacles[] obstacles = null;
     private static Months[] months = null;
     private static Occupations[] occupations = null;
+    private static PrintWriter outFile = null;
+    private static BufferedReader inFile = null;
+    private static PrintWriter logFile = null;
+
+    public static PrintWriter getLogFile() {
+        return logFile;
+    }
+
+    public static void setLogFile(PrintWriter logFile) {
+        JamaicanExodus.logFile = logFile;
+    }
+
+    public static PrintWriter getOutFile() {
+        return outFile;
+    }
+
+    public static void setOutFile(PrintWriter outFile) {
+        JamaicanExodus.outFile = outFile;
+    }
+
+    public static BufferedReader getInfile() {
+        return inFile;
+    }
+
+    public static void setInfile(BufferedReader infile) {
+        JamaicanExodus.inFile = infile;
+    }
 
     public static Months[] getMonths() {
         return months;
@@ -97,15 +128,40 @@ public class JamaicanExodus {
     
     
     
-    public static void main(String[] args) {     
+    public static void main(String[] args) { 
         
-        StartProgram startProgram = new StartProgram();
         try {
-        startProgram.displayStartProgram();
-        } catch (Throwable te) {
-        System.out.println(te.getMessage());
-        te.printStackTrace();
-        startProgram.displayStartProgram();
+        
+            JamaicanExodus.inFile = new BufferedReader(new InputStreamReader(System.in));
+            JamaicanExodus.outFile = new PrintWriter(System.out, true);
+            
+            //Log file
+            String filePath = "log.txt";
+            JamaicanExodus.logFile = new PrintWriter(filePath);
+        
+        
+            StartProgram startProgram = new StartProgram();
+            startProgram.displayStartProgram();
+        
+        } 
+        catch (Throwable e) {
+            System.out.println("Exception:" + e.toString() + "\nCause:" + e.getCause() + "\nMessage:" + e.getMessage());
+            e.printStackTrace();   
+        }
+        finally {
+            try {
+                if (JamaicanExodus.inFile != null)
+                        JamaicanExodus.inFile.close();
+                if (JamaicanExodus.outFile != null)
+                        JamaicanExodus.outFile.close();
+                if (JamaicanExodus.logFile != null)
+                        JamaicanExodus.logFile.close();
+                
+            } catch (IOException ex) {
+                System.out.println("Error closing files.");
+                return;
+            }
+            
         }
   }
 

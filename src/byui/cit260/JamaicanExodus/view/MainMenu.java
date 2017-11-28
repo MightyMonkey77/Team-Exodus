@@ -9,7 +9,6 @@ import byui.cit260.JamaicanExodus.Exception.DoubleControlException;
 import byui.cit260.JamaicanExodus.JamaicanExodus;
 import byui.cit260.JamaicanExodus.control.GameControl;
 import byui.cit260.JamaicanExodus.Exception.GameControlException;
-import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -75,16 +74,7 @@ public class MainMenu extends View  {
     }    
 
     private void startNewGame() { 
-        // create new game
-       // int returnValue = GameControl.createNewGame();
-       // if (returnValue < 0) {
-        //    System.out.println("ERROR - Failiure to Launch.");
-       // }
-        //GameControl.createNewGame(JamaicanExodus.getPlayer());
-        //GameControl gameControl = new GameControl();
-        //gameControl.createNewGame();
-      // GameControl.createNewGame(JamaicanExodus.getPlayer()); //New game
-             
+                    
        GameMenu gameMenu = new GameMenu();
        gameMenu.display();
     }
@@ -102,14 +92,14 @@ public class MainMenu extends View  {
     private void saveGame() {
        
           // prompt for and get the name of the file to save the game in
-        System.out.println("\nEnter the path and filename for file where the game "
+        this.console.println("\nEnter the path and filename for file where the game "
                            + "is to be saved:");
         String filePath = this.getInput();     
         
         try {
             // save the game to the speciried file
             GameControl.saveGame(JamaicanExodus.getCurrentGame(), filePath);
-        } catch (GameControlException | IOException ex) {
+        } catch (GameControlException ex) {
             ErrorView.display("MainMenuView", ex.getMessage());
         } 
 
@@ -130,14 +120,14 @@ public class MainMenu extends View  {
     private void loadSavedGame() {
                   
        // prompt for and get the name of the file to save the game in
-        System.out.println("\n\nEnter the path and filename for file where the game "
+        this.console.println("\n\nEnter the path and filename for file where the game "
                            + "is to be saved:");
         
         String filePath = this.getInput();
         
         try {
             // start a saved game
-            GameControl.getSavedGame(filePath);
+            GameControl.loadSavedGame(filePath);
         } catch (GameControlException ex) {
             ErrorView.display("MainMenuView", ex.getMessage());
         } 

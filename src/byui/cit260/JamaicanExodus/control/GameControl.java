@@ -15,16 +15,16 @@ import byui.cit260.JamaicanExodus.model.Months;
 import byui.cit260.JamaicanExodus.model.Occupations;
 import byui.cit260.JamaicanExodus.model.Player;
 import byui.cit260.JamaicanExodus.JamaicanExodus;
+import byui.cit260.JamaicanExodus.enums.Item;
 import byui.cit260.JamaicanExodus.model.Actor;
 import byui.cit260.JamaicanExodus.model.Location;
 import byui.cit260.JamaicanExodus.model.Obstacles;
 import byui.cit260.JamaicanExodus.model.Scene;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+
 
 
 
@@ -33,8 +33,8 @@ import java.io.ObjectOutputStream;
  * @author Office Payne
  */
 public class GameControl {
-
-       
+    
+           
     public static Player createPlayer(String name) {  
                
      if (name == null) {
@@ -57,19 +57,19 @@ public class GameControl {
      Game currentGame = new Game(); // Starts the game.
      JamaicanExodus.setCurrentGame(currentGame); // Sets it to the main program.
     
-     JamaicanExodus.setPlayer(player);//sets current player into main program. 
+     currentGame.setPlayer(player);//sets current player into main program. 
            
      Actor[] actor = GameControl.createActors();
-     JamaicanExodus.setActor(actor);
+     currentGame.setActor(actor);
      
      Months[] months = GameControl.createMonths();
-     JamaicanExodus.setMonths(months);
+     currentGame.setMonths(months);
      
      Occupations[] occupations = GameControl.createOccupations();
-     JamaicanExodus.setOccupations(occupations);
+     currentGame.setOccupations(occupations);
      
      Inventory[] inventory = GameControl.createInvetoryList();
-     JamaicanExodus.setInventory(inventory);// save me!
+     currentGame.setInventory(inventory);// save me!
      
      Map map = MapControl.createMap(8, 9); // Start the Map
      
@@ -77,7 +77,7 @@ public class GameControl {
         return -1;
      }
      else {
-     JamaicanExodus.setMap(map);
+     currentGame.setMap(map);
      JamaicanExodus.setCurrentGame(currentGame);
      return 1;
      }
@@ -179,34 +179,54 @@ public class GameControl {
         return occupationsList;
   
     }
-  
+    
+    public enum Companions {
+    companionOne,
+    companionTwo,
+    companionThree,
+    companionFour,
+    companionFive;
+    }
+    // Need to find out how to call the actors names from Actors Control or 
+    //rather make the end user select them the use the rest of the Info for them. 
     
     private static Actor[] createActors() {
        
         Actor[] actorList = new Actor[5];
         
         Actor companionOne = new Actor();
-        companionOne.setDescription("");
+        companionOne.setDescription("This is your wife/husband that is accompaning you.");
         companionOne.setName("");
-        companionOne.setCoordinates(1, 1);
-      //actorList[Actors[].companionOne.ordinal()] = companionOne;
+        companionOne.setCoordinates(1, 2);
+        actorList[Companions.companionOne.ordinal()] = companionOne;
+      
+        Actor companionTwo = new Actor();
+        companionTwo.setDescription("Your First child.");
+        companionTwo.setName("");
+        companionTwo.setCoordinates(1, 3);
+        actorList[Companions.companionOne.ordinal()] = companionOne;
+        
+        Actor companionThree = new Actor();
+        companionThree.setDescription("Your second child.");
+        companionThree.setName("");
+        companionThree.setCoordinates(1, 4);
+        actorList[Companions.companionOne.ordinal()] = companionOne;
+        
+        Actor companionFour = new Actor();
+        companionFour.setDescription("Best friend.");
+        companionFour.setName("");
+        companionFour.setCoordinates(1, 5);
+        actorList[Companions.companionOne.ordinal()] = companionOne;
+      
+        Actor companionFive = new Actor();
+        companionFive.setDescription("Best friends wife/husband.");
+        companionFive.setName("");
+        companionFive.setCoordinates(1, 6);
+        actorList[Companions.companionOne.ordinal()] = companionOne;
         
         return actorList;        
         
-    }
-  
-    public enum Item {
-    
-    clothing,
-    rations,
-    fuel,
-    tools,
-    computer,
-    calc,
-    farmtools,
-    medicine,
-    chest;
-    }
+    }   
      
      public static Inventory[] createInvetoryList() {
           
@@ -214,63 +234,63 @@ public class GameControl {
           
           Inventory clothing = new Inventory();
           clothing.setDescription("clothing");
-          clothing.setQuantity(1);
+          clothing.setQuantity(0);
           clothing.setWeight(2.03);
           clothing.setCost(15.55);
           inventoryList[Item.clothing.ordinal()] = clothing;
           
           Inventory rations = new Inventory();
           rations.setDescription("rations");
-          rations.setQuantity(1);
+          rations.setQuantity(0);
           rations.setWeight(2.03);
           rations.setCost(15.55);
           inventoryList[Item.rations.ordinal()] = rations;
           
           Inventory fuel = new Inventory();
           fuel.setDescription("fuel");
-          fuel.setQuantity(1);
+          fuel.setQuantity(0);
           fuel.setWeight(10.00);
           fuel.setCost(15.55);
           inventoryList[Item.fuel.ordinal()] = fuel;
           
           Inventory tools = new Inventory();
           tools.setDescription("tools used by carpenter, shipwrieght");
-          tools.setQuantity(1);
+          tools.setQuantity(0);
           tools.setWeight(6.53);
           tools.setCost(15.55);
           inventoryList[Item.tools.ordinal()] = tools;
           
           Inventory computer = new Inventory();
           computer.setDescription("computer");
-          computer.setQuantity(1);
+          computer.setQuantity(0);
           computer.setWeight(8.5);
           computer.setCost(15.55);
           inventoryList[Item.computer.ordinal()] = computer;
           
           Inventory calc = new Inventory();
           calc.setDescription("calculator");
-          calc.setQuantity(1);
+          calc.setQuantity(0);
           calc.setWeight(1.01);
           calc.setCost(15.55);
           inventoryList[Item.calc.ordinal()] = calc;
           
           Inventory farmtools = new Inventory();
           farmtools.setDescription("farmtools");
-          farmtools.setQuantity(1);
+          farmtools.setQuantity(0);
           farmtools.setWeight(8.36);
           farmtools.setCost(15.55);
           inventoryList[Item.farmtools.ordinal()] = farmtools;
           
           Inventory medicine = new Inventory();
           medicine.setDescription("medicine");
-          medicine.setQuantity(1);
+          medicine.setQuantity(0);
           medicine.setWeight(0.75);
           medicine.setCost(15.55);
           inventoryList[Item.medicine.ordinal()] = farmtools;
           
           Inventory chest = new Inventory();
           chest.setDescription("Chest of holding.");
-          chest.setQuantity(1);
+          chest.setQuantity(0);
           chest.setWeight(10.00);
           inventoryList[Item.chest.ordinal()] = chest;          
          
@@ -462,7 +482,7 @@ public class GameControl {
          
 
     }
-         public static void getSavedGame(String filepath) throws GameControlException 
+         public static void loadSavedGame(String filepath) throws GameControlException 
 
        {
         Game game = null;
@@ -472,27 +492,23 @@ public class GameControl {
             
             game = (Game) output.readObject(); // read the game object from file
         }
-        catch(FileNotFoundException fnfe) {
-            throw new GameControlException(fnfe.getMessage());
-        }
         catch(Exception e) {
             throw new GameControlException(e.getMessage());
         }
-
        // close the outuput file
        JamaicanExodus.setCurrentGame(game);    
 
     }
        
         public static void saveGame(Game game, String filepath) 
-            throws GameControlException, FileNotFoundException, IOException {
+            throws GameControlException {
 
         try( FileOutputStream fops = new FileOutputStream(filepath)) {
             ObjectOutputStream output = new ObjectOutputStream(fops);
             
             output.writeObject(game); // write the game object out to file
         }
-        catch(IOException e) {
+        catch(Exception e) {
             throw new GameControlException(e.getMessage());
         } 
     }

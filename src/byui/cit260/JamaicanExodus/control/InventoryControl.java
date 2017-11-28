@@ -8,6 +8,9 @@ package byui.cit260.JamaicanExodus.control;
 //import byui.cit260.JamaicanExodus.model.Inventory;
 
 import byui.cit260.JamaicanExodus.Exception.InventoryControlException;
+import byui.cit260.JamaicanExodus.JamaicanExodus;
+import byui.cit260.JamaicanExodus.model.Game;
+import byui.cit260.JamaicanExodus.enums.Item;
 import byui.cit260.JamaicanExodus.model.Inventory;
 import java.util.Scanner;
 
@@ -37,64 +40,19 @@ public class InventoryControl {
                    } 
              } 
       } 
-    
-    public enum Item {
-    
-    clothing,
-    rations,
-    fuel,
-    tools,
-    computer,
-    calc,
-    farmtools,
-    medicine,
-    chest;
-    }
-     
-     public static Inventory[] setWeight() {
-          
-          Inventory[] inventoryList = new Inventory [8];
-          
-          Inventory clothing = new Inventory();
-          clothing.setWeight(2.03);
-          inventoryList[Item.clothing.ordinal()] = clothing;
-          
-          Inventory rations = new Inventory();
-          rations.setWeight(2.03);
-          inventoryList[Item.rations.ordinal()] = rations;
-          
-          Inventory fuel = new Inventory();
-          fuel.setWeight(10.00);
-          inventoryList[Item.fuel.ordinal()] = fuel;
-          
-          Inventory tools = new Inventory();
-          tools.setWeight(6.53);
-          inventoryList[Item.tools.ordinal()] = tools;
-          
-          Inventory computer = new Inventory();
-          computer.setWeight(8.5);
-          inventoryList[Item.computer.ordinal()] = computer;
-          
-          Inventory calc = new Inventory();
-          calc.setWeight(1.01);
-          inventoryList[Item.calc.ordinal()] = calc;
-          
-          Inventory farmtools = new Inventory();
-          farmtools.setWeight(8.36);
-          inventoryList[Item.farmtools.ordinal()] = farmtools;
-          
-          Inventory medicine = new Inventory();
-          medicine.setWeight(0.75);
-          inventoryList[Item.medicine.ordinal()] = farmtools;
-          
-          Inventory chest = new Inventory();
-          chest.setWeight(10.00);
-          inventoryList[Item.chest.ordinal()] = chest;          
-         
-          
-          return inventoryList;
-     }
-    
+    /**
+    Get Inventory item weights. 
+     */
+    public void calcGetWeight() throws InventoryControlException {
+        
+        Game game = JamaicanExodus.getCurrentGame();
+        Inventory[] inventoryList = game.getInventory();
+               
+        Inventory inventoryItem = inventoryList[Item.clothing.ordinal()]; 
+        double clothingWeight = inventoryItem.getWeight();
+        
+        
+    }    
     public void calcInventoryAmount() throws InventoryControlException {
 
        Scanner in = new Scanner(System.in); // Ask for user input on quantity.

@@ -5,7 +5,13 @@
  */
 package byui.cit260.JamaicanExodus.view;
 
-import java.util.Scanner;
+import byui.cit260.JamaicanExodus.JamaicanExodus;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.IllegalFormatException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -14,6 +20,8 @@ import java.util.Scanner;
 public abstract class View implements ViewInterface {
     
     protected String displayMessage;
+    protected final BufferedReader keyboard = JamaicanExodus.getInfile();
+    protected final PrintWriter console = JamaicanExodus.getOutFile();
     
     public View() {
     }
@@ -23,38 +31,51 @@ public abstract class View implements ViewInterface {
     }
     
     @Override
-    public void display() {
-        
+    public void display()throws IllegalFormatException {
+    try{
+          
         boolean done = false;
+        
         do {
+            this.console.println(this.displayMessage);
             String choice = this.getInput();
             if (choice.toUpperCase().equals("Q"))
                 return;
             done = this.doAction(choice);
         
-        }while (!done);
-    
+        }
+        while (!done);
+        }
+         catch 
+           (IllegalFormatException me){
+            ErrorView.display(this.getClass().getName(),me.getMessage());
+        }
     }
     
     @Override
-    public String getInput() {
+    public String getInput() throws IllegalFormatException {
         
-        Scanner keyboard = new Scanner(System.in); 
         boolean valid = false;
         String value = null;
         
+    try {
+            
         while (!valid) {
             
-            System.out.println("\n" + this.displayMessage);
-            
-            value = keyboard.nextLine();
+           // System.out.println("\n" + this.displayMessage);
+            value = this.keyboard.readLine();
             value = value.trim();
-                       
-            if (value.length() <1){
-                System.out.println("\nInvalid Input");
-                continue;    
+            
+         if (value.length() <1){
+            ErrorView.display(this.getClass().getName(), "Enter a valid entry:");
+            continue;    
             }
-            break;
+            break;   
+        }   
+        } catch (IllegalFormatException e) {
+        ErrorView.display(this.getClass().getName(),"Invalid, try again: " + e.getMessage());
+        } catch (IOException ex) {                     
+            Logger.getLogger(View.class.getName()).log(Level.SEVERE, null, ex);
         }
         return value;
     }

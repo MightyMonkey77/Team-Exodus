@@ -5,12 +5,19 @@
  */
 package byui.cit260.JamaicanExodus.view;
 
+import byui.cit260.JamaicanExodus.Exception.InventoryControlException;
+import byui.cit260.JamaicanExodus.control.GameControl;
+import byui.cit260.JamaicanExodus.control.InventoryControl;
+import byui.cit260.JamaicanExodus.model.Inventory;
+
+
 /**
  *
  * @author Office Payne
  */
 public class InventoryView extends View{
-    
+
+       
     public InventoryView() {
         
        super("\n"
@@ -57,7 +64,8 @@ public class InventoryView extends View{
     }            
 
     private void viewInventoryItems() {
-            System.out.println("\nInventory called YO!");          
+        ChestView chestView = new ChestView();
+        chestView.displayChestView();             
     }
 
     private void printInventoryReport() {

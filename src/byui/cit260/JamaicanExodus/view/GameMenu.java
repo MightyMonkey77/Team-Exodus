@@ -58,7 +58,7 @@ class GameMenu extends View {
             case "L":
                 this.locationContents();
                 return false;    
-            case "P":
+            case "R":
                 this.moveToNewLocation();
                 return true;
             case "E":
@@ -84,7 +84,7 @@ class GameMenu extends View {
                 return true; 
             case "T":
                 this.months();    
-                return true; 
+                return true;
             default :
                 System.out.println("\n *Invalid Choice*");
                 return false;              
@@ -156,6 +156,8 @@ class GameMenu extends View {
        MinMax minMax = new MinMax();
        System.out.println(minMax);
     }
+
+   
 
  
     
