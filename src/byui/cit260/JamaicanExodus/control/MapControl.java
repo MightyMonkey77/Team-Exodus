@@ -36,7 +36,7 @@ public class MapControl {
        
        Obstacles[] obstaclePosition = createObstacles();
        
-       MapControl.sceneToLocations(map, scenes, obstaclePosition);
+      // MapControl.sceneToLocations(map, scenes, obstaclePosition);
        
        return map; //brings up the map
        
@@ -87,7 +87,7 @@ public class MapControl {
         return 0;
     }
 
-    private static void sceneToLocations(Map map, Scene[] scenes, Obstacles[] obstaclePosition) {
+   /* private static void sceneToLocations(Map map, Scene[] scenes, Obstacles[] obstaclePosition) {
          
          Location[][] locations = map.getLocations();
          
@@ -106,7 +106,8 @@ public class MapControl {
          locations [7][1].setScenes(scenes[GameControl.SceneArea.redding.ordinal()]);
          locations [7][10].setObstacles(obstaclePosition[GameControl.ObName.Seven.ordinal()]);
          locations [8][1].setScenes(scenes[GameControl.SceneArea.medford.ordinal()]);
-    }
+   
+    }*/
 
    
 }

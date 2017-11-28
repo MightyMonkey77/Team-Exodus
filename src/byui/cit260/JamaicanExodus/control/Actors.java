@@ -38,51 +38,48 @@ public class Actors {
       Scanner keyboard = new Scanner(System.in);
       System.out.println("Enter first companions name: ");
       String actorName1 = keyboard.nextLine();
-     // Actor companionOne = new Actor();
       Game currentGame = JamaicanExodus.getCurrentGame();
-      Actor[] actors = currentGame.getActor();
-      Actor actorOne = actors[0];
+      Actor[] actor = currentGame.getActor();
+      Actor actorOne = actor[0];
       actorOne.setName(actorName1);
-     // JamaicanExodus.getCurrentGame().getActor()[0] = actorOne;  
-      actors[0] = actorOne;
+      actor[0] = actorOne;
       
-  /*          
       System.out.println("Enter second companions name: ");
       String actorName2 = keyboard.nextLine();
-      Actor companionTwo = new Actor();
-      companionTwo.setName(actorName2);
+      Actor actorTwo = actor[1];
+      actorOne.setName(actorName2);
+      actor[0] = actorTwo;
       
-      actors.add(companionTwo);
-        
       System.out.println("Enter third companions name: ");
       String actorName3 = keyboard.nextLine();
-      Actor companionThree = new Actor();
-      companionThree.setName(actorName3);
-      
-      actors.add(companionThree);
+      Actor actorThree = actor[2];
+      actorOne.setName(actorName3);
+      actor[0] = actorThree;
       
       System.out.println("Enter fourth companions name: ");
       String actorName4 = keyboard.nextLine();
-      Actor companionFour = new Actor();
-      companionFour.setName(actorName4);
-      
-      actors.add(companionFour);
+      Actor actorFour = actor[3];
+      actorOne.setName(actorName4);
+      actor[0] = actorFour;
       
       System.out.println("Enter fifth companions name: ");
       String actorName5 = keyboard.nextLine();
-      Actor companionFive = new Actor();
-      companionFive.setName(actorName5);
-      
-      actors.add(companionFive);
+      Actor actorFive = actor[4];
+      actorOne.setName(actorName5);
+      actor[0] = actorFive;
+   
         return null;
           }  
-*/
+
     private boolean doAction(String menuOption) {
                  
-        actors.forEach((actor) -> {
-            System.out.println(actor);
-        });
-        return true;
+        for(int i = 0; i < JamaicanExodus.getCurrentGame().getActor().length; i++)   {
+		System.out.println(JamaicanExodus.getCurrentGame().getActor()[i]);
+            }    
+    
+        return true;	
+				
+        
     }
 }
   
