@@ -72,8 +72,9 @@ public class MapControl {
          obstaclePosition[GameControl.ObName.One.ordinal()] = oneScene;
          
          return obstaclePosition;
-    }    
-    
+    } 
+     
+       
     
     private static int moveActorToLocation(Actor actor, Point coordinates) throws MapControlException {
         Map map = JamaicanExodus.getCurrentGame().getMap();

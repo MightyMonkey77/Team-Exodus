@@ -67,6 +67,7 @@ public class InventoryControl {
            try{
              System.out.println("Enter quantity ");  
              double quantity = in.nextInt();
+             // Need to have this call from item selected by user. 
              double chosenItemWeight = 2000.00;
              double limit = 500.00;
              if (calcGetWeight() + chosenItemWeight > limit) {
@@ -82,7 +83,7 @@ public class InventoryControl {
              System.out.println("\n that weighs " + totalWeight+ " Pounds"); 
              x = 2;
        }
-         catch(Exception InventoryException) {  
+         catch(InventoryControlException e) {  
                 System.out.println("If over current reamianing weight, cannot purchase.");
       
          }
