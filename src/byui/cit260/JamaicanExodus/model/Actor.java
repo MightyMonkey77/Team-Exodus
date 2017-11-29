@@ -17,7 +17,7 @@ public class Actor implements Serializable {
      
     private String name;
     private String description;
-    private Point coordinates;
+    private int coordinates;
     private int startingHealth = 100;
 
     public Actor() {
@@ -39,11 +39,11 @@ public class Actor implements Serializable {
         this.description = description;
     }
 
-    public Point getCoordinates() {
+    public int  getCoordinates() {
         return coordinates;
     }
 
-    public void setCoordinates(Point coordinates) {
+    public void setCoordinates(int coordinates) {
         this.coordinates = coordinates;
     }
 
@@ -100,6 +100,10 @@ public class Actor implements Serializable {
   //  public void setCoordinates(int i, int i0) {
   //      throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
   //  }
+
+    public void setCoordinates(int i, int i0) {
+        System.out.println("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
      
    

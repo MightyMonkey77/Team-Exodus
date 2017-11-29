@@ -9,6 +9,8 @@ import byui.cit260.JamaicanExodus.Exception.MapControlException;
 import byui.cit260.JamaicanExodus.model.Game;
 import byui.cit260.JamaicanExodus.model.Map;
 import byui.cit260.JamaicanExodus.JamaicanExodus;
+import byui.cit260.JamaicanExodus.enums.ObName;
+import byui.cit260.JamaicanExodus.enums.SceneArea;
 import byui.cit260.JamaicanExodus.model.Actor;
 import byui.cit260.JamaicanExodus.model.Location;
 import byui.cit260.JamaicanExodus.model.Obstacles;
@@ -46,12 +48,12 @@ public class MapControl {
      
         Game game = JamaicanExodus.getCurrentGame();
 
-        Scene[] scenes = new Scene[GameControl.SceneArea.values().length];
+        Scene[] scenes = new Scene[SceneArea.values().length];
         
         Scene froomeScenes = new Scene();
         froomeScenes.setDescription("");
         froomeScenes.setMap("");
-        scenes[GameControl.SceneArea.froome.ordinal()] = froomeScenes;
+        scenes[SceneArea.froome.ordinal()] = froomeScenes;
         
         
         
@@ -64,12 +66,12 @@ public class MapControl {
         
          Game game = JamaicanExodus.getCurrentGame();
          
-         Obstacles[] obstaclePosition = new Obstacles[GameControl.ObName.values().length];
+         Obstacles[] obstaclePosition = new Obstacles[ObName.values().length];
          
          Obstacles oneScene = new Obstacles();
          oneScene.setObstacleDescription("");
          oneScene.setAnswer("");
-         obstaclePosition[GameControl.ObName.One.ordinal()] = oneScene;
+         obstaclePosition[ObName.One.ordinal()] = oneScene;
          
          return obstaclePosition;
     } 

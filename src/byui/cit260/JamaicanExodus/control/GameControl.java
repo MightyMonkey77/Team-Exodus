@@ -15,7 +15,12 @@ import byui.cit260.JamaicanExodus.model.Months;
 import byui.cit260.JamaicanExodus.model.Occupations;
 import byui.cit260.JamaicanExodus.model.Player;
 import byui.cit260.JamaicanExodus.JamaicanExodus;
+import byui.cit260.JamaicanExodus.enums.Companions;
 import byui.cit260.JamaicanExodus.enums.Item;
+import byui.cit260.JamaicanExodus.enums.Jobs;
+import byui.cit260.JamaicanExodus.enums.ObName;
+import byui.cit260.JamaicanExodus.enums.SceneArea;
+import byui.cit260.JamaicanExodus.enums.UseableMonths;
 import byui.cit260.JamaicanExodus.model.Actor;
 import byui.cit260.JamaicanExodus.model.Location;
 import byui.cit260.JamaicanExodus.model.Obstacles;
@@ -82,16 +87,7 @@ public class GameControl {
      return 1;
      }
     }   
-    
-   public enum usableMonths {      
-      January,
-      February,
-      March,
-      April,
-      May,
-      June;
-   } 
-    
+        
    private static Months[] createMonths() { 
      Months[] monthList = new Months [6];
       
@@ -99,96 +95,76 @@ public class GameControl {
           January.setDescription("Month of January. Average temp of 86F dry season.");
           January.setName("January");
           January.setImpact((int) .25);
-          monthList[usableMonths.January.ordinal()] = January;
+          monthList[UseableMonths.January.ordinal()] = January;
           
       Months February = new Months();
           February.setDescription("Month of Feburary. Average temp of 86F dry season.");
           February.setName("February");
           February.setImpact((int) .35);
-          monthList[usableMonths.February.ordinal()] = February;
+          monthList[UseableMonths.February.ordinal()] = February;
       
       Months March = new Months();
           March.setDescription("Month of March. Average temp of 88F dry season.");
           March.setName("March");
           March.setImpact((int) .45);
-          monthList[usableMonths.March.ordinal()] = March;
+          monthList[UseableMonths.March.ordinal()] = March;
       
       Months April = new Months();
           April.setDescription("Month of April. Average temp of 88F begining of the first wet season.");
           April.setName("April");
           April.setImpact((int) .25);
-          monthList[usableMonths.April.ordinal()] = April;
+          monthList[UseableMonths.April.ordinal()] = April;
           
       Months May = new Months();
           May.setDescription("Month of May. Average temp of 88F first wet season.");
           May.setName("May");
           May.setImpact((int) .35);
-          monthList[usableMonths.May.ordinal()] = May;
+          monthList[UseableMonths.May.ordinal()] = May;
       
       Months June = new Months();
           June.setDescription("Month of June. Average temp of 90F lightening of the first wet season.");
           June.setName("June");
           June.setImpact((int) .45);
-          monthList[usableMonths.June.ordinal()] = June;    
+          monthList[UseableMonths.June.ordinal()] = June;    
           
       return monthList;    
    }       
-
-    public enum jobs {
-        
-      banker,
-      carpenter,
-      farmer,
-      shipwright,
-      softwareEngineer;
-     
-    }
     
-    private static Occupations[] createOccupations() {
+        private static Occupations[] createOccupations() {
         Occupations[] occupationsList = new Occupations[5]; 
         
         Occupations banker = new Occupations();        
         banker.setDescription("");
         banker.setName("banker");
         banker.setStartingMoney(100000000.00);
-        occupationsList[jobs.banker.ordinal()] = banker;
+        occupationsList[Jobs.banker.ordinal()] = banker;
         
         Occupations carpenter = new Occupations();        
         banker.setDescription("");
         banker.setName("carpenter");
         banker.setStartingMoney(100000000.00);
-        occupationsList[jobs.carpenter.ordinal()] = carpenter;
+        occupationsList[Jobs.carpenter.ordinal()] = carpenter;
         
         Occupations farmer = new Occupations();        
         banker.setDescription("");
         banker.setName("farmer");
         banker.setStartingMoney(100000000.00);
-        occupationsList[jobs.farmer.ordinal()] = farmer;
+        occupationsList[Jobs.farmer.ordinal()] = farmer;
         
         Occupations shipwright = new Occupations();        
         banker.setDescription("");
         banker.setName("shipwright");
         banker.setStartingMoney(100000000.00);
-        occupationsList[jobs.shipwright.ordinal()] = shipwright;
+        occupationsList[Jobs.shipwright.ordinal()] = shipwright;
         
         Occupations softwareEngineer = new Occupations();        
         banker.setDescription("");
         banker.setName("softwareEngineer");
         banker.setStartingMoney(100000000.00);
-        occupationsList[jobs.softwareEngineer.ordinal()] = softwareEngineer;
+        occupationsList[Jobs.softwareEngineer.ordinal()] = softwareEngineer;
         return occupationsList;
   
-    }
-    
-    public enum Companions {
-    companionOne,
-    companionTwo,
-    companionThree,
-    companionFour,
-    companionFive;
-    }
-    // Need to find out how to call the actors names from Actors Control or 
-    //rather make the end user select them the use the rest of the Info for them. 
+    }       
     
     private static Actor[] createActors() {
        
@@ -197,31 +173,31 @@ public class GameControl {
         Actor companionOne = new Actor();
         companionOne.setDescription("This is your wife/husband that is accompaning you.");
         companionOne.setName("");
-    //    companionOne.setCoordinates(1, 2);
+        companionOne.setCoordinates(1, 2);
         actorList[Companions.companionOne.ordinal()] = companionOne;
       
         Actor companionTwo = new Actor();
         companionTwo.setDescription("Your First child.");
         companionTwo.setName("");
-    //   companionTwo.setCoordinates(1, 3);
+        companionTwo.setCoordinates(1, 3);
         actorList[Companions.companionOne.ordinal()] = companionOne;
         
         Actor companionThree = new Actor();
         companionThree.setDescription("Your second child.");
         companionThree.setName("");
-    //    companionThree.setCoordinates(1, 4);
+        companionThree.setCoordinates(1, 4);
         actorList[Companions.companionOne.ordinal()] = companionOne;
         
         Actor companionFour = new Actor();
         companionFour.setDescription("Best friend.");
         companionFour.setName("");
-    //    companionFour.setCoordinates(1, 5);
+        companionFour.setCoordinates(1, 5);
         actorList[Companions.companionOne.ordinal()] = companionOne;
       
         Actor companionFive = new Actor();
         companionFive.setDescription("Best friends wife/husband.");
         companionFive.setName("");
-    //    companionFive.setCoordinates(1, 6);
+        companionFive.setCoordinates(1, 6);
         actorList[Companions.companionOne.ordinal()] = companionOne;
         
         return actorList;        
@@ -322,19 +298,7 @@ public class GameControl {
         return map;
         
     }
-     public enum SceneArea {
-     froome,
-     kingston,
-     saintPetersburg,
-     birmingham,
-     elPaso,
-     losAngeles,
-     redding,
-     medford
-     ;
-     
-     }
-    
+        
      private static Scene[] createScenes() {
        
          Scene[] scenePlace = new Scene[8];
@@ -389,17 +353,7 @@ public class GameControl {
                           
          return scenePlace;
     }
-     
-      public enum ObName {
-      One,
-      Two,
-      Three,
-      Four,
-      Five,
-      Six,
-      Seven;
-      }
-     
+                
       private static Obstacles[] createObstacles() {
           
           Obstacles[] obstaclePosition = new Obstacles[7];
