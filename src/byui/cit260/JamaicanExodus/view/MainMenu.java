@@ -100,7 +100,7 @@ public class MainMenu extends View  {
             // save the game to the speciried file
             GameControl.saveGame(JamaicanExodus.getCurrentGame(), filePath);
         } catch (GameControlException ex) {
-            ErrorView.display("MainMenuView", ex.getMessage());
+            Error.display("MainMenuView", ex.getMessage());
         } 
 
     }
@@ -129,7 +129,7 @@ public class MainMenu extends View  {
             // start a saved game
             GameControl.loadSavedGame(filePath);
         } catch (GameControlException ex) {
-            ErrorView.display("MainMenuView", ex.getMessage());
+            Error.display("MainMenuView", ex.getMessage());
         } 
 
         // display the game menu

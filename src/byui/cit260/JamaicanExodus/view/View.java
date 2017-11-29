@@ -34,7 +34,7 @@ public abstract class View implements ViewInterface {
     public void display()throws IllegalFormatException {
     try{
           
-        boolean done = false;
+        boolean done ;//= false;
         
         do {
             this.console.println(this.displayMessage);
@@ -48,7 +48,7 @@ public abstract class View implements ViewInterface {
         }
          catch 
            (IllegalFormatException me){
-            ErrorView.display(this.getClass().getName(),me.getMessage());
+            Error.display(this.getClass().getName(),me.getMessage());
         }
     }
     
@@ -67,13 +67,13 @@ public abstract class View implements ViewInterface {
             value = value.trim();
             
          if (value.length() <1){
-            ErrorView.display(this.getClass().getName(), "Enter a valid entry:");
+            Error.display(this.getClass().getName(), "Enter a valid entry:");
             continue;    
             }
             break;   
         }   
         } catch (IllegalFormatException e) {
-        ErrorView.display(this.getClass().getName(),"Invalid, try again: " + e.getMessage());
+        Error.display(this.getClass().getName(),"Invalid, try again: " + e.getMessage());
         } catch (IOException ex) {                     
             Logger.getLogger(View.class.getName()).log(Level.SEVERE, null, ex);
         }
