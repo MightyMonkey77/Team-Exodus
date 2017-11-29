@@ -21,12 +21,12 @@ class ChestView {
              
        viewSortedInventory.inventorySort(items);
             
-     //  for ( int i = 0;  i < items.length;  i++ ){
-     //     this.console.println( items [ i ] );  
+       //for ( int i = 0;  i < items.length;  i++ ){
+       //   this.console.println( items [ i ] );  
     }
 
     void displayChestView() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
   

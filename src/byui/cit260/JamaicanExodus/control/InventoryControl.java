@@ -10,7 +10,6 @@ package byui.cit260.JamaicanExodus.control;
 import byui.cit260.JamaicanExodus.Exception.InventoryControlException;
 import byui.cit260.JamaicanExodus.JamaicanExodus;
 import byui.cit260.JamaicanExodus.model.Game;
-import byui.cit260.JamaicanExodus.enums.Item;
 import byui.cit260.JamaicanExodus.model.Inventory;
 import java.util.Scanner;
 
@@ -42,6 +41,7 @@ public class InventoryControl {
       } 
     /**
     Get Inventory item weights. 
+     * @return 
      */
     public double calcGetWeight()  {
         
@@ -49,11 +49,11 @@ public class InventoryControl {
         Inventory[] inventoryList = game.getInventory();
         
         double totalWeight = 0.0;
-        for(int i = 0; i<inventoryList.length; i++) {
-            double weight = inventoryList[i].getWeight();
-            int quantity = inventoryList[i].getQuantity();
-            totalWeight = totalWeight + weight;
-    }
+         for (Inventory inventoryList1 : inventoryList) {
+             double weight = inventoryList1.getWeight();
+             int quantity = inventoryList1.getQuantity();
+             totalWeight =  weight;
+         }
         return totalWeight;
           
         
