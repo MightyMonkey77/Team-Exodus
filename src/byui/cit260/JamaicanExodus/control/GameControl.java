@@ -134,31 +134,31 @@ public class GameControl {
         Occupations[] occupationsList = new Occupations[5]; 
         
         Occupations banker = new Occupations();        
-        banker.setDescription("");
+        banker.setDescription("Smooth Talker");
         banker.setName("banker");
         banker.setStartingMoney(100000000.00);
         occupationsList[Jobs.banker.ordinal()] = banker;
         
         Occupations carpenter = new Occupations();        
-        banker.setDescription("");
+        banker.setDescription("Smells Like Wet Wood");
         banker.setName("carpenter");
         banker.setStartingMoney(100000000.00);
         occupationsList[Jobs.carpenter.ordinal()] = carpenter;
         
         Occupations farmer = new Occupations();        
-        banker.setDescription("");
+        banker.setDescription("Loves His Pigs");
         banker.setName("farmer");
         banker.setStartingMoney(100000000.00);
         occupationsList[Jobs.farmer.ordinal()] = farmer;
         
         Occupations shipwright = new Occupations();        
-        banker.setDescription("");
+        banker.setDescription("Can't Swim");
         banker.setName("shipwright");
         banker.setStartingMoney(100000000.00);
         occupationsList[Jobs.shipwright.ordinal()] = shipwright;
         
         Occupations softwareEngineer = new Occupations();        
-        banker.setDescription("");
+        banker.setDescription("C++,Java?");
         banker.setName("softwareEngineer");
         banker.setStartingMoney(100000000.00);
         occupationsList[Jobs.softwareEngineer.ordinal()] = softwareEngineer;
