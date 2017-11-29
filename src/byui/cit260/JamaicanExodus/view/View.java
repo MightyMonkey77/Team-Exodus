@@ -34,7 +34,7 @@ public abstract class View implements ViewInterface {
     public void display()throws IllegalFormatException {
     try{
           
-        boolean done = false;
+        boolean done ;//= false;
         
         do {
             this.console.println(this.displayMessage);

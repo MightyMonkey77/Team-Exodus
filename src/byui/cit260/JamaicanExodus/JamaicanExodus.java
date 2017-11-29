@@ -28,12 +28,12 @@ public class JamaicanExodus {
 
     private static Game currentGame = null;
     private static Player player = null;
-    private static Actor[] actor = null;
-    private static Inventory[] inventory = null;
-    private static Map[][] map =null;
-    private static Obstacles[] obstacles = null;
-    private static Months[] months = null;
-    private static Occupations[] occupations = null;
+ //   private static Actor[] actor = null;
+ //   private static Inventory[] inventory = null;
+ //   private static Map[][] map =null;
+ //   private static Obstacles[] obstacles = null;
+ //   private static Months[] months = null;
+ //   private static Occupations[] occupations = null;
     private static PrintWriter outFile = null;
     private static BufferedReader inFile = null;
     private static PrintWriter logFile = null;
@@ -62,7 +62,7 @@ public class JamaicanExodus {
         JamaicanExodus.inFile = infile;
     }
 
-    public static Months[] getMonths() {
+  /*  public static Months[] getMonths() {
         return months;
     }
 
@@ -109,7 +109,7 @@ public class JamaicanExodus {
     public static void setMap(Map[][] map) {
         JamaicanExodus.map = map;
     }
-            
+    */        
     public static Game getCurrentGame() {
         return currentGame;
     }

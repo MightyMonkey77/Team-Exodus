@@ -5,13 +5,13 @@
  */
 package byui.cit260.JamaicanExodus.control;
 
-
 import byui.cit260.JamaicanExodus.JamaicanExodus;
 import byui.cit260.JamaicanExodus.model.Actor;
 import byui.cit260.JamaicanExodus.model.Game;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+
 /**
  *
  * @author Office Payne
@@ -43,7 +43,7 @@ public class Actors {
       Actor actorOne = actor[0];
       actorOne.setName(actorName1);
       actor[0] = actorOne;
-      
+
       System.out.println("Enter second companions name: ");
       String actorName2 = keyboard.nextLine();
       Actor actorTwo = actor[1];
@@ -87,11 +87,3 @@ public class Actors {
         return false;
     }
 }
-  
-        
-   
-
-   
- 
-   
-
