@@ -180,25 +180,25 @@ public class GameControl {
         companionTwo.setDescription("Your First child.");
         companionTwo.setName("");
         companionTwo.setCoordinates(1, 3);
-        actorList[Companions.companionOne.ordinal()] = companionOne;
+        actorList[Companions.companionTwo.ordinal()] = companionTwo;
         
         Actor companionThree = new Actor();
         companionThree.setDescription("Your second child.");
         companionThree.setName("");
         companionThree.setCoordinates(1, 4);
-        actorList[Companions.companionOne.ordinal()] = companionOne;
+        actorList[Companions.companionThree.ordinal()] = companionThree;
         
         Actor companionFour = new Actor();
         companionFour.setDescription("Best friend.");
         companionFour.setName("");
         companionFour.setCoordinates(1, 5);
-        actorList[Companions.companionOne.ordinal()] = companionOne;
+        actorList[Companions.companionFour.ordinal()] = companionFour;
       
         Actor companionFive = new Actor();
         companionFive.setDescription("Best friends wife/husband.");
         companionFive.setName("");
         companionFive.setCoordinates(1, 6);
-        actorList[Companions.companionOne.ordinal()] = companionOne;
+        actorList[Companions.companionFive.ordinal()] = companionFive;  
         
         return actorList;        
         

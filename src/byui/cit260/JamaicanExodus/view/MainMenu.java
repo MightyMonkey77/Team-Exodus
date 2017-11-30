@@ -97,7 +97,7 @@ public class MainMenu extends View  {
         String filePath = this.getInput();     
         
         try {
-            // save the game to the speciried file
+            // save the game to the specified file
             GameControl.saveGame(JamaicanExodus.getCurrentGame(), filePath);
         } catch (GameControlException ex) {
             Error.display("MainMenuView", ex.getMessage());

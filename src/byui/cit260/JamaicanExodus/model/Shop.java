@@ -17,10 +17,20 @@ public class Shop implements Serializable {
     private String name;
     private int position;
     private String items;
+    private Inventory[] inventoryList;
+    
 
     public Shop() {
     }
 
+    public Inventory[] getInventoryList() {
+        return inventoryList;
+    }
+
+    public void setInventoryList(Inventory[] inventoryList) {
+        this.inventoryList = inventoryList;
+    }
+    
     public double getPrice() {
         return price;
     }

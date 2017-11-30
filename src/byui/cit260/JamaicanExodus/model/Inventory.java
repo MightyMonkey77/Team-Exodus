@@ -13,6 +13,8 @@ import java.util.Objects;
  * @author Office Payne
  */
 public class Inventory implements Serializable {
+    
+    private static Inventory inventoryReport = null;
 
     private String name;
     private String description;
@@ -23,6 +25,14 @@ public class Inventory implements Serializable {
     public Inventory() {
     }
 
+    public static Inventory getInventoryReport() {
+        return inventoryReport;
+    }
+
+    public static void setInventoryReport(Inventory inventoryReport) {
+        Inventory.inventoryReport = inventoryReport;
+    }
+            
     public String getName() {
         return name;
     }

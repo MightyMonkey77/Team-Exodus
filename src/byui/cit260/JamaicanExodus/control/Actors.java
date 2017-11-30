@@ -43,29 +43,30 @@ public class Actors {
       Actor actorOne = actor[0];
       actorOne.setName(actorName1);
       actor[0] = actorOne;
+      
 
       System.out.println("Enter second companions name: ");
       String actorName2 = keyboard.nextLine();
       Actor actorTwo = actor[1];
-      actorOne.setName(actorName2);
+      actorTwo.setName(actorName2);
       actor[1] = actorTwo;
       
       System.out.println("Enter third companions name: ");
       String actorName3 = keyboard.nextLine();
       Actor actorThree = actor[2];
-      actorOne.setName(actorName3);
+      actorThree.setName(actorName3);
       actor[2] = actorThree;
       
       System.out.println("Enter fourth companions name: ");
       String actorName4 = keyboard.nextLine();
       Actor actorFour = actor[3];
-      actorOne.setName(actorName4);
+      actorFour.setName(actorName4);
       actor[3] = actorFour;
       
       System.out.println("Enter fifth companions name: ");
       String actorName5 = keyboard.nextLine();
       Actor actorFive = actor[4];
-      actorOne.setName(actorName5);
+      actorFive.setName(actorName5);
       actor[4] = actorFive;
    
         return actors;

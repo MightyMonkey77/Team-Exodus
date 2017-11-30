@@ -6,9 +6,11 @@
 package byui.cit260.JamaicanExodus.view;
 
 import byui.cit260.JamaicanExodus.Exception.InventoryControlException;
-import byui.cit260.JamaicanExodus.control.GameControl;
-import byui.cit260.JamaicanExodus.control.InventoryControl;
+import byui.cit260.JamaicanExodus.JamaicanExodus;
 import byui.cit260.JamaicanExodus.model.Inventory;
+import static byui.cit260.JamaicanExodus.model.Inventory.getInventoryReport;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 /**
@@ -48,8 +50,14 @@ public class InventoryView extends View{
                 this.viewInventoryItems();
                 break;
                 
-            case "R"://run report on inventory items?
-                this.printInventoryReport();
+            case "R":{
+                try {
+                    //run report on inventory items?
+                    this.printInventoryReport();
+                } catch (InventoryControlException ex) {
+                    Logger.getLogger(InventoryView.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
                 break;
             
             case "U"://Use inventory item
@@ -66,12 +74,8 @@ public class InventoryView extends View{
     private void viewInventoryItems() {
         ChestView chestView = new ChestView();
         chestView.displayChestView();             
-    }
-
-    private void printInventoryReport() {
-        System.out.println("\n Future home possibly. Not sure how to code this.");
-    }
-
+    }  
+   
     private void useInventoryItem() {
         System.out.println("\n Just used it.");
     }
@@ -80,6 +84,16 @@ public class InventoryView extends View{
          DropItemControl dropItem = new DropItemControl();
          dropItem.dropInventoryItem();
     }
+
+    private void printInventoryReport() throws InventoryControlException {
+        // Get name and path to save the file
+        this.console.println("\n Enter a valid path name to save the file.");
+        // Set it to the filePath
+        String filePath = this.getInput();
+        // Specified file where it is to be saved
+        InventoryReport.report(getInventoryReport(), filePath);    }
+
+
     
 }
 

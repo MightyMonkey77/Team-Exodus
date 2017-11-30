@@ -94,6 +94,7 @@ public class Actor implements Serializable {
 
     @Override
     public String toString() {
+
         return "Actor{" + "name=" + name + ", description=" + description + ", coordinates=" + coordinates + ", startingHealth=" + startingHealth + '}';
     }
 
