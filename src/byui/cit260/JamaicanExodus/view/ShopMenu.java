@@ -50,7 +50,8 @@ public class ShopMenu extends View {
     }
 
     private void buy() {
-        System.out.println("Item Purchased");
+        ShopItemView shopItemView = new ShopItemView();
+        shopItemView.display();
     }
 
     private void exit() {
