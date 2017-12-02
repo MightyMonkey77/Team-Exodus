@@ -6,8 +6,10 @@
 package byui.cit260.JamaicanExodus.model;
 
 import byui.cit260.JamaicanExodus.control.Actors;
+import byui.cit260.JamaicanExodus.view.ScenesView;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Objects;
 
 /**
  *
@@ -19,34 +21,12 @@ public class Location implements Serializable  {
     private int y;
     private boolean visited;
     private int next;
-    private Scene scenes;
+    private int symbol;
     private Obstacles obstacles;
-    private ArrayList<Actors> actors = new ArrayList<Actors>();
-
-    public ArrayList<Actors> getActors() {
-        return actors;
-    }
-
-    public void setActors(ArrayList<Actors> actors) {
-        this.actors = actors;
-    }
-    
-
-    public Scene getScenes() {
-        return scenes;
-    }
-
-    public void setScenes(Scene scenes) {
-        this.scenes = scenes;
-    }
-
-    public Obstacles getObstacles() {
-        return obstacles;
-    }
-
-    public void setObstacles(Obstacles obstacles) {
-        this.obstacles = obstacles;
-    }
+    private ArrayList<Actors> actors = new ArrayList<>();
+    private Towns towns;
+    private Scene scenes;
+     
 
     public Location() {
     }
@@ -67,7 +47,7 @@ public class Location implements Serializable  {
         this.y = y;
     }
 
-    public boolean getVisited() {
+    public boolean isVisited() {
         return visited;
     }
 
@@ -83,17 +63,60 @@ public class Location implements Serializable  {
         this.next = next;
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 59 * hash + this.x;
-        hash = 59 * hash + this.y;
-        hash = 59 * hash + (this.visited ? 1 : 0);
-        hash = 59 * hash + this.next;
-        return hash;
+    public int getSymbol() {
+        return symbol;
     }
 
-    
+    public void setSymbol(int symbol) {
+        this.symbol = symbol;
+    }
+
+    public Obstacles getObstacles() {
+        return obstacles;
+    }
+
+    public void setObstacles(Obstacles obstacles) {
+        this.obstacles = obstacles;
+    }
+
+    public ArrayList<Actors> getActors() {
+        return actors;
+    }
+
+    public void setActors(ArrayList<Actors> actors) {
+        this.actors = actors;
+    }
+
+    public Towns getTowns() {
+        return towns;
+    }
+
+    public void setTowns(Towns towns) {
+        this.towns = towns;
+    }
+
+    public Scene getScenes() {
+        return scenes;
+    }
+
+    public void setScenes(Scene scenes) {
+        this.scenes = scenes;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 43 * hash + this.x;
+        hash = 43 * hash + this.y;
+        hash = 43 * hash + (this.visited ? 1 : 0);
+        hash = 43 * hash + this.next;
+        hash = 43 * hash + this.symbol;
+        hash = 43 * hash + Objects.hashCode(this.obstacles);
+        hash = 43 * hash + Objects.hashCode(this.actors);
+        hash = 43 * hash + Objects.hashCode(this.towns);
+        hash = 43 * hash + Objects.hashCode(this.scenes);
+        return hash;
+    }
 
     @Override
     public boolean equals(Object obj) {
@@ -119,13 +142,33 @@ public class Location implements Serializable  {
         if (this.next != other.next) {
             return false;
         }
+        if (this.symbol != other.symbol) {
+            return false;
+        }
+        if (!Objects.equals(this.obstacles, other.obstacles)) {
+            return false;
+        }
+        if (!Objects.equals(this.actors, other.actors)) {
+            return false;
+        }
+        if (this.towns != other.towns) {
+            return false;
+        }
+        if (!Objects.equals(this.scenes, other.scenes)) {
+            return false;
+        }
         return true;
     }
 
     @Override
     public String toString() {
-        return "Location{" + "xCord=" + x + ", yCord=" + y + ", visited=" + visited + ", next=" + next + '}';
+        return "Location{" + "x=" + x + ", y=" + y + ", visited=" + visited + ", next=" + next + ", symbol=" + symbol + ", obstacles=" + obstacles + ", actors=" + actors + ", towns=" + towns + ", scene=" + scenes + '}';
     }
+
+    
+
+   
+   
     
     
 }

@@ -20,9 +20,11 @@ import java.util.logging.Logger;
 public class ShopItemView extends View {
     
     public static Inventory[] inventoryList;
+   
     // adding totalWeight for return as a temp file to hold the total wieght 
     //gained from this to be used later to verify wieght to go into chest.
-    public double totalWeights = 0.0; 
+    public static double totalWeight = 0.0; 
+    
 
     public ShopItemView() {
         super ("\n **************************************************"
@@ -40,8 +42,8 @@ public class ShopItemView extends View {
     
     }
 
-    public void setTotalWeights(double totalWeights) {
-        this.totalWeights = totalWeights;
+    public void setTotalWeight(double totalWeight) {
+        this.totalWeight = totalWeight;
     }
         
     @Override
@@ -148,7 +150,7 @@ public class ShopItemView extends View {
         JamaicanExodus.getCurrentGame().getInventory()[Item.clothing.ordinal()] = item; // good practice - sets updated inventory item to inventory array
         
         double totalWeight = clothingWeight * newQuantity;
-        
+       
                 
         System.out.println("\nYou have purchased " + newQuantity + /*Inventory.getDescription() +*/ " items. With a total weight of :" + totalWeight);
         return totalWeight;

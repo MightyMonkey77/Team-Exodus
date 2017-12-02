@@ -14,10 +14,9 @@ import java.io.ObjectOutputStream;
  *
  * @author Office Payne
  */
-public class InventoryReport {
+class InventoryReport {
 
-    static void report(Inventory inventoryReport, String filePath) throws InventoryControlException {
-             
+    static void report(Inventory inventoryReport, String filePath) throws InventoryControlException { 
 
         try( FileOutputStream fops = new FileOutputStream(filePath)) {
             ObjectOutputStream output = new ObjectOutputStream(fops);
@@ -29,7 +28,7 @@ public class InventoryReport {
         } 
     }
 
+  
     }
     
-    
-  
+
