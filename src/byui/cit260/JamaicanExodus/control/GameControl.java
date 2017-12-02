@@ -218,7 +218,7 @@ public class GameControl {
           Inventory rations = new Inventory();
           rations.setDescription("rations");
           rations.setQuantity(0);
-          rations.setWeight(2.03);
+          rations.setWeight(2.15);
           rations.setCost(15.55);
           inventoryList[Item.rations.ordinal()] = rations;
           

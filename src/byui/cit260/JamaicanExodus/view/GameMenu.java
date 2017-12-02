@@ -51,7 +51,7 @@ class GameMenu extends View {
                 return true;
             case "A":
                 this.actors();
-                return true;
+                return false;
             case "O":
                 this.occupations();
                 return true;

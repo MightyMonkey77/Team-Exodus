@@ -85,6 +85,6 @@ public class Actors {
         for(int i = 0; i < JamaicanExodus.getCurrentGame().getActor().length; i++)   {
 		System.out.println(JamaicanExodus.getCurrentGame().getActor()[i]);
         }
-        return false;
+        return true;
     }
 }

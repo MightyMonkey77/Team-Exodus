@@ -18,6 +18,7 @@ public class Occupations implements Serializable{
     private String description;
     private String name;
     private double startingMoney;
+    
     public Occupations() {
     }
 

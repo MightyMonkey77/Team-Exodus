@@ -6,6 +6,7 @@
 package byui.cit260.JamaicanExodus.model;
 
 import java.io.Serializable;
+import java.util.Arrays;
 import java.util.Objects;
 /**
  *
@@ -18,19 +19,12 @@ public class Shop implements Serializable {
     private int position;
     private String items;
     private Inventory[] inventoryList;
+    private double totalMoneyUsed;
     
 
     public Shop() {
     }
 
-    public Inventory[] getInventoryList() {
-        return inventoryList;
-    }
-
-    public void setInventoryList(Inventory[] inventoryList) {
-        this.inventoryList = inventoryList;
-    }
-    
     public double getPrice() {
         return price;
     }
@@ -63,13 +57,31 @@ public class Shop implements Serializable {
         this.items = items;
     }
 
+    public Inventory[] getInventoryList() {
+        return inventoryList;
+    }
+
+    public void setInventoryList(Inventory[] inventoryList) {
+        this.inventoryList = inventoryList;
+    }
+
+    public double getTotalMoneyUsed() {
+        return totalMoneyUsed;
+    }
+
+    public void setTotalMoneyUsed(double totalMoneyUsed) {
+        this.totalMoneyUsed = totalMoneyUsed;
+    }
+
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 29 * hash + (int) (Double.doubleToLongBits(this.price) ^ (Double.doubleToLongBits(this.price) >>> 32));
-        hash = 29 * hash + Objects.hashCode(this.name);
-        hash = 29 * hash + this.position;
-        hash = 29 * hash + Objects.hashCode(this.items);
+        hash = 11 * hash + (int) (Double.doubleToLongBits(this.price) ^ (Double.doubleToLongBits(this.price) >>> 32));
+        hash = 11 * hash + Objects.hashCode(this.name);
+        hash = 11 * hash + this.position;
+        hash = 11 * hash + Objects.hashCode(this.items);
+        hash = 11 * hash + Arrays.deepHashCode(this.inventoryList);
+        hash = 11 * hash + (int) (Double.doubleToLongBits(this.totalMoneyUsed) ^ (Double.doubleToLongBits(this.totalMoneyUsed) >>> 32));
         return hash;
     }
 
@@ -91,10 +103,16 @@ public class Shop implements Serializable {
         if (this.position != other.position) {
             return false;
         }
+        if (Double.doubleToLongBits(this.totalMoneyUsed) != Double.doubleToLongBits(other.totalMoneyUsed)) {
+            return false;
+        }
         if (!Objects.equals(this.name, other.name)) {
             return false;
         }
         if (!Objects.equals(this.items, other.items)) {
+            return false;
+        }
+        if (!Arrays.deepEquals(this.inventoryList, other.inventoryList)) {
             return false;
         }
         return true;
@@ -102,8 +120,10 @@ public class Shop implements Serializable {
 
     @Override
     public String toString() {
-        return "Shop{" + "price=" + price + ", name=" + name + ", position=" + position + ", items=" + items + '}';
+        return "Shop{" + "price=" + price + ", name=" + name + ", position=" + position + ", items=" + items + ", inventoryList=" + inventoryList + ", totalMoneyUsed=" + totalMoneyUsed + '}';
     }
+    
+    
 
     
 }
