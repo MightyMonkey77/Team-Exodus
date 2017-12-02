@@ -34,7 +34,11 @@ public class OccupationsReport {
        File file = new File("OccupationsList.txt");
        try {
            PrintWriter output = new PrintWriter(file);
-           output.println("Banker, Carpenter, Farmer, Shipwright, Software Engineer");
+           output.println("Banker");
+           output.println("Carpenter");
+           output.println("Shipwright");
+           output.println("Software Engineer");
+           output.println("Farmer");
            output.close();
        } catch (IOException ex) {
            System.out.printf("ERROR: %s\n ", ex);
