@@ -11,6 +11,7 @@ import byui.cit260.JamaicanExodus.Exception.InventoryControlException;
 import byui.cit260.JamaicanExodus.JamaicanExodus;
 import byui.cit260.JamaicanExodus.model.Game;
 import byui.cit260.JamaicanExodus.model.Inventory;
+import byui.cit260.JamaicanExodus.view.ShopItemView;
 import java.util.Scanner;
 
 
@@ -68,7 +69,7 @@ public class InventoryControl {
              System.out.println("Enter quantity ");  
              double quantity = in.nextInt();
              // Need to have this call from item selected by user. 
-             double chosenItemWeight = 2000.00;
+             double chosenItemWeight = ShopItemView.totalWeight;
              double limit = 500.00;
              if (calcGetWeight() + chosenItemWeight > limit) {
                 throw new InventoryControlException();

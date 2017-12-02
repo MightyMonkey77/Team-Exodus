@@ -92,8 +92,6 @@ public class InventoryView extends View{
         String filePath = this.getInput();
         // Specified file where it is to be saved
         InventoryReport.report(getInventoryReport(), filePath);    }
-
-
     
 }
 

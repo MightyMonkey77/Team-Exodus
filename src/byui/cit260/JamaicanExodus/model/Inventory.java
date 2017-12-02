@@ -32,7 +32,7 @@ public class Inventory implements Serializable {
     public static void setInventoryReport(Inventory inventoryReport) {
         Inventory.inventoryReport = inventoryReport;
     }
-            
+          
     public String getName() {
         return name;
     }
