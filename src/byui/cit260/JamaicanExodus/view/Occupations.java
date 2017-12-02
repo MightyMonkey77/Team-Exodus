@@ -25,7 +25,7 @@ public class Occupations extends View {
                 +"\n        B - Banker"
                 +"\n        C - Carpenter"
                 +"\n        F - Farmer"
-                +"\n        S - Shipwrieght"
+                +"\n        S - Shipwright"
                 +"\n        E - Software Engineer"
                 +"\n        Q - Quit"
                 +"\n       *****************************************************");
