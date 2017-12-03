@@ -27,6 +27,7 @@ import byui.cit260.JamaicanExodus.model.Obstacles;
 import byui.cit260.JamaicanExodus.model.Scene;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
@@ -466,5 +467,5 @@ public class GameControl {
             throw new GameControlException(e.getMessage());
         } 
     }
- 
+   
 }

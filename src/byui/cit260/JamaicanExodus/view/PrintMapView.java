@@ -17,6 +17,7 @@ import java.io.PrintWriter;
 public class PrintMapView extends View{
     
     public PrintMapView() {
+        
         super("\nEnter the file path where you want the report to be saved.");
     }
 

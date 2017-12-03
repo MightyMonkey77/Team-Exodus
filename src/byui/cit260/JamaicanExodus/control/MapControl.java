@@ -90,27 +90,7 @@ public class MapControl {
         return 0;
     }
 
-   /* private static void sceneToLocations(Map map, Scene[] scenes, Obstacles[] obstaclePosition) {
-         
-         Location[][] locations = map.getLocations();
-         
-         locations [1][1].setScenes(scenes[GameControl.SceneArea.froome.ordinal()]);
-         locations [1][10].setObstacles(obstaclePosition[GameControl.ObName.One.ordinal()]);
-         locations [2][1].setScenes(scenes[GameControl.SceneArea.kingston.ordinal()]);
-         locations [2][10].setObstacles(obstaclePosition[GameControl.ObName.Two.ordinal()]);
-         locations [3][1].setScenes(scenes[GameControl.SceneArea.saintPetersburg.ordinal()]);
-         locations [3][10].setObstacles(obstaclePosition[GameControl.ObName.Three.ordinal()]);
-         locations [4][1].setScenes(scenes[GameControl.SceneArea.birmingham.ordinal()]);
-         locations [4][10].setObstacles(obstaclePosition[GameControl.ObName.Four.ordinal()]);
-         locations [5][1].setScenes(scenes[GameControl.SceneArea.elPaso.ordinal()]);
-         locations [5][10].setObstacles(obstaclePosition[GameControl.ObName.Five.ordinal()]);
-         locations [6][1].setScenes(scenes[GameControl.SceneArea.losAngeles.ordinal()]);
-         locations [6][10].setObstacles(obstaclePosition[GameControl.ObName.Six.ordinal()]);
-         locations [7][1].setScenes(scenes[GameControl.SceneArea.redding.ordinal()]);
-         locations [7][10].setObstacles(obstaclePosition[GameControl.ObName.Seven.ordinal()]);
-         locations [8][1].setScenes(scenes[GameControl.SceneArea.medford.ordinal()]);
-   
-    }*/
+    
 
    
 }

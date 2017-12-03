@@ -22,6 +22,7 @@ public class Map implements Serializable {
     private double traveled;
     private Location [][] locations;
     private String map;
+    private Towns[] towns;
 
     public Map(int x, int y) {
     }
@@ -30,6 +31,14 @@ public class Map implements Serializable {
         
     }
 
+    public Towns[] getTowns() {
+        return towns;
+    }
+
+    public void setTowns(Towns[] towns) {
+        this.towns = towns;
+    }
+    
     public String getMap() {
         return map;
     }
@@ -89,12 +98,14 @@ public class Map implements Serializable {
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 89 * hash + Objects.hashCode(this.description);
-        hash = 89 * hash + this.x;
-        hash = 89 * hash + this.y;
-        hash = 89 * hash + this.location;
-        hash = 89 * hash + (int) (Double.doubleToLongBits(this.traveled) ^ (Double.doubleToLongBits(this.traveled) >>> 32));
-        hash = 89 * hash + Arrays.deepHashCode(this.locations);
+        hash = 97 * hash + Objects.hashCode(this.description);
+        hash = 97 * hash + this.x;
+        hash = 97 * hash + this.y;
+        hash = 97 * hash + this.location;
+        hash = 97 * hash + (int) (Double.doubleToLongBits(this.traveled) ^ (Double.doubleToLongBits(this.traveled) >>> 32));
+        hash = 97 * hash + Arrays.deepHashCode(this.locations);
+        hash = 97 * hash + Objects.hashCode(this.map);
+        hash = 97 * hash + Arrays.deepHashCode(this.towns);
         return hash;
     }
 
@@ -125,7 +136,13 @@ public class Map implements Serializable {
         if (!Objects.equals(this.description, other.description)) {
             return false;
         }
+        if (!Objects.equals(this.map, other.map)) {
+            return false;
+        }
         if (!Arrays.deepEquals(this.locations, other.locations)) {
+            return false;
+        }
+        if (!Arrays.deepEquals(this.towns, other.towns)) {
             return false;
         }
         return true;
@@ -133,8 +150,11 @@ public class Map implements Serializable {
 
     @Override
     public String toString() {
-        return "Map{" + "description=" + description + ", x=" + x + ", y=" + y + ", location=" + location + ", traveled=" + traveled + ", locations=" + locations + '}';
+        return "Map{" + "description=" + description + ", x=" + x + ", y=" + y + ", location=" + location + ", traveled=" + traveled + ", locations=" + locations + ", map=" + map + ", towns=" + towns + '}';
     }
+
+    
+    
 
     
     
