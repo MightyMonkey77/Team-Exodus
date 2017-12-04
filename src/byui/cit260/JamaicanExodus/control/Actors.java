@@ -6,7 +6,6 @@
 package byui.cit260.JamaicanExodus.control;
 
 import byui.cit260.JamaicanExodus.JamaicanExodus;
-import static byui.cit260.JamaicanExodus.control.GameControl.clearScreen;
 import static byui.cit260.JamaicanExodus.control.GameControl.pressEnterToContinue;
 import byui.cit260.JamaicanExodus.model.Actor;
 import byui.cit260.JamaicanExodus.model.Game;
@@ -89,5 +88,5 @@ public class Actors {
       
       return true;
    }
-
 }
+
