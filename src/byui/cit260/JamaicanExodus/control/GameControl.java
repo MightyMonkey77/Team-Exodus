@@ -25,7 +25,6 @@ import byui.cit260.JamaicanExodus.model.Actor;
 import byui.cit260.JamaicanExodus.model.Location;
 import byui.cit260.JamaicanExodus.model.Obstacles;
 import byui.cit260.JamaicanExodus.model.Scene;
-<<<<<<< HEAD
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.io.FileInputStream;

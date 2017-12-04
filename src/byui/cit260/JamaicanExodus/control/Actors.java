@@ -72,7 +72,7 @@ public class Actors {
       System.out.println("\n"
               + "Party Summary"
               + "-------------\n\n"
-              + "Actor: YOU \n\tYou should know your name by now. \n\tDo YOU know where you are? How 'ya feeln'?");
+              + "Actor: YOU \n\tYou should know your name by now. \n\tDo YOU know where you are? How ya feeling?");
 
       return actors;
    }
@@ -84,7 +84,7 @@ public class Actors {
       }
       
       pressEnterToContinue();
-      //clearScreen();
+      //clearScreen(); tried-failed
       
       return true;
    }
