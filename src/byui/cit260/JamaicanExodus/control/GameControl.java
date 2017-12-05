@@ -171,31 +171,31 @@ public class GameControl {
         Actor[] actorList = new Actor[5];
         
         Actor companionOne = new Actor();
-        companionOne.setDescription("This is your spouce.");
+        companionOne.setDescription(" Your spouce");
         companionOne.setName("");
         companionOne.setCoordinates(1, 2);
         actorList[Companions.companionOne.ordinal()] = companionOne;
       
         Actor companionTwo = new Actor();
-        companionTwo.setDescription("Your First child.");
+        companionTwo.setDescription(" Your First child");
         companionTwo.setName("");
         companionTwo.setCoordinates(1, 3);
         actorList[Companions.companionTwo.ordinal()] = companionTwo;
         
         Actor companionThree = new Actor();
-        companionThree.setDescription("Your second child.");
+        companionThree.setDescription(" Your second child");
         companionThree.setName("");
         companionThree.setCoordinates(1, 4);
         actorList[Companions.companionThree.ordinal()] = companionThree;
         
         Actor companionFour = new Actor();
-        companionFour.setDescription("Your best friend.");
+        companionFour.setDescription(" Your best friend");
         companionFour.setName("");
         companionFour.setCoordinates(1, 5);
         actorList[Companions.companionFour.ordinal()] = companionFour;
       
         Actor companionFive = new Actor();
-        companionFive.setDescription("Spouce's best friend.");
+        companionFive.setDescription(" Spouce's best friend");
         companionFive.setName("");
         companionFive.setCoordinates(1, 6);
         actorList[Companions.companionFive.ordinal()] = companionFive;  

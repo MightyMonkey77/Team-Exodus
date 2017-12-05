@@ -82,7 +82,7 @@ public class Actors {
       for (int i = 0; i < JamaicanExodus.getCurrentGame().getActor().length; i++) {
          System.out.println(JamaicanExodus.getCurrentGame().getActor()[i]);
       }
-      
+      System.out.println("\n\n");
       pressEnterToContinue();
       //clearScreen(); tried-failed
       
