@@ -25,7 +25,9 @@ public class JamaicanExodus {
     private static PrintWriter outFile = null;
     private static BufferedReader inFile = null;
     private static PrintWriter logFile = null;
-
+    String filePath = "c:/users/Office_Payne/Documents/log.file";
+   
+      
     public static PrintWriter getLogFile() {
         return logFile;
     }
@@ -103,6 +105,8 @@ public class JamaicanExodus {
             }
             
         }
+        
+        
   }
 
   

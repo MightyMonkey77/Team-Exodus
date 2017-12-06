@@ -18,6 +18,7 @@ public enum SceneArea {
      elPaso,
      losAngeles,
      redding,
-     medford;
+     medford,
+     store;
      
 }
