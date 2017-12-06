@@ -37,7 +37,7 @@ public class Movement extends View{
     
         String playerLocation = playerMapLocation.buildMap(x, y);
     
-        String currentSceneDescription = sceneDescription.buildSceneDescription(x, y);
+        int[] currentSceneDescription = sceneDescription.buildSceneDescription(x, y);
     }
     
     @Override

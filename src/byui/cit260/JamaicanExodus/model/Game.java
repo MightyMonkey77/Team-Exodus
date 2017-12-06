@@ -22,9 +22,10 @@ public class Game implements Serializable {
     private  Obstacles[] obstacles = null;
     private  Months[] months = null;
     private  Occupations[] occupations = null;
+    private double allPeoples;
 
     public Game() {
-    }  
+    }    
 
     public Player getPlayer() {
         return player;
@@ -82,16 +83,25 @@ public class Game implements Serializable {
         this.occupations = occupations;
     }
 
+    public double getAllPeoples() {
+        return allPeoples;
+    }
+
+    public void setAllPeoples(double allPeoples) {
+        this.allPeoples = allPeoples;
+    }
+
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 43 * hash + Objects.hashCode(this.player);
-        hash = 43 * hash + Arrays.deepHashCode(this.actor);
-        hash = 43 * hash + Arrays.deepHashCode(this.inventory);
-        hash = 43 * hash + Objects.hashCode(this.map);
-        hash = 43 * hash + Arrays.deepHashCode(this.obstacles);
-        hash = 43 * hash + Arrays.deepHashCode(this.months);
-        hash = 43 * hash + Arrays.deepHashCode(this.occupations);
+        int hash = 5;
+        hash = 29 * hash + Objects.hashCode(this.player);
+        hash = 29 * hash + Arrays.deepHashCode(this.actor);
+        hash = 29 * hash + Arrays.deepHashCode(this.inventory);
+        hash = 29 * hash + Objects.hashCode(this.map);
+        hash = 29 * hash + Arrays.deepHashCode(this.obstacles);
+        hash = 29 * hash + Arrays.deepHashCode(this.months);
+        hash = 29 * hash + Arrays.deepHashCode(this.occupations);
+        hash = 29 * hash + (int) (Double.doubleToLongBits(this.allPeoples) ^ (Double.doubleToLongBits(this.allPeoples) >>> 32));
         return hash;
     }
 
@@ -107,6 +117,9 @@ public class Game implements Serializable {
             return false;
         }
         final Game other = (Game) obj;
+        if (Double.doubleToLongBits(this.allPeoples) != Double.doubleToLongBits(other.allPeoples)) {
+            return false;
+        }
         if (!Objects.equals(this.player, other.player)) {
             return false;
         }
@@ -133,19 +146,8 @@ public class Game implements Serializable {
 
     @Override
     public String toString() {
-        return "Game{" + "player=" + player + ", actor=" + actor + ", inventory=" + inventory + ", map=" + map + ", obstacles=" + obstacles + ", months=" + months + ", occupations=" + occupations + '}';
+        return "Game{" + "player=" + player + ", actor=" + actor + ", inventory=" + inventory + ", map=" + map + ", obstacles=" + obstacles + ", months=" + months + ", occupations=" + occupations + ", allPeoples=" + allPeoples + '}';
     }
-
-    
-    
-    
-    
-
-    
-  
-    
-
-    
     
     
 }
