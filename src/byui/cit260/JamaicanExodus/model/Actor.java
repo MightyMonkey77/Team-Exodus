@@ -13,98 +13,94 @@ import java.util.Objects;
  *
  * @author Office Payne
  */
-public class Actor implements Serializable {    
-     
-    private String name;
-    private String description;
-    private int coordinates;
-    private int startingHealth = 100;
+public class Actor implements Serializable {
 
-    public Actor() {
-    }
-        
-    public String getName() {
-        return name;
-    }
+   private String name;
+   private String description;
+   private int coordinates;
+   private int startingHealth = 100;
 
-    public void setName(String name) {
-        this.name = name;
-    }
+   public Actor() {
+   }
 
-    public String getDescription() {
-        return description;
-    }
+   public String getName() {
+      return name;
+   }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
+   public void setName(String name) {
+      this.name = name;
+   }
 
-    public int  getCoordinates() {
-        return coordinates;
-    }
+   public String getDescription() {
+      return description;
+   }
 
-    public void setCoordinates(int coordinates) {
-        this.coordinates = coordinates;
-    }
+   public void setDescription(String description) {
+      this.description = description;
+   }
 
-    public int getStartingHealth() {
-        return startingHealth;
-    }
+   public int getCoordinates() {
+      return coordinates;
+   }
 
-    public void setStartingHealth(int startingHealth) {
-        this.startingHealth = startingHealth;
-    }
+   public void setCoordinates(int coordinates) {
+      this.coordinates = coordinates;
+   }
 
-    @Override
-    public int hashCode() {
-        int hash = 5;
-        hash = 19 * hash + Objects.hashCode(this.name);
-        hash = 19 * hash + Objects.hashCode(this.description);
-        hash = 19 * hash + Objects.hashCode(this.coordinates);
-        hash = 19 * hash + this.startingHealth;
-        return hash;
-    }
+   public int getStartingHealth() {
+      return startingHealth;
+   }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Actor other = (Actor) obj;
-        if (this.startingHealth != other.startingHealth) {
-            return false;
-        }
-        if (!Objects.equals(this.name, other.name)) {
-            return false;
-        }
-        if (!Objects.equals(this.description, other.description)) {
-            return false;
-        }
-        if (!Objects.equals(this.coordinates, other.coordinates)) {
-            return false;
-        }
-        return true;
-    }
-    @Override
-    public String toString() {
+   public void setStartingHealth(int startingHealth) {
+      this.startingHealth = startingHealth;
+   }
 
-        return "Actor: " + name + "\n\tDescription:" + description + "\n\tCoordinates:" + coordinates + "\tStarting Health:" + startingHealth;
-    }
+   @Override
+   public int hashCode() {
+      int hash = 5;
+      hash = 19 * hash + Objects.hashCode(this.name);
+      hash = 19 * hash + Objects.hashCode(this.description);
+      hash = 19 * hash + Objects.hashCode(this.coordinates);
+      hash = 19 * hash + this.startingHealth;
+      return hash;
+   }
 
-  //  public void setCoordinates(int i, int i0) 
+   @Override
+   public boolean equals(Object obj) {
+      if (this == obj) {
+         return true;
+      }
+      if (obj == null) {
+         return false;
+      }
+      if (getClass() != obj.getClass()) {
+         return false;
+      }
+      final Actor other = (Actor) obj;
+      if (this.startingHealth != other.startingHealth) {
+         return false;
+      }
+      if (!Objects.equals(this.name, other.name)) {
+         return false;
+      }
+      if (!Objects.equals(this.description, other.description)) {
+         return false;
+      }
+      if (!Objects.equals(this.coordinates, other.coordinates)) {
+         return false;
+      }
+      return true;
+   }
 
-    public void setCoordinates(int i, int i0) {
-        System.out.println("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+   @Override
+   public String toString() {
 
-     
-   
-    }
-    
+      return "Actor: " + name + "\n\tDescription:" + description + "\n\tCoordinates:" + coordinates + "\tStarting Health:" + startingHealth;
+   }
 
+   //  public void setCoordinates(int i, int i0) 
+   public void setCoordinates(int i, int i0) {
+      System.out.println("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+   }
+
+}

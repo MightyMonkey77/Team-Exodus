@@ -25,8 +25,8 @@ import byui.cit260.JamaicanExodus.model.Actor;
 import byui.cit260.JamaicanExodus.model.Location;
 import byui.cit260.JamaicanExodus.model.Obstacles;
 import byui.cit260.JamaicanExodus.model.Scene;
-import java.awt.AWTException;
-import java.awt.Robot;
+//import java.awt.AWTException;
+//import java.awt.Robot;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
@@ -177,7 +177,7 @@ public class GameControl {
         actorList[Companions.companionOne.ordinal()] = companionOne;
       
         Actor companionTwo = new Actor();
-        companionTwo.setDescription(" Your First child");
+        companionTwo.setDescription(" Your first child");
         companionTwo.setName("");
         companionTwo.setCoordinates(1, 3);
         actorList[Companions.companionTwo.ordinal()] = companionTwo;
@@ -479,7 +479,10 @@ public class GameControl {
     
     // Clear Screen
     public final static void clearScreen(){ //doesnt work ... yet
-      try {
+      
+       
+       /*
+       try {
          Robot pressbot = new Robot();
          pressbot.keyPress(17); // Holds CTRL key.
          pressbot.keyPress(76); // Holds L key.
@@ -487,6 +490,6 @@ public class GameControl {
          pressbot.keyRelease(76); // Releases L key.
       } 
       catch (AWTException ex) {
-      }
+      }*/
    }
 }    
