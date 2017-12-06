@@ -91,16 +91,13 @@ public class Actor implements Serializable {
         }
         return true;
     }
-
     @Override
     public String toString() {
 
-        return "Actor{" + "name=" + name + ", description=" + description + ", coordinates=" + coordinates + ", startingHealth=" + startingHealth + '}';
+        return "Actor: " + name + "\n\tDescription:" + description + "\n\tCoordinates:" + coordinates + "\tStarting Health:" + startingHealth;
     }
 
-  //  public void setCoordinates(int i, int i0) {
-  //      throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-  //  }
+  //  public void setCoordinates(int i, int i0) 
 
     public void setCoordinates(int i, int i0) {
         System.out.println("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
