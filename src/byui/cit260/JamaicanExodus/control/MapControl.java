@@ -12,7 +12,6 @@ import byui.cit260.JamaicanExodus.JamaicanExodus;
 import byui.cit260.JamaicanExodus.enums.ObName;
 import byui.cit260.JamaicanExodus.enums.SceneArea;
 import byui.cit260.JamaicanExodus.model.Actor;
-import byui.cit260.JamaicanExodus.model.Location;
 import byui.cit260.JamaicanExodus.model.Obstacles;
 import byui.cit260.JamaicanExodus.model.Scene;
 import java.awt.Point;
