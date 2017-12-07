@@ -9,8 +9,10 @@ package byui.cit260.JamaicanExodus.control;
 
 import byui.cit260.JamaicanExodus.Exception.InventoryControlException;
 import byui.cit260.JamaicanExodus.JamaicanExodus;
+import byui.cit260.JamaicanExodus.enums.Item;
 import byui.cit260.JamaicanExodus.model.Game;
 import byui.cit260.JamaicanExodus.model.Inventory;
+import byui.cit260.JamaicanExodus.model.InventoryItems;
 import byui.cit260.JamaicanExodus.view.ShopItemView;
 import java.util.Scanner;
 
@@ -43,6 +45,7 @@ public class InventoryControl {
     /**
     Get Inventory item weights. 
      * @return 
+     * @throws byui.cit260.JamaicanExodus.Exception.InventoryControlException 
      */
     public double calcGetWeight()  {
         
@@ -52,7 +55,7 @@ public class InventoryControl {
         double totalWeight = 0.0;
          for (Inventory inventoryList1 : inventoryList) {
              double weight = inventoryList1.getWeight();
-             int quantity = inventoryList1.getQuantity();
+             double quantity = inventoryList1.getQuantity();
              totalWeight =  weight;
          }
         return totalWeight;
@@ -93,6 +96,72 @@ public class InventoryControl {
          return 0;
     }
 
+     public static Inventory[] getItemDatabase() throws InventoryControlException {
+     
+         Inventory[] inventoryList = new Inventory[8];
+         inventoryList = JamaicanExodus.getCurrentGame().getInventory();
+         return inventoryList;
+     
+     }
+     // Setting the get the items from the enum.
+     public static Inventory getInventoryStuff(InventoryItems items) throws InventoryControlException {
+         Inventory[] item = getItemDatabase();
+         Inventory itemList = item[items.ordinal()];
+         return itemList;
+     }
+     // Found from group three. Was going far to complicated.
+     public static void addInventory(InventoryItems items, int quantity) throws InventoryControlException {
+     
+            Inventory item = getInventoryStuff(items);
+            item.setQuantity(item.getQuantity() + quantity);
+                       
+     }
+     // Simplest way to subtract inventory. Thankyou stackoverflow.com 
+     public static void subtractFromInventory(InventoryItems items, int quantity) throws InventoryControlException {
+       
+            Inventory item = getInventoryStuff(items); 
+            item.setQuantity(item.getQuantity() - quantity);
+    }
+     
+    public static void addWeight(InventoryItems items, double weight) throws InventoryControlException {
+    
+            Inventory item = getInventoryStuff(items);
+            item.setWeight(item.getWeight() + weight);
+    }
+    
+    public static void subtractWeight(InventoryItems items, double weight) throws InventoryControlException {
+    
+            Inventory item = getInventoryStuff(items);
+            item.setWeight(item.getWeight() - weight);
+    }
+     
+    public static String InvToQuantityPrice() throws InventoryControlException {
+        
+        
+        String output = "";
+        String name;
+        double inStock;
+        double price;
+        double value;
+        int i = 0;
+        Inventory[] inventory = getItemDatabase();
+        if (inventory == null) 
+            throw new InventoryControlException("Can not display inventory because player inventory is null. "
+                    + "Please start new game to fix problem.");
+        for (Inventory item : inventory) {
+                name = item.getInventoryItems().name();
+                inStock = item.getQuantity();
+                price = item.getInventoryItems().getCost();
+                value = inStock * price;
+                output += "\n* " + i + " - " + name + ": Quantity owned: " + inStock + ", Price: $" + price ;
+                i++;
+        }
+        return output;
+        
+     
+    
+    }
+     
 
 
 }

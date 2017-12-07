@@ -22,6 +22,7 @@ import byui.cit260.JamaicanExodus.enums.ObName;
 import byui.cit260.JamaicanExodus.enums.SceneArea;
 import byui.cit260.JamaicanExodus.enums.UseableMonths;
 import byui.cit260.JamaicanExodus.model.Actor;
+import byui.cit260.JamaicanExodus.model.InventoryItems;
 import byui.cit260.JamaicanExodus.model.Location;
 import byui.cit260.JamaicanExodus.model.Obstacles;
 import byui.cit260.JamaicanExodus.model.Scene;
@@ -203,12 +204,25 @@ public class GameControl {
         return actorList;        
         
     }   
-     
+     // Re-did inventory here to accomidate changes in enum. AS well as to streamline the ordinal finding capability.
      public static Inventory[] createInvetoryList() {
           
-          Inventory[] inventoryList = new Inventory [10];
+          Inventory[] inventoryList = new Inventory[10];
           
-          Inventory clothing = new Inventory();
+          inventoryList[InventoryItems.clothing.ordinal()] = new Inventory(InventoryItems.clothing, 0, 0);
+          inventoryList[InventoryItems.rations.ordinal()] = new Inventory(InventoryItems.rations, 0, 0);
+          inventoryList[InventoryItems.fuel.ordinal()] = new Inventory(InventoryItems.fuel, 0, 0);
+          inventoryList[InventoryItems.tools.ordinal()] = new Inventory(InventoryItems.tools, 0, 0);
+          inventoryList[InventoryItems.computer.ordinal()] = new Inventory(InventoryItems.computer, 0, 0);
+          inventoryList[InventoryItems.calc.ordinal()] = new Inventory(InventoryItems.calc, 0, 0);
+          inventoryList[InventoryItems.farmtools.ordinal()] = new Inventory(InventoryItems.farmtools, 0, 0);
+          inventoryList[InventoryItems.medicine.ordinal()] = new Inventory(InventoryItems.medicine, 0, 0);
+          inventoryList[InventoryItems.money.ordinal()] = new Inventory(InventoryItems.money, 0, 0);
+          
+          return inventoryList;
+     }
+          
+ /*         Inventory clothing = new Inventory();
           clothing.setDescription("clothing");
           clothing.setQuantity(0);
           clothing.setWeight(2.03);
@@ -273,7 +287,7 @@ public class GameControl {
           
           return inventoryList;
      }
-     
+     */
     public static Map createMap(int x, int y, Inventory[] inventory) {
     
         if (x < 0 || y < 0)
