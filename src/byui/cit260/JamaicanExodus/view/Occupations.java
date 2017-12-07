@@ -19,16 +19,16 @@ public class Occupations extends View {
         
       public Occupations() {
         
-        super( "\n       ****************************************************"
-                +"\n       |             OccupationSelection                   |"
-                +"\n       ****************************************************"
-                +"\n        B - Banker"
-                +"\n        C - Carpenter"
-                +"\n        F - Farmer"
-                +"\n        S - Shipwright"
-                +"\n        E - Software Engineer"
+        super( "\n       ************************************************************"
+                +"\n       |                    OccupationSelection                   |"
+                +"\n       ************************************************************"
+                +"\n        B - Banker (Great with numbers, income $1,000 )"
+                +"\n        C - Carpenter (Always carries tools, income $150)"
+                +"\n        F - Farmer (Always carries seed, income $75)"
+                +"\n        S - Shipwright (Always carries wood, income $200)"
+                +"\n        E - Software Engineer (Always has a laptop, income $1,500)"
                 +"\n        Q - Quit"
-                +"\n       *****************************************************");
+                +"\n       **********************************************************");
         
     }
     

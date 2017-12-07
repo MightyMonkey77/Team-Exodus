@@ -84,7 +84,8 @@ public class Actors {
       }
       System.out.println("\n\n");
       pressEnterToContinue();
-      //clearScreen(); tried-failed
+      
+      //clearScreen(); //tried-failed
       
       return true;
    }
