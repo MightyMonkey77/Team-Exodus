@@ -7,7 +7,7 @@ package byui.cit260.JamaicanExodus.view;
 
 /**
  *
- * @author Office Payne
+ * @author Kim
  */
 class MoveLocationView {
 

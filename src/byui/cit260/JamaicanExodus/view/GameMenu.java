@@ -23,7 +23,7 @@ class GameMenu extends View {
                 +"\n D - Map View"
                 +"\n A - Actors"
                 +"\n O - Choose Occupation"
-                +"\n L - View contents of location"
+                +"\n L - View current location"
                 +"\n P - Move party to new location"
                 +"\n E - Estimate the resource needed"
                 +"\n G - Go into shop"
@@ -56,7 +56,7 @@ class GameMenu extends View {
                 this.occupations();
                 return true;
             case "L":
-                this.locationContents();
+                this.viewCurrentLoc();
                 return false;    
             case "R":
                 this.moveToNewLocation();
@@ -138,7 +138,7 @@ class GameMenu extends View {
         occupations.display();
     }
 
-    private void locationContents() {
+    private void viewCurrentLoc() {
        System.out.println("");
     }
 
