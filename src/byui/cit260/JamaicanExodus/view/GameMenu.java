@@ -24,7 +24,7 @@ class GameMenu extends View {
                 +"\n A - Actors"
                 +"\n O - Choose Occupation"
                 +"\n L - View contents of location"
-                +"\n P - Move person to new location"
+                +"\n P - Move party to new location"
                 +"\n E - Estimate the resource needed"
                 +"\n G - Go into shop"
                 +"\n C - Confront Obstacle"
