@@ -10,5 +10,9 @@ package byui.cit260.JamaicanExodus.view;
  * @author mikeg
  */
 public class Obstacle {
+
+    void display() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

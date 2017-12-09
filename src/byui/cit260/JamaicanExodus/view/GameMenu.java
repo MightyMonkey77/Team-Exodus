@@ -157,7 +157,10 @@ class GameMenu extends View {
        System.out.println(minMax);
     }
 
-   
+    private void obstacle(){
+       Obstacle obstacle = new Obstacle();
+       obstacle.display();
+    }
 
  
     
