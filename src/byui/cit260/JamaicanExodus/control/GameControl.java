@@ -637,10 +637,10 @@ public class GameControl {
       }
    }
 
-   // Clear Screen
+   /* Clear Screen
    public final static void clearScreen() { //doesnt work ... yet
 
-      /*
+      
        try {
          Robot pressbot = new Robot();
          pressbot.keyPress(17); // Holds CTRL key.
