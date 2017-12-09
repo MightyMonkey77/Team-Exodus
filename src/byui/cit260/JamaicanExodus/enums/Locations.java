@@ -1,10 +1,7 @@
 package byui.cit260.JamaicanExodus.enums;
 
-/**
- *
- * Kimbuilt
- */
-
+// Kimbuilt
+ 
 public enum Locations{
 //("display name", "distance to next city", "x-coor", "y-coor") 
 // CITIES   
@@ -28,8 +25,12 @@ public enum Locations{
    obstacle7("Obstacle 7",0,7,9),
    obstacle8("Obstacle 8",0,8,9),
    
-   
-   store;
+// OTHER   
+   highwayRest("Highway Rest Stop",0,0,0),
+   walmartPark("Walmart Parking Lot",0,0,0),
+   koaCamp("KOA camp ground",0,0,0),
+   truckStop("Truck Stop",0,0,0),
+   store("General Store",0,0,0);
    
    private final String disName;
    private final int disNext;
