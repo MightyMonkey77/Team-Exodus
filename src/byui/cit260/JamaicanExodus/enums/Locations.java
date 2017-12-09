@@ -26,11 +26,11 @@ public enum Locations{
    obstacle8("Obstacle 8",0,8,9),
    
 // OTHER   
-   highwayRest("Highway Rest Stop",0,0,0),
-   walmartPark("Walmart Parking Lot",0,0,0),
-   koaCamp("KOA camp ground",0,0,0),
-   truckStop("Truck Stop",0,0,0),
-   store("General Store",0,0,0);
+   highwayRest("Highway Rest Stop",  0,0,0),//No store
+   walmartPark("Walmart Parking Lot",0,0,0),//Store onsite
+   koaCamp    ("KOA camp ground",    0,0,0),//No store
+   truckStop  ("Truck Stop",         0,0,0),//Store onsite
+   store      ("General Store",      0,0,0);
    
    private final String disName;
    private final int disNext;
