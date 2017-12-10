@@ -318,7 +318,19 @@ public class GameControl {
       Scene[] scenePlace = new Scene[8];
 
       Scene froome = new Scene();
-      froome.setDescription("Home Town - Beggining Town");
+      froome.setDescription("And so it begins..."
+              + " Things are bleak in this town.  Years of war"
+              + " and strife have taken their toll on this town you"
+              + " once loved. Thankfully, you have landed a job in"
+              + " Medford, Oregon.  You and your family have decided to"
+              + " make the long trek together, along with a few friends."
+              + " A recent supply of goods has arrived, and the local"
+              + " store should be well stocked.  You decide the time is"
+              + " now, and need to get going!  The recent fires which"
+              + " burned down your house have left you with only the"
+              + " clothes on your back, and the money in your pockets."
+              + ""
+              + " Godspeed and Good-luck!");
       froome.setSceneName("Froome");
       froome.setSymbol("FR");
       scenePlace[SceneArea.froome.ordinal()] = froome;
@@ -651,4 +663,4 @@ public class GameControl {
       catch (AWTException ex) {
       }*/
    }
-}
+
