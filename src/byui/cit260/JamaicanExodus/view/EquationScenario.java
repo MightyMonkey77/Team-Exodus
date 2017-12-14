@@ -9,10 +9,10 @@ package byui.cit260.JamaicanExodus.view;
  *
  * @author mikeg
  */
-public class Obstacle {
-
-    void display() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+public class EquationScenario implements Scenario {
+    
+    //public int ();
+        //System.out.println("Put your thinking cap on, time for math");
+        //System.out.
     
 }

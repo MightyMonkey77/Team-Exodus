@@ -10,7 +10,6 @@ import byui.cit260.JamaicanExodus.model.Game;
 import byui.cit260.JamaicanExodus.model.Map;
 import byui.cit260.JamaicanExodus.JamaicanExodus;
 import byui.cit260.JamaicanExodus.enums.ObName;
-import byui.cit260.JamaicanExodus.enums.SceneArea;
 import byui.cit260.JamaicanExodus.model.Actor;
 import byui.cit260.JamaicanExodus.model.Obstacles;
 import byui.cit260.JamaicanExodus.model.Scene;
@@ -45,21 +44,8 @@ public class MapControl {
        
     }
 
-    public static Scene[] createScenes() {
-     
-        Game game = JamaicanExodus.getCurrentGame();
-
-        Scene[] scenes = new Scene[SceneArea.values().length];
-        
-        Scene froomeScenes = new Scene();
-        froomeScenes.setDescription("");
-        froomeScenes.setMap("");
-        scenes[SceneArea.froome.ordinal()] = froomeScenes;
-        
-        
-        
-        
-        
+   public static Scene[] createScenes() {
+        Scene[] scenes = null;      
         return scenes;
     }    
         

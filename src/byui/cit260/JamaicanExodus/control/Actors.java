@@ -37,7 +37,7 @@ public class Actors {
    private List<Actor> getActor() {
 
       Scanner keyboard = new Scanner(System.in);
-      System.out.println("Enter first companion's name: ");
+      System.out.print("Enter your spouce's name: ");
       String actorName1 = keyboard.nextLine();
       Game currentGame = JamaicanExodus.getCurrentGame();
       Actor[] actor = currentGame.getActor();
@@ -45,25 +45,25 @@ public class Actors {
       actorOne.setName(actorName1);
       actor[0] = actorOne;
 
-      System.out.println("Enter second companion's name: ");
+      System.out.print("Enter your first child's name: ");
       String actorName2 = keyboard.nextLine();
       Actor actorTwo = actor[1];
       actorTwo.setName(actorName2);
       actor[1] = actorTwo;
 
-      System.out.println("Enter third companion's name: ");
+      System.out.print("Enter your second child's name: ");
       String actorName3 = keyboard.nextLine();
       Actor actorThree = actor[2];
       actorThree.setName(actorName3);
       actor[2] = actorThree;
 
-      System.out.println("Enter fourth companion's name: ");
+      System.out.print("Enter the name of your best friend: ");
       String actorName4 = keyboard.nextLine();
       Actor actorFour = actor[3];
       actorFour.setName(actorName4);
       actor[3] = actorFour;
 
-      System.out.println("Enter fifth companion's name: ");
+      System.out.print("Enter the name of your spouce's best friend: ");
       String actorName5 = keyboard.nextLine();
       Actor actorFive = actor[4];
       actorFive.setName(actorName5);

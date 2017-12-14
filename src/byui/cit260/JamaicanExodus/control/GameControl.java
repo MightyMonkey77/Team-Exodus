@@ -18,7 +18,7 @@ import byui.cit260.JamaicanExodus.JamaicanExodus;
 import byui.cit260.JamaicanExodus.enums.Companions;
 import byui.cit260.JamaicanExodus.enums.Jobs;
 import byui.cit260.JamaicanExodus.enums.ObName;
-import byui.cit260.JamaicanExodus.enums.SceneArea;
+import byui.cit260.JamaicanExodus.enums.Towns;
 import byui.cit260.JamaicanExodus.enums.UseableMonths;
 import byui.cit260.JamaicanExodus.model.Actor;
 import byui.cit260.JamaicanExodus.model.InventoryItems;
@@ -320,49 +320,49 @@ public class GameControl {
          froome.setDescription("Home Town - Beggining Town");
          froome.setSceneName("Froome");
          froome.setSymbol("FR");
-         scenePlace[SceneArea.froome.ordinal()] = froome;
+         scenePlace[Towns.froome.ordinal()] = froome;
          
          Scene kingston = new Scene();
          froome.setDescription("Kingston, Jamaica - Port Town");
          froome.setSceneName("Kingston");
          froome.setSymbol("KI");
-         scenePlace[SceneArea.kingston.ordinal()] = kingston;
+         scenePlace[Towns.kingston.ordinal()] = kingston;
          
          Scene saintPetersburg = new Scene();
          froome.setDescription("Saint Petersburg, FL - Port Town - USA");
          froome.setSceneName("Saint Petersburg");
          froome.setSymbol("SP");
-         scenePlace[SceneArea.saintPetersburg.ordinal()] = saintPetersburg;
+         scenePlace[Towns.saintPetersburg.ordinal()] = saintPetersburg;
          
          Scene birmingham = new Scene();
          froome.setDescription("Birmingham, AL - Switch Town for Railroads");
          froome.setSceneName("Birmingham");
          froome.setSymbol("BR");
-         scenePlace[SceneArea.birmingham.ordinal()] = birmingham;
+         scenePlace[Towns.birmingham.ordinal()] = birmingham;
          
          Scene elPaso = new Scene();
          froome.setDescription("El Paso, TX - Switch Town");
          froome.setSceneName("El Paso");
          froome.setSymbol("EP");
-         scenePlace[SceneArea.elPaso.ordinal()] = elPaso;
+         scenePlace[Towns.elPaso.ordinal()] = elPaso;
          
          Scene losAngeles = new Scene();
          froome.setDescription("Los Angeles, CA - Horrid Place, leave fast.");
          froome.setSceneName("Los Angeles");
          froome.setSymbol("LA");
-         scenePlace[SceneArea.losAngeles.ordinal()] = losAngeles;
+         scenePlace[Towns.losAngeles.ordinal()] = losAngeles;
          
          Scene redding = new Scene();
          froome.setDescription("Redding, CA - A Dirty Palace");
          froome.setSceneName("Redding");
          froome.setSymbol("RD");
-         scenePlace[SceneArea.redding.ordinal()] = redding;
+         scenePlace[Towns.redding.ordinal()] = redding;
          
          Scene medford = new Scene();
          froome.setDescription("Medford, OR - End Goal - Congrats");
          froome.setSceneName("Medford");
          froome.setSymbol("MD");
-         scenePlace[SceneArea.medford.ordinal()] = medford;
+         scenePlace[Towns.medford.ordinal()] = medford;
                           
          return scenePlace;
     }
@@ -432,21 +432,21 @@ public class GameControl {
         
          Location[][] locations = map.getLocations();
          
-         locations [1][1].setScenes(scenes[SceneArea.froome.ordinal()]);
+         locations [1][1].setScenes(scenes[Towns.froome.ordinal()]);
          locations [1][10].setObstacles(obstaclePosition[ObName.One.ordinal()]);
-         locations [2][1].setScenes(scenes[SceneArea.kingston.ordinal()]);
+         locations [2][1].setScenes(scenes[Towns.kingston.ordinal()]);
          locations [2][10].setObstacles(obstaclePosition[ObName.Two.ordinal()]);
-         locations [3][1].setScenes(scenes[SceneArea.saintPetersburg.ordinal()]);
+         locations [3][1].setScenes(scenes[Towns.saintPetersburg.ordinal()]);
          locations [3][10].setObstacles(obstaclePosition[ObName.Three.ordinal()]);
-         locations [4][1].setScenes(scenes[SceneArea.birmingham.ordinal()]);
+         locations [4][1].setScenes(scenes[Towns.birmingham.ordinal()]);
          locations [4][10].setObstacles(obstaclePosition[ObName.Four.ordinal()]);
-         locations [5][1].setScenes(scenes[SceneArea.elPaso.ordinal()]);
+         locations [5][1].setScenes(scenes[Towns.elPaso.ordinal()]);
          locations [5][10].setObstacles(obstaclePosition[ObName.Five.ordinal()]);
-         locations [6][1].setScenes(scenes[SceneArea.losAngeles.ordinal()]);
+         locations [6][1].setScenes(scenes[Towns.losAngeles.ordinal()]);
          locations [6][10].setObstacles(obstaclePosition[ObName.Six.ordinal()]);
-         locations [7][1].setScenes(scenes[SceneArea.redding.ordinal()]);
+         locations [7][1].setScenes(scenes[Towns.redding.ordinal()]);
          locations [7][10].setObstacles(obstaclePosition[ObName.Seven.ordinal()]);
-         locations [8][1].setScenes(scenes[SceneArea.medford.ordinal()]);
+         locations [8][1].setScenes(scenes[Towns.medford.ordinal()]);
          
 
     }

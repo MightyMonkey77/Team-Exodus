@@ -21,7 +21,12 @@ public class ObstacleView extends View {
                 + "\n*********************************");
     }
 
-  @Override
+    /**
+     *
+     * @param choice
+     * @return
+     */
+    @Override
     public boolean doAction(String choice)
     {
         choice = choice.toUpperCase();
@@ -40,7 +45,7 @@ public class ObstacleView extends View {
                 riddle();
                 break;
             case "Q":
-                MainMenu menu = new MainMenu();
+                MainMenu mainMenu = new MainMenu();
                 break;
             default:
                 Error.display(this.getClass().getName(), "Invalid option. Choose one of the listed options.");
@@ -49,27 +54,15 @@ public class ObstacleView extends View {
         return false;
      }
     
-    protected void caulkWagon() {
-        this.console.println("caulkWagon function successfully called.");
+    protected void equation() {
+        this.console.println("equation successfully picked.");
     }
     
-    protected void hireGuide() {
-        this.console.println("hireGuide function successfully called.");
+    protected void puzzle() {
+        this.console.println("puzzle successfully picked.");
     }
     
-    protected void useFerry() {
-        this.console.println("useFerry function successfully called.");
+    protected void riddle() {
+        this.console.println("riddle successfully picked.");
     } 
-
-    private void riddle() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    private void puzzle() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    private void equation() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }

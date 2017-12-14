@@ -1,17 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package byui.cit260.JamaicanExodus.view;
+
+//Kimbuilt
 
 import byui.cit260.JamaicanExodus.control.Actors;
 import byui.cit260.JamaicanExodus.control.MinMax;
 
-/**
- *
- * @author Kim on a PC
- */
 class GameMenu extends View {
     
     
@@ -23,8 +16,8 @@ class GameMenu extends View {
                 +"\n D - Map View"
                 +"\n A - Actors"
                 +"\n O - Choose Occupation"
-                +"\n L - View contents of location"
-                +"\n P - Move person to new location"
+                +"\n L - View current location"
+                +"\n P - Move party to next location"
                 +"\n E - Estimate the resource needed"
                 +"\n G - Go into shop"
                 +"\n C - Confront Obstacle"
@@ -48,7 +41,7 @@ class GameMenu extends View {
                 return true;
             case "D":
                 this.displayMap();
-                return true;
+                return false;
             case "A":
                 this.actors();
                 return false;
@@ -56,9 +49,9 @@ class GameMenu extends View {
                 this.occupations();
                 return true;
             case "L":
-                this.locationContents();
+                this.viewCurrentLoc();
                 return false;    
-            case "R":
+            case "P":
                 this.moveToNewLocation();
                 return true;
             case "E":
@@ -138,7 +131,7 @@ class GameMenu extends View {
         occupations.display();
     }
 
-    private void locationContents() {
+    private void viewCurrentLoc() {
        System.out.println("");
     }
 
@@ -157,7 +150,10 @@ class GameMenu extends View {
        System.out.println(minMax);
     }
 
-   
+    private void obstacle(){
+       Obstacle obstacle = new Obstacle();
+       obstacle.display();
+    }
 
  
     

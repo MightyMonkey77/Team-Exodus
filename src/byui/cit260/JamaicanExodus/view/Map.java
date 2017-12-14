@@ -73,32 +73,34 @@ public class Map extends View{
 
     String buildMap(int x, int y) {
         
-        String [][] locArray = null;
+        String [][] locArray = null; // Location array
         locArray = new String [8][9];
         
         locArray[1][0] = "Froome Starting Town";
         locArray[1][5] = "Store";
-        locArray[1][10] = "Obstacle One";
+        locArray[1][9] = "Obstacle One";
         locArray[2][1] = "Kingston";
         locArray[2][5] = "Store";
-        locArray[2][10] = "Obstacle Two";
-        locArray[3][1] = "Saint PetersBurg";
+        locArray[2][9] = "Obstacle Two";
+        locArray[3][1] = "St Petersburg, FL";
         locArray[3][5] = "Store";
-        locArray[3][10] = "Obstacle Three";
-        locArray[4][1] = "Birmingham";
+        locArray[3][9] = "Obstacle Three";
+        locArray[4][1] = "Montgomery, AL";
         locArray[4][5] = "Store";
-        locArray[4][10] = "Obstacle Four";
-        locArray[5][1] = "El Paso, TX";
+        locArray[4][9] = "Obstacle Four";
+        locArray[5][1] = "Dallas, TX";
         locArray[5][5] = "Store";
-        locArray[5][10] = "Obstacle Five";
-        locArray[6][1] = "Los Angeles";
+        locArray[5][9] = "Obstacle Five";
+        locArray[6][1] = "Albuquerque, NM";
         locArray[6][5] = "Store";
-        locArray[6][10] = "Obstacle Six";
-        locArray[7][1] = "Redding, Ca";
+        locArray[6][9] = "Obstacle Six";
+        locArray[7][1] = "Las Vegas, NV";
         locArray[7][5] = "Store";
-        locArray[7][10] = "Obstacle Seven";
-        locArray[8][1] = "Medford, OR Finish";
-                
+        locArray[7][9] = "Obstacle Seven";
+        locArray[8][1] = "Reno, NV";
+        locArray[8][5] = "Store";
+        locArray[8][9] = "Obstacle Eight";
+        locArray[9][1] = "Medford, OR Finish";        
 
         return locArray[x][y];
     }
