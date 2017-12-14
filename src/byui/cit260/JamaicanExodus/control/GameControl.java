@@ -408,7 +408,7 @@ public class GameControl {
 
    public static void froome() {
       System.out.println("And so it begins..."
-              + " Things are bleak in this town.  Years of war"
+              + " Things are bleak in this town. Years of war"
               + " and strife have taken their toll on this town you"
               + " once loved. Thankfully, you have landed a job in "
               + " Medford, Oregon.  You and your family have decided to"
@@ -425,8 +425,8 @@ public class GameControl {
    public static void kingston() {
       System.out.println("Welcome to Kingston Jamaica !!"
               + "  \"The local time is...\",  eh nevermind.  You need to"
-              + " check your inventory your food before you take to"
-              + " the next leg of your journey.  Luckily, the ship"
+              + " check your inventory and your food before you take to"
+              + " the next leg of your journey. Luckily, the ship"
               + " leaving for Florida has room on board for all of"
               + " your party.  Even better, the first mate is an old"
               + " friend of yours who has graciously made arrangements "
@@ -476,7 +476,7 @@ public class GameControl {
               + " \"Jerry's World\".  You've had a rough journey and the Caravan "
               + " smells like it hasn't showered in forever.  Think about it, "
               + " neither have you!  Grab that smart phone you found in Shreveport"
-              + " and see if you find a KOA campground. Better yet, find truck a"
+              + " and see if you find a KOA campground. Better yet, find a truck"
               + " stop. They've got showers there, but it will cost you a few"
               + " dollars each. While you're there, grab some supplies, and lay"
               + " off the beans!"
@@ -525,7 +525,7 @@ public class GameControl {
       System.out.println("Welcome to the biggest little city in the word."
               + " "
               + " That's what they used to call this place,  you're sure to"
-              + " see a sign to that effect if you look close enough as your"
+              + " see a sign to that effect if you look close enough as you"
               + " travel through here. Just think if you had gotten that job"
               + " with Tesla, or Amazon, or Apple... you may be arriving in"
               + " your new home. No such luck.  You're roughly 350 miles "
@@ -630,7 +630,8 @@ public class GameControl {
       System.out.println("Press -ENTER- to continue...");
       try {
          System.in.read();
-      } catch (Exception e) {
+      } catch (Exception e){
+         System.out.println("Next time, just press the ENTER key.");
       }
    }
 
