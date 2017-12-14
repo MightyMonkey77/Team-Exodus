@@ -9,7 +9,6 @@ package byui.cit260.JamaicanExodus.control;
 
 import byui.cit260.JamaicanExodus.Exception.InventoryControlException;
 import byui.cit260.JamaicanExodus.JamaicanExodus;
-import byui.cit260.JamaicanExodus.enums.Item;
 import byui.cit260.JamaicanExodus.model.Game;
 import byui.cit260.JamaicanExodus.model.Inventory;
 import byui.cit260.JamaicanExodus.model.InventoryItems;

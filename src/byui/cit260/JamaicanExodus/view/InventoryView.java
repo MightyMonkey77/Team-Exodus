@@ -6,8 +6,6 @@
 package byui.cit260.JamaicanExodus.view;
 
 import byui.cit260.JamaicanExodus.Exception.InventoryControlException;
-import byui.cit260.JamaicanExodus.JamaicanExodus;
-import byui.cit260.JamaicanExodus.model.Inventory;
 import static byui.cit260.JamaicanExodus.model.Inventory.getInventoryReport;
 import java.util.logging.Level;
 import java.util.logging.Logger;

@@ -6,7 +6,6 @@
 package byui.cit260.JamaicanExodus.model;
 
 import byui.cit260.JamaicanExodus.control.Actors;
-import byui.cit260.JamaicanExodus.view.ScenesView;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Objects;

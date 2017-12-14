@@ -153,6 +153,10 @@ public class Map implements Serializable {
         return "Map{" + "description=" + description + ", x=" + x + ", y=" + y + ", location=" + location + ", traveled=" + traveled + ", locations=" + locations + ", map=" + map + ", towns=" + towns + '}';
     }
 
+    public void setLocation(Location[][] locations) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     
     
 

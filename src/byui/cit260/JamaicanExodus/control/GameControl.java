@@ -16,7 +16,6 @@ import byui.cit260.JamaicanExodus.model.Occupations;
 import byui.cit260.JamaicanExodus.model.Player;
 import byui.cit260.JamaicanExodus.JamaicanExodus;
 import byui.cit260.JamaicanExodus.enums.Companions;
-import byui.cit260.JamaicanExodus.enums.Item;
 import byui.cit260.JamaicanExodus.enums.Jobs;
 import byui.cit260.JamaicanExodus.enums.ObName;
 import byui.cit260.JamaicanExodus.enums.SceneArea;
@@ -85,7 +84,7 @@ public class GameControl {
      else {
      currentGame.setMap(map);
      JamaicanExodus.setCurrentGame(currentGame);
-     return 1;
+     return -1;
      }
     }   
         

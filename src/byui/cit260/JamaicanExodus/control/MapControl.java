@@ -25,12 +25,14 @@ public class MapControl {
     
     
 
-    public static Map createMap(int x, int y) {
+    public static Map createMap(int x, int y)throws MapControlException {
        
         if (x < 0 || y < 0){
-        }
         
-       Map map = new Map(8 ,10);      
+       throw new MapControlException("Least 1 row and 1 col.");
+        }       
+               
+       Map map = new Map();      
        
        //Scenes array
        Scene[] scenes = createScenes();
