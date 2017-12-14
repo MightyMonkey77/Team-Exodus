@@ -140,7 +140,7 @@ class GameMenu extends View {
        months.display();
     }
 
-    void displayMap() {
+    private void displayMap() {
        Map map = new Map();
        map.display();
     }
